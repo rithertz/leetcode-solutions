@@ -9,6 +9,9 @@ Working through problems consistently.
 |---|-------|------------|----------|------|
 
 <!-- SOLUTIONS_TABLE_START -->
+| # | Title | Difficulty | Language | Tags |
+|---|-------|------------|----------|------|
+| 1952 | [Three Divisors](Easy/1952-three-divisors/README.md) | Easy | Cpp | Math, Enumeration, Number Theory, Prime Factorization, Sieve Theory |
 <!-- SOLUTIONS_TABLE_END -->
 
 ---
