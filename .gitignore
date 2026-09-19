@@ -6,10 +6,12 @@ __pycache__/
 venv/
 .venv/
 
-# Logs & temp files
+# Project internals — not for repo
+scripts/
+state.json
+requirements.txt
 *.log
 *.tmp
-logs/
 
 # OS
 .DS_Store
@@ -18,7 +20,3 @@ desktop.ini
 
 # VS Code
 .vscode/
-
-# Secrets (never commit these)
-.env.local
-secrets.json
