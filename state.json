@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-09-19T20:59:13.183087+00:00",
+  "last_updated": "2026-09-20T12:44:12.633462+00:00",
   "total_solved_on_leetcode": 74,
-  "total_synced_to_repo": 1,
+  "total_synced_to_repo": 2,
   "synced": [
     {
       "frontend_id": "1952",
@@ -20,9 +20,7 @@
       "submission_id": 1592106807,
       "solved_at": "2025-03-31T14:13:35+00:00",
       "synced_at": "2026-09-19T20:59:13.183070+00:00"
-    }
-  ],
-  "pending": [
+    },
     {
       "frontend_id": "7",
       "slug": "reverse-integer",
@@ -33,11 +31,12 @@
       ],
       "lang": "cpp",
       "extension": "cpp",
-      "code": "class Solution {\npublic:\n    int reverse(int x) {\n        long rev=0;\n        while(x){\n            rev=(10*rev+x%10);\n            x/=10;\n        }\n        if(rev<INT_MIN||rev>INT_MAX){\n            return 0;\n        }\n        return (int)rev;\n    }\n};",
       "submission_id": 1638143530,
       "solved_at": "2025-05-19T10:21:42+00:00",
-      "content": "<p>Given a signed 32-bit integer <code>x</code>, return <code>x</code><em> with its digits reversed</em>. If reversing <code>x</code> causes the value to go outside the signed 32-bit integer range <code>[-2<sup>31</sup>, 2<sup>31</sup> - 1]</code>, then return <code>0</code>.</p>\n\n<p><strong>Assume the environment does not allow you to store 64-bit integers (signed or unsigned).</strong></p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> x = 123\n<strong>Output:</strong> 321\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> x = -123\n<strong>Output:</strong> -321\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> x = 120\n<strong>Output:</strong> 21\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>-2<sup>31</sup> &lt;= x &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n"
-    },
+      "synced_at": "2026-09-20T12:44:12.633452+00:00"
+    }
+  ],
+  "pending": [
     {
       "frontend_id": "9",
       "slug": "palindrome-number",
