@@ -59,6 +59,7 @@ jobs:
           git config user.name  "${{ secrets.GIT_AUTHOR_NAME }}"
           git config user.email "${{ secrets.GIT_AUTHOR_EMAIL }}"
           cp state.json /tmp/state.json
+          git stash --include-untracked
           git fetch origin _data
           git checkout _data
           cp /tmp/state.json state.json
@@ -66,6 +67,7 @@ jobs:
           git diff --cached --quiet && echo "state unchanged" || git commit -m "state update"
           git push origin _data
           git checkout main
+          git stash pop || true
 
       - name: commit solution to main
         env:
