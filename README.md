@@ -11,6 +11,7 @@ Working through problems consistently.
 <!-- SOLUTIONS_TABLE_START -->
 | # | Title | Difficulty | Language | Tags |
 |---|-------|------------|----------|------|
+| 7 | [Reverse Integer](Medium/0007-reverse-integer/README.md) | Medium | Cpp | Math |
 | 1952 | [Three Divisors](Easy/1952-three-divisors/README.md) | Easy | Cpp | Math, Enumeration, Number Theory, Prime Factorization, Sieve Theory |
 <!-- SOLUTIONS_TABLE_END -->
 
