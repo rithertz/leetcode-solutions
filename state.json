@@ -1,0 +1,1242 @@
+{
+  "last_updated": "2026-09-19T20:59:13.183087+00:00",
+  "total_solved_on_leetcode": 74,
+  "total_synced_to_repo": 1,
+  "synced": [
+    {
+      "frontend_id": "1952",
+      "slug": "three-divisors",
+      "title": "Three Divisors",
+      "difficulty": "Easy",
+      "tags": [
+        "Math",
+        "Enumeration",
+        "Number Theory",
+        "Prime Factorization",
+        "Sieve Theory"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "submission_id": 1592106807,
+      "solved_at": "2025-03-31T14:13:35+00:00",
+      "synced_at": "2026-09-19T20:59:13.183070+00:00"
+    }
+  ],
+  "pending": [
+    {
+      "frontend_id": "7",
+      "slug": "reverse-integer",
+      "title": "Reverse Integer",
+      "difficulty": "Medium",
+      "tags": [
+        "Math"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    int reverse(int x) {\n        long rev=0;\n        while(x){\n            rev=(10*rev+x%10);\n            x/=10;\n        }\n        if(rev<INT_MIN||rev>INT_MAX){\n            return 0;\n        }\n        return (int)rev;\n    }\n};",
+      "submission_id": 1638143530,
+      "solved_at": "2025-05-19T10:21:42+00:00",
+      "content": "<p>Given a signed 32-bit integer <code>x</code>, return <code>x</code><em> with its digits reversed</em>. If reversing <code>x</code> causes the value to go outside the signed 32-bit integer range <code>[-2<sup>31</sup>, 2<sup>31</sup> - 1]</code>, then return <code>0</code>.</p>\n\n<p><strong>Assume the environment does not allow you to store 64-bit integers (signed or unsigned).</strong></p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> x = 123\n<strong>Output:</strong> 321\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> x = -123\n<strong>Output:</strong> -321\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> x = 120\n<strong>Output:</strong> 21\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>-2<sup>31</sup> &lt;= x &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "9",
+      "slug": "palindrome-number",
+      "title": "Palindrome Number",
+      "difficulty": "Easy",
+      "tags": [
+        "Math"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n\n    bool isPalindrome(int x) {\n        if(x<0){\n            return false;\n        }\n        int temp=x;\n        long  num=0;\n        while(temp){\n            num=num*(10)+(temp%10);\n            temp/=10;\n        }\n        return x==num;\n            \n    }\n};",
+      "submission_id": 1638146915,
+      "solved_at": "2025-05-19T10:26:15+00:00",
+      "content": "<p>Given an integer <code>x</code>, return <code>true</code> if <code>x</code> is a <span data-keyword=\"palindrome-integer\"><strong>palindrome</strong></span>, and <code>false</code> otherwise.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> x = 121\n<strong>Output:</strong> true\n<strong>Explanation:</strong> 121 reads as 121 from left to right and from right to left.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> x = -121\n<strong>Output:</strong> false\n<strong>Explanation:</strong> From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> x = 10\n<strong>Output:</strong> false\n<strong>Explanation:</strong> Reads 01 from right to left. Therefore it is not a palindrome.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>-2<sup>31</sup>&nbsp;&lt;= x &lt;= 2<sup>31</sup>&nbsp;- 1</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<strong>Follow up:</strong> Could you solve it without converting the integer to a string?"
+    },
+    {
+      "frontend_id": "1979",
+      "slug": "find-greatest-common-divisor-of-array",
+      "title": "Find Greatest Common Divisor of Array",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Math",
+        "Number Theory",
+        "Euclidean Algorithm",
+        "Greatest Common Divisor"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    int gcd(int a,int b){\n        if(b==0){\n            return a;\n        }\n        else {\n            return gcd(b,a%b);\n        }\n    }\n    int findGCD(vector<int>& nums) {\n        sort(nums.begin(),nums.end());\n        return gcd(nums[0],nums.back());\n    }\n};",
+      "submission_id": 1638209688,
+      "solved_at": "2025-05-19T11:50:55+00:00",
+      "content": "<p>Given an integer array <code>nums</code>, return<strong> </strong><em>the <strong>greatest common divisor</strong> of the smallest number and largest number in </em><code>nums</code>.</p>\n\n<p>The <strong>greatest common divisor</strong> of two numbers is the largest positive integer that evenly divides both numbers.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [2,5,6,9,10]\n<strong>Output:</strong> 2\n<strong>Explanation:</strong>\nThe smallest number in nums is 2.\nThe largest number in nums is 10.\nThe greatest common divisor of 2 and 10 is 2.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [7,5,6,8,3]\n<strong>Output:</strong> 1\n<strong>Explanation:</strong>\nThe smallest number in nums is 3.\nThe largest number in nums is 8.\nThe greatest common divisor of 3 and 8 is 1.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,3]\n<strong>Output:</strong> 3\n<strong>Explanation:</strong>\nThe smallest number in nums is 3.\nThe largest number in nums is 3.\nThe greatest common divisor of 3 and 3 is 3.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>2 &lt;= nums.length &lt;= 1000</code></li>\n\t<li><code>1 &lt;= nums[i] &lt;= 1000</code></li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "125",
+      "slug": "valid-palindrome",
+      "title": "Valid Palindrome",
+      "difficulty": "Easy",
+      "tags": [
+        "Two Pointers",
+        "String"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    bool isp(const string &s,int st,int end){\n        if(st>=end) return true;\n        if(s[st]!=s[end]) return false;\n        return isp(s,st+1,end-1);\n    }\n    bool isPalindrome(string &s) {\n        string str;\n        for(char ch:s){\n            if(isalnum(ch)){\n                str+=tolower(ch);\n            }\n        }\n        return isp(str,0,str.length()-1);\n    }\n};",
+      "submission_id": 1638472297,
+      "solved_at": "2025-05-19T16:45:19+00:00",
+      "content": "<p>A phrase is a <strong>palindrome</strong> if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.</p>\n\n<p>Given a string <code>s</code>, return <code>true</code><em> if it is a <strong>palindrome</strong>, or </em><code>false</code><em> otherwise</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;A man, a plan, a canal: Panama&quot;\n<strong>Output:</strong> true\n<strong>Explanation:</strong> &quot;amanaplanacanalpanama&quot; is a palindrome.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;race a car&quot;\n<strong>Output:</strong> false\n<strong>Explanation:</strong> &quot;raceacar&quot; is not a palindrome.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot; &quot;\n<strong>Output:</strong> true\n<strong>Explanation:</strong> s is an empty string &quot;&quot; after removing non-alphanumeric characters.\nSince an empty string reads the same forward and backward, it is a palindrome.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 2 * 10<sup>5</sup></code></li>\n\t<li><code>s</code> consists only of printable ASCII characters.</li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "509",
+      "slug": "fibonacci-number",
+      "title": "Fibonacci Number",
+      "difficulty": "Easy",
+      "tags": [
+        "Math",
+        "Dynamic Programming",
+        "Recursion",
+        "Memoization"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    int fib(int n) {\n        if(n==0||n==1) return n;\n        int first =0;int second=1;\n        for(int i=2;i<=n;i++){\n            int temp=first +second;\n            first=second;\n            second=temp;\n        }\n        return second;\n    }\n};",
+      "submission_id": 1638488067,
+      "solved_at": "2025-05-19T16:59:59+00:00",
+      "content": "<p>The <b>Fibonacci numbers</b>, commonly denoted <code>F(n)</code> form a sequence, called the <b>Fibonacci sequence</b>, such that each number is the sum of the two preceding ones, starting from <code>0</code> and <code>1</code>. That is,</p>\n\n<pre>\nF(0) = 0, F(1) = 1\nF(n) = F(n - 1) + F(n - 2), for n &gt; 1.\n</pre>\n\n<p>Given <code>n</code>, calculate <code>F(n)</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 2\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> F(2) = F(1) + F(0) = 1 + 0 = 1.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 3\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> F(3) = F(2) + F(1) = 1 + 1 = 2.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 4\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> F(4) = F(3) + F(2) = 2 + 1 = 3.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>0 &lt;= n &lt;= 30</code></li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "70",
+      "slug": "climbing-stairs",
+      "title": "Climbing Stairs",
+      "difficulty": "Easy",
+      "tags": [
+        "Math",
+        "Dynamic Programming",
+        "Memoization"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    int climbStairs(int n) {\n        if(n==1 || n==2 || n==3 ) return n;\n        int first =0;\n        int second=1;\n        for(int i=1;i<=n;i++){\n            int temp=second;\n            second=first+second;\n            first=temp;\n        }\n        return second;\n    }\n};",
+      "submission_id": 1643206228,
+      "solved_at": "2025-05-24T15:44:58+00:00",
+      "content": "<p>You are climbing a staircase. It takes <code>n</code> steps to reach the top.</p>\n\n<p>Each time you can either climb <code>1</code> or <code>2</code> steps. In how many distinct ways can you climb to the top?</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 2\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> There are two ways to climb to the top.\n1. 1 step + 1 step\n2. 2 steps\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 3\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> There are three ways to climb to the top.\n1. 1 step + 1 step + 1 step\n2. 1 step + 2 steps\n3. 2 steps + 1 step\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= n &lt;= 45</code></li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "231",
+      "slug": "power-of-two",
+      "title": "Power of Two",
+      "difficulty": "Easy",
+      "tags": [
+        "Math",
+        "Bit Manipulation",
+        "Recursion"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    bool isPowerOfTwo(int n) {\n        if(n<1) return false;\n        return ((n&(n-1))==0) && (n>0);\n    }\n};",
+      "submission_id": 1643245909,
+      "solved_at": "2025-05-24T16:21:25+00:00",
+      "content": "<p>Given an integer <code>n</code>, return <em><code>true</code> if it is a power of two. Otherwise, return <code>false</code></em>.</p>\n\n<p>An integer <code>n</code> is a power of two, if there exists an integer <code>x</code> such that <code>n == 2<sup>x</sup></code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 1\n<strong>Output:</strong> true\n<strong>Explanation: </strong>2<sup>0</sup> = 1\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 16\n<strong>Output:</strong> true\n<strong>Explanation: </strong>2<sup>4</sup> = 16\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 3\n<strong>Output:</strong> false\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>-2<sup>31</sup> &lt;= n &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<strong>Follow up:</strong> Could you solve it without loops/recursion?"
+    },
+    {
+      "frontend_id": "258",
+      "slug": "add-digits",
+      "title": "Add Digits",
+      "difficulty": "Easy",
+      "tags": [
+        "Math",
+        "Simulation",
+        "Number Theory"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    int addDigits(int num) {\n       \n        while(num>=10){\n            int sum=0; \n            while(num){\n                sum+=(num%10);\n                num/=10;\n            }\n            num=sum;\n        }\n        return num;\n    }\n};",
+      "submission_id": 1643257376,
+      "solved_at": "2025-05-24T16:35:13+00:00",
+      "content": "<p>Given an integer <code>num</code>, repeatedly add all its digits until the result has only one digit, and return it.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> num = 38\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> The process is\n38 --&gt; 3 + 8 --&gt; 11\n11 --&gt; 1 + 1 --&gt; 2 \nSince 2 has only one digit, return it.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> num = 0\n<strong>Output:</strong> 0\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>0 &lt;= num &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up:</strong> Could you do it without any loop/recursion in <code>O(1)</code> runtime?</p>\n"
+    },
+    {
+      "frontend_id": "1752",
+      "slug": "check-if-array-is-sorted-and-rotated",
+      "title": "Check if Array Is Sorted and Rotated",
+      "difficulty": "Easy",
+      "tags": [
+        "Array"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    bool check(vector<int>& nums) {\n        int count = 0;\n        int n = nums.size();\n\n        for(int i = 0; i < n; ++i) {\n            if(nums[i] > nums[(i + 1) % n]) {\n                count++;\n            }\n        }\n\n        return count <= 1;\n    }\n};",
+      "submission_id": 1645825182,
+      "solved_at": "2025-05-27T08:43:04+00:00",
+      "content": "<p>Given an array <code>nums</code>, return <code>true</code><em> if the array was originally sorted in non-decreasing order, then rotated <strong>some</strong> number of positions (including zero)</em>. Otherwise, return <code>false</code>.</p>\n\n<p>There may be <strong>duplicates</strong> in the original array.</p>\n\n<p><strong>Note:</strong> An array <code>A</code> rotated by <code>x</code> positions results in an array <code>B</code> of the same length such that <code>B[i] == A[(i+x) % A.length]</code> for every valid index <code>i</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,4,5,1,2]\n<strong>Output:</strong> true\n<strong>Explanation:</strong> [1,2,3,4,5] is the original sorted array.\nYou can rotate the array by x = 2 positions to begin on the element of value 3: [3,4,5,1,2].\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [2,1,3,4]\n<strong>Output:</strong> false\n<strong>Explanation:</strong> There is no sorted array once rotated that can make nums.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,3]\n<strong>Output:</strong> true\n<strong>Explanation:</strong> [1,2,3] is the original sorted array.\nYou can rotate the array by x = 0 positions (i.e. no rotation) to make nums.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 100</code></li>\n\t<li><code>1 &lt;= nums[i] &lt;= 100</code></li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "26",
+      "slug": "remove-duplicates-from-sorted-array",
+      "title": "Remove Duplicates from Sorted Array",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Two Pointers"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    int removeDuplicates(vector<int>& nums) {\n        int i=0;\n        int n=nums.size();\n        for(int j=1;j<n;j++){\n            if(nums[j]!=nums[i]){\n                nums[i+1]=nums[j];\n                i++;\n            }\n        }\n        return i+1;\n    }\n};",
+      "submission_id": 1645833429,
+      "solved_at": "2025-05-27T08:53:58+00:00",
+      "content": "<p>Given an integer array <code>nums</code> sorted in <strong>non-decreasing order</strong>, remove the duplicates <a href=\"https://en.wikipedia.org/wiki/In-place_algorithm\" target=\"_blank\"><strong>in-place</strong></a> such that each unique element appears only <strong>once</strong>. The <strong>relative order</strong> of the elements should be kept the <strong>same</strong>.</p>\n\n<p>Consider the number of <em>unique elements</em> in&nbsp;<code>nums</code> to be <code>k<strong>​​​​​​​</strong></code>​​​​​​​. <meta charset=\"UTF-8\" />After removing duplicates, return the number of unique elements&nbsp;<code>k</code>.</p>\n\n<p><meta charset=\"UTF-8\" />The first&nbsp;<code>k</code>&nbsp;elements of&nbsp;<code>nums</code>&nbsp;should contain the unique numbers in <strong>sorted order</strong>. The remaining elements beyond index&nbsp;<code>k - 1</code>&nbsp;can be ignored.</p>\n\n<p><strong>Custom Judge:</strong></p>\n\n<p>The judge will test your solution with the following code:</p>\n\n<pre>\nint[] nums = [...]; // Input array\nint[] expectedNums = [...]; // The expected answer with correct length\n\nint k = removeDuplicates(nums); // Calls your implementation\n\nassert k == expectedNums.length;\nfor (int i = 0; i &lt; k; i++) {\n    assert nums[i] == expectedNums[i];\n}\n</pre>\n\n<p>If all assertions pass, then your solution will be <strong>accepted</strong>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,1,2]\n<strong>Output:</strong> 2, nums = [1,2,_]\n<strong>Explanation:</strong> Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.\nIt does not matter what you leave beyond the returned k (hence they are underscores).\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [0,0,1,1,1,2,2,3,3,4]\n<strong>Output:</strong> 5, nums = [0,1,2,3,4,_,_,_,_,_]\n<strong>Explanation:</strong> Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.\nIt does not matter what you leave beyond the returned k (hence they are underscores).\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 3 * 10<sup>4</sup></code></li>\n\t<li><code>-100 &lt;= nums[i] &lt;= 100</code></li>\n\t<li><code>nums</code> is sorted in <strong>non-decreasing</strong> order.</li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "189",
+      "slug": "rotate-array",
+      "title": "Rotate Array",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Math",
+        "Two Pointers"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "#include<vector>\n#include<algorithm>\nusing namespace std;\nclass Solution{\npublic:\nvoid rotate(vector<int>&nums,int k){\nint n=nums.size();\nk%=n;\nreverse(nums.begin(),nums.end());\nreverse(nums.begin(),nums.begin()+k);\nreverse(nums.begin()+k,nums.end());\n}\n};\n",
+      "submission_id": 1645894131,
+      "solved_at": "2025-05-27T10:10:37+00:00",
+      "content": "<p>Given an integer array <code>nums</code>, rotate the array to the right by <code>k</code> steps, where <code>k</code> is non-negative.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,3,4,5,6,7], k = 3\n<strong>Output:</strong> [5,6,7,1,2,3,4]\n<strong>Explanation:</strong>\nrotate 1 steps to the right: [7,1,2,3,4,5,6]\nrotate 2 steps to the right: [6,7,1,2,3,4,5]\nrotate 3 steps to the right: [5,6,7,1,2,3,4]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [-1,-100,3,99], k = 2\n<strong>Output:</strong> [3,99,-1,-100]\n<strong>Explanation:</strong> \nrotate 1 steps to the right: [99,-1,-100,3]\nrotate 2 steps to the right: [3,99,-1,-100]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>-2<sup>31</sup> &lt;= nums[i] &lt;= 2<sup>31</sup> - 1</code></li>\n\t<li><code>0 &lt;= k &lt;= 10<sup>5</sup></code></li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up:</strong></p>\n\n<ul>\n\t<li>Try to come up with as many solutions as you can. There are at least <strong>three</strong> different ways to solve this problem.</li>\n\t<li>Could you do it in-place with <code>O(1)</code> extra space?</li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "283",
+      "slug": "move-zeroes",
+      "title": "Move Zeroes",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Two Pointers"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    void moveZeroes(vector<int>& nums) {\n        int non_zero=0;\n        for(int i=0;i<nums.size();i++){\n            if(nums[i]!=0){\n                nums[non_zero++]=nums[i];\n            }\n        }\n        for(int i=non_zero;i<nums.size();i++){\n            nums[i]=0;\n        }\n    }\n};",
+      "submission_id": 1645947327,
+      "solved_at": "2025-05-27T11:20:21+00:00",
+      "content": "<p>Given an integer array <code>nums</code>, move all <code>0</code>&#39;s to the end of it while maintaining the relative order of the non-zero elements.</p>\n\n<p><strong>Note</strong> that you must do this in-place without making a copy of the array.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> nums = [0,1,0,3,12]\n<strong>Output:</strong> [1,3,12,0,0]\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> nums = [0]\n<strong>Output:</strong> [0]\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>-2<sup>31</sup> &lt;= nums[i] &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<strong>Follow up:</strong> Could you minimize the total number of operations done?"
+    },
+    {
+      "frontend_id": "268",
+      "slug": "missing-number",
+      "title": "Missing Number",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Math",
+        "Binary Search",
+        "Bit Manipulation",
+        "Sorting"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    int missingNumber(vector<int>& nums) {\n        int sum=0;\n        for(int i=0;i<nums.size();i++){\n            sum+=nums[i];\n        }\n        return (((nums.size())*(nums.size()+1)/2)-sum);\n    }\n};",
+      "submission_id": 1645952204,
+      "solved_at": "2025-05-27T11:27:05+00:00",
+      "content": "<p>Given an array <code>nums</code> containing <code>n</code> distinct numbers in the range <code>[0, n]</code>, return <em>the only number in the range that is missing from the array.</em></p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">nums = [3,0,1]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">2</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p><code>n = 3</code> since there are 3 numbers, so all numbers are in the range <code>[0,3]</code>. 2 is the missing number in the range since it does not appear in <code>nums</code>.</p>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">nums = [0,1]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">2</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p><code>n = 2</code> since there are 2 numbers, so all numbers are in the range <code>[0,2]</code>. 2 is the missing number in the range since it does not appear in <code>nums</code>.</p>\n</div>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">nums = [9,6,4,2,3,5,7,0,1]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">8</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p><code>n = 9</code> since there are 9 numbers, so all numbers are in the range <code>[0,9]</code>. 8 is the missing number in the range since it does not appear in <code>nums</code>.</p>\n</div>\n\n<div class=\"simple-translate-system-theme\" id=\"simple-translate\">\n<div>\n<div class=\"simple-translate-button isShow\" style=\"background-image: url(&quot;moz-extension://8a9ffb6b-7e69-4e93-aae1-436a1448eff6/icons/512.png&quot;); height: 22px; width: 22px; top: 318px; left: 36px;\">&nbsp;</div>\n\n<div class=\"simple-translate-panel \" style=\"width: 300px; height: 200px; top: 0px; left: 0px; font-size: 13px;\">\n<div class=\"simple-translate-result-wrapper\" style=\"overflow: hidden;\">\n<div class=\"simple-translate-move\" draggable=\"true\">&nbsp;</div>\n\n<div class=\"simple-translate-result-contents\">\n<p class=\"simple-translate-result\" dir=\"auto\">&nbsp;</p>\n\n<p class=\"simple-translate-candidate\" dir=\"auto\">&nbsp;</p>\n</div>\n</div>\n</div>\n</div>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>n == nums.length</code></li>\n\t<li><code>1 &lt;= n &lt;= 10<sup>4</sup></code></li>\n\t<li><code>0 &lt;= nums[i] &lt;= n</code></li>\n\t<li>All the numbers of <code>nums</code> are <strong>unique</strong>.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up:</strong> Could you implement a solution using only <code>O(1)</code> extra space complexity and <code>O(n)</code> runtime complexity?</p>\n"
+    },
+    {
+      "frontend_id": "485",
+      "slug": "max-consecutive-ones",
+      "title": "Max Consecutive Ones",
+      "difficulty": "Easy",
+      "tags": [
+        "Array"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    int findMaxConsecutiveOnes(vector<int>& nums) {\n        int ans = 0, count = 0;\n        for(int i = 0, n = nums.size(); i < n; ++i){\n            if(nums[i]){\n                ++count;\n                ans = max(ans , count);\n            }\n            else count = 0;\n        }\n        return ans;\n    }\n};\n",
+      "submission_id": 1645980736,
+      "solved_at": "2025-05-27T12:06:41+00:00",
+      "content": "<p>Given a binary array <code>nums</code>, return <em>the maximum number of consecutive </em><code>1</code><em>&#39;s in the array</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,1,0,1,1,1]\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> The first two digits or the last three digits are consecutive 1s. The maximum number of consecutive 1s is 3.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,0,1,1,0,1]\n<strong>Output:</strong> 2\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>nums[i]</code> is either <code>0</code> or <code>1</code>.</li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "136",
+      "slug": "single-number",
+      "title": "Single Number",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Bit Manipulation"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    int singleNumber(vector<int>& nums) {\n        int result=0;\n        for(int i=0;i<nums.size();i++){\n            result^=nums[i];\n        }\n        return result;\n    }\n};",
+      "submission_id": 1645992566,
+      "solved_at": "2025-05-27T12:22:34+00:00",
+      "content": "<p>Given a <strong>non-empty</strong>&nbsp;array of integers <code>nums</code>, every element appears <em>twice</em> except for one. Find that single one.</p>\n\n<p>You must&nbsp;implement a solution with a linear runtime complexity and use&nbsp;only constant&nbsp;extra space.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">nums = [2,2,1]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">1</span></p>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">nums = [4,1,2,1,2]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">4</span></p>\n</div>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">nums = [1]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">1</span></p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 3 * 10<sup>4</sup></code></li>\n\t<li><code>-3 * 10<sup>4</sup> &lt;= nums[i] &lt;= 3 * 10<sup>4</sup></code></li>\n\t<li>Each element in the array appears twice except for one element which appears only once.</li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "35",
+      "slug": "search-insert-position",
+      "title": "Search Insert Position",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Binary Search"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    int searchInsert(vector<int>& nums, int target) {\n        int l=0;\n        int r=nums.size()-1;\n        while(l<=r){\n            int mid=l+(r-l)/2;\n            if(nums[mid]>target){\n                r=mid-1;\n            }\n            else if(nums[mid]==target){\n                return mid;\n            }\n            else if(nums[mid]<target){\n                l=mid+1;\n            }\n        }\n        return l;\n    }\n};",
+      "submission_id": 1647152515,
+      "solved_at": "2025-05-28T16:01:19+00:00",
+      "content": "<p>Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.</p>\n\n<p>You must&nbsp;write an algorithm with&nbsp;<code>O(log n)</code> runtime complexity.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,3,5,6], target = 5\n<strong>Output:</strong> 2\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,3,5,6], target = 2\n<strong>Output:</strong> 1\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,3,5,6], target = 7\n<strong>Output:</strong> 4\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>-10<sup>4</sup> &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>\n\t<li><code>nums</code> contains <strong>distinct</strong> values sorted in <strong>ascending</strong> order.</li>\n\t<li><code>-10<sup>4</sup> &lt;= target &lt;= 10<sup>4</sup></code></li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "292",
+      "slug": "nim-game",
+      "title": "Nim Game",
+      "difficulty": "Easy",
+      "tags": [
+        "Math",
+        "Brainteaser",
+        "Minimax",
+        "Game Theory",
+        "Nim Game",
+        "Impartial Game"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    bool canWinNim(int n) {\n        return n%4!=0;\n    }\n};",
+      "submission_id": 1647161679,
+      "solved_at": "2025-05-28T16:11:40+00:00",
+      "content": "<p>You are playing the following Nim Game with your friend:</p>\n\n<ul>\n\t<li>Initially, there is a heap of stones on the table.</li>\n\t<li>You and your friend will alternate taking turns, and <strong>you go first</strong>.</li>\n\t<li>On each turn, the person whose turn it is will remove 1 to 3 stones from the heap.</li>\n\t<li>The one who removes the last stone is the winner.</li>\n</ul>\n\n<p>Given <code>n</code>, the number of stones in the heap, return <code>true</code><em> if you can win the game assuming both you and your friend play optimally, otherwise return </em><code>false</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 4\n<strong>Output:</strong> false\n<strong>Explanation:</strong> These are the possible outcomes:\n1. You remove 1 stone. Your friend removes 3 stones, including the last stone. Your friend wins.\n2. You remove 2 stones. Your friend removes 2 stones, including the last stone. Your friend wins.\n3. You remove 3 stones. Your friend removes the last stone. Your friend wins.\nIn all outcomes, your friend wins.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 1\n<strong>Output:</strong> true\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 2\n<strong>Output:</strong> true\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= n &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "326",
+      "slug": "power-of-three",
+      "title": "Power of Three",
+      "difficulty": "Easy",
+      "tags": [
+        "Math",
+        "Recursion"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    bool isPowerOfThree(int n) {\n        if(n==0) return false;\n        if(n==1) return true;\n        if(n>1){\n            return n%3==0 && isPowerOfThree(n/3);\n        }\n        else {\n            return false;\n        }\n    }\n};",
+      "submission_id": 1647169318,
+      "solved_at": "2025-05-28T16:20:13+00:00",
+      "content": "<p>Given an integer <code>n</code>, return <em><code>true</code> if it is a power of three. Otherwise, return <code>false</code></em>.</p>\n\n<p>An integer <code>n</code> is a power of three, if there exists an integer <code>x</code> such that <code>n == 3<sup>x</sup></code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 27\n<strong>Output:</strong> true\n<strong>Explanation:</strong> 27 = 3<sup>3</sup>\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 0\n<strong>Output:</strong> false\n<strong>Explanation:</strong> There is no x where 3<sup>x</sup> = 0.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = -1\n<strong>Output:</strong> false\n<strong>Explanation:</strong> There is no x where 3<sup>x</sup> = (-1).\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>-2<sup>31</sup> &lt;= n &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<strong>Follow up:</strong> Could you solve it without loops/recursion?"
+    },
+    {
+      "frontend_id": "75",
+      "slug": "sort-colors",
+      "title": "Sort Colors",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Two Pointers",
+        "Sorting",
+        "Quicksort",
+        "Bubble Sort"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    void sortColors(vector<int>& nums) {\n        int l=0,m=0,r=nums.size()-1;\n        while(m<=r){\n            int choice=nums[m];\n            switch(choice){\n                case 0:\n                swap(nums[m++],nums[l++]);\n                break;\n                case 1:\n                m++;\n                break;\n                case 2:\n                swap(nums[m],nums[r--]);\n                break;\n            }\n        }\n    }\n};",
+      "submission_id": 1648622756,
+      "solved_at": "2025-05-30T06:27:28+00:00",
+      "content": "<p>You are given an array <code>nums</code> with <code>n</code> objects colored red, white, or blue, sort them <strong><a href=\"https://en.wikipedia.org/wiki/In-place_algorithm\" target=\"_blank\">in-place</a> </strong>so that objects of the same color are adjacent, with the colors in the order red, white, and blue.</p>\n\n<p>We will use the integers 0, 1, and 2 to represent the color red, white, and blue, respectively.</p>\n\n<p>You must solve this problem without using the library&#39;s sort function.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">nums = [2,0,2,1,1,0]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">[0,0,1,1,2,2]</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>The array has two 0s, two 1s, and two 2s. Sorting them in-place places all 0s first, then all 1s, then all 2s.</p>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">nums = [2,0,1]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">[0,1,2]</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>The array has one each of 0, 1, and 2, arranged in-place in the order 0, 1, 2.</p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>n == nums.length</code></li>\n\t<li><code>1 &lt;= n &lt;= 300</code></li>\n\t<li><code>nums[i]</code> is either 0, 1, or 2.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up:</strong>&nbsp;Could you come up with a one-pass algorithm using only&nbsp;constant extra space?</p>\n"
+    },
+    {
+      "frontend_id": "3386",
+      "slug": "button-with-longest-push-time",
+      "title": "Button with Longest Push Time",
+      "difficulty": "Easy",
+      "tags": [
+        "Array"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    int buttonWithLongestTime(vector<vector<int>>& events) {\n        int maxDuration = events[0][1];\n        int result = events[0][0];\n\n        for (int i = 1; i < events.size(); i++) {\n            int duration = events[i][1] - events[i - 1][1];\n            if (duration > maxDuration || \n               (duration == maxDuration && events[i][0] < result)) {\n                maxDuration = duration;\n                result = events[i][0];\n            }\n        }\n\n        return result;\n    }\n};",
+      "submission_id": 1654934483,
+      "solved_at": "2025-06-05T17:02:08+00:00",
+      "content": "<p>You are given a 2D array <code>events</code> which represents a sequence of events where a child pushes a series of buttons on a keyboard.</p>\n\n<p>Each <code>events[i] = [index<sub>i</sub>, time<sub>i</sub>]</code> indicates that the button at index <code>index<sub>i</sub></code> was pressed at time <code>time<sub>i</sub></code>.</p>\n\n<ul>\n\t<li>The array is <strong>sorted</strong> in increasing order of <code>time</code>.</li>\n\t<li>The time taken to press a button is the difference in time between consecutive button presses. The time for the first button is simply the time at which it was pressed.</li>\n</ul>\n\n<p>Return the <code>index</code> of the button that took the <strong>longest</strong> time to push. If multiple buttons have the same longest time, return the button with the <strong>smallest</strong> <code>index</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">events = [[1,2],[2,5],[3,9],[1,15]]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">1</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<ul>\n\t<li>Button with index 1 is pressed at time 2.</li>\n\t<li>Button with index 2 is pressed at time 5, so it took <code>5 - 2 = 3</code> units of time.</li>\n\t<li>Button with index 3 is pressed at time 9, so it took <code>9 - 5 = 4</code> units of time.</li>\n\t<li>Button with index 1 is pressed again at time 15, so it took <code>15 - 9 = 6</code> units of time.</li>\n</ul>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">events = [[10,5],[1,7]]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">10</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<ul>\n\t<li>Button with index 10 is pressed at time 5.</li>\n\t<li>Button with index 1 is pressed at time 7, so it took <code>7 - 5 = 2</code> units of time.</li>\n</ul>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= events.length &lt;= 1000</code></li>\n\t<li><code>events[i] == [index<sub>i</sub>, time<sub>i</sub>]</code></li>\n\t<li><code>1 &lt;= index<sub>i</sub>, time<sub>i</sub> &lt;= 10<sup>5</sup></code></li>\n\t<li>The input is generated such that <code>events</code> is sorted in increasing order of <code>time<sub>i</sub></code>.</li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "27",
+      "slug": "remove-element",
+      "title": "Remove Element",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Two Pointers"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    int removeElement(vector<int>& nums, int val) {\n        int l=0,r=nums.size()-1;\n        while(l<=r){\n            if(nums[l]!=val && nums[r]==val){\n                l++;r--;\n            }\n            else if(nums[l]==val && nums[r]==val){\n                r--;\n            }\n            else if(nums[l]!=val && nums[r]!=val){\n                l++;\n            }\n            else if(nums[l]==val && nums[r]!=val){\n                swap(nums[l++],nums[r--]);\n            }\n        }\n        return l;\n\n    }\n};",
+      "submission_id": 1655070105,
+      "solved_at": "2025-06-05T19:34:12+00:00",
+      "content": "<p>Given an integer array <code>nums</code> and an integer <code>val</code>, remove all occurrences of <code>val</code> in <code>nums</code> <a href=\"https://en.wikipedia.org/wiki/In-place_algorithm\" target=\"_blank\"><strong>in-place</strong></a>. The order of the elements may be changed. Then return <em>the number of elements in </em><code>nums</code><em> which are not equal to </em><code>val</code>.</p>\n\n<p>Consider the number of elements in <code>nums</code> which are not equal to <code>val</code> be <code>k</code>, to get accepted, you need to do the following things:</p>\n\n<ul>\n\t<li>Change the array <code>nums</code> such that the first <code>k</code> elements of <code>nums</code> contain the elements which are not equal to <code>val</code>. The remaining elements of <code>nums</code> are not important as well as the size of <code>nums</code>.</li>\n\t<li>Return <code>k</code>.</li>\n</ul>\n\n<p><strong>Custom Judge:</strong></p>\n\n<p>The judge will test your solution with the following code:</p>\n\n<pre>\nint[] nums = [...]; // Input array\nint val = ...; // Value to remove\nint[] expectedNums = [...]; // The expected answer with correct length.\n                            // It is sorted with no values equaling val.\n\nint k = removeElement(nums, val); // Calls your implementation\n\nassert k == expectedNums.length;\nsort(nums, 0, k); // Sort the first k elements of nums\nfor (int i = 0; i &lt; actualLength; i++) {\n    assert nums[i] == expectedNums[i];\n}\n</pre>\n\n<p>If all assertions pass, then your solution will be <strong>accepted</strong>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,2,2,3], val = 3\n<strong>Output:</strong> 2, nums = [2,2,_,_]\n<strong>Explanation:</strong> Your function should return k = 2, with the first two elements of nums being 2.\nIt does not matter what you leave beyond the returned k (hence they are underscores).\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [0,1,2,2,3,0,4,2], val = 2\n<strong>Output:</strong> 5, nums = [0,1,4,0,3,_,_,_]\n<strong>Explanation:</strong> Your function should return k = 5, with the first five elements of nums containing 0, 0, 1, 3, and 4.\nNote that the five elements can be returned in any order.\nIt does not matter what you leave beyond the returned k (hence they are underscores).\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>0 &lt;= nums.length &lt;= 100</code></li>\n\t<li><code>0 &lt;= nums[i] &lt;= 50</code></li>\n\t<li><code>0 &lt;= val &lt;= 100</code></li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "1822",
+      "slug": "sign-of-the-product-of-an-array",
+      "title": "Sign of the Product of an Array",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Math"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    int signum(int x){\n        if(x==0){\n            return 0;\n        }\n        else if(x<0){\n            return -1;\n        }\n        else {\n            return 1;\n        }\n    }\n    int arraySign(vector<int>& nums) {\n        int p=1;\n        for(int i=0;i<nums.size();i++){\n            p*=signum(nums[i]);\n            if(p==0){\n                return 0;\n            }\n        }\n        return p;\n    }\n};",
+      "submission_id": 1655090520,
+      "solved_at": "2025-06-05T20:06:39+00:00",
+      "content": "<p>Implement a function <code>signFunc(x)</code> that returns:</p>\n\n<ul>\n\t<li><code>1</code> if <code>x</code> is positive.</li>\n\t<li><code>-1</code> if <code>x</code> is negative.</li>\n\t<li><code>0</code> if <code>x</code> is equal to <code>0</code>.</li>\n</ul>\n\n<p>You are given an integer array <code>nums</code>. Let <code>product</code> be the product of all values in the array <code>nums</code>.</p>\n\n<p>Return <code>signFunc(product)</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [-1,-2,-3,-4,3,2,1]\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> The product of all values in the array is 144, and signFunc(144) = 1\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,5,0,2,-3]\n<strong>Output:</strong> 0\n<strong>Explanation:</strong> The product of all values in the array is 0, and signFunc(0) = 0\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [-1,1,-1,1,-1]\n<strong>Output:</strong> -1\n<strong>Explanation:</strong> The product of all values in the array is -1, and signFunc(-1) = -1\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 1000</code></li>\n\t<li><code>-100 &lt;= nums[i] &lt;= 100</code></li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "1475",
+      "slug": "final-prices-with-a-special-discount-in-a-shop",
+      "title": "Final Prices With a Special Discount in a Shop",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Stack",
+        "Monotonic Stack"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    vector<int> finalPrices(vector<int>& prices) {\n        for(int i=0;i<prices.size()-1;i++){\n            for(int j=i+1;j<prices.size();j++){\n                if(prices[i]>=prices[j]){\n                    prices[i]-=prices[j];\n                    break;\n                }\n            }\n        }\n        return prices;\n    }\n};",
+      "submission_id": 1655096922,
+      "solved_at": "2025-06-05T20:18:03+00:00",
+      "content": "<p>You are given an integer array <code>prices</code> where <code>prices[i]</code> is the price of the <code>i<sup>th</sup></code> item in a shop.</p>\n\n<p>There is a special discount for items in the shop. If you buy the <code>i<sup>th</sup></code> item, then you will receive a discount equivalent to <code>prices[j]</code> where <code>j</code> is the minimum index such that <code>j &gt; i</code> and <code>prices[j] &lt;= prices[i]</code>. Otherwise, you will not receive any discount at all.</p>\n\n<p>Return an integer array <code>answer</code> where <code>answer[i]</code> is the final price you will pay for the <code>i<sup>th</sup></code> item of the shop, considering the special discount.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> prices = [8,4,6,2,3]\n<strong>Output:</strong> [4,2,4,2,3]\n<strong>Explanation:</strong> \nFor item 0 with price[0]=8 you will receive a discount equivalent to prices[1]=4, therefore, the final price you will pay is 8 - 4 = 4.\nFor item 1 with price[1]=4 you will receive a discount equivalent to prices[3]=2, therefore, the final price you will pay is 4 - 2 = 2.\nFor item 2 with price[2]=6 you will receive a discount equivalent to prices[3]=2, therefore, the final price you will pay is 6 - 2 = 4.\nFor items 3 and 4 you will not receive any discount at all.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> prices = [1,2,3,4,5]\n<strong>Output:</strong> [1,2,3,4,5]\n<strong>Explanation:</strong> In this case, for all items, you will not receive any discount at all.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> prices = [10,1,1,6]\n<strong>Output:</strong> [9,0,1,6]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= prices.length &lt;= 500</code></li>\n\t<li><code>1 &lt;= prices[i] &lt;= 1000</code></li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "3065",
+      "slug": "minimum-operations-to-exceed-threshold-value-i",
+      "title": "Minimum Operations to Exceed Threshold Value I",
+      "difficulty": "Easy",
+      "tags": [
+        "Array"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    int minOperations(vector<int>& nums, int k) {\n        //sort(nums.begin(),nums.end());\n        int count=0;\n        for(int x:nums){\n            if(x<k){\n                count++;\n            }\n        }\n        return count;\n    }\n    \n};",
+      "submission_id": 1655843879,
+      "solved_at": "2025-06-06T16:30:50+00:00",
+      "content": "<p>You are given a <strong>0-indexed</strong> integer array <code>nums</code>, and an integer <code>k</code>.</p>\n\n<p>In one operation, you can remove one occurrence of the smallest element of <code>nums</code>.</p>\n\n<p>Return <em>the <strong>minimum</strong> number of operations needed so that all elements of the array are greater than or equal to</em> <code>k</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [2,11,10,1,3], k = 10\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> After one operation, nums becomes equal to [2, 11, 10, 3].\nAfter two operations, nums becomes equal to [11, 10, 3].\nAfter three operations, nums becomes equal to [11, 10].\nAt this stage, all the elements of nums are greater than or equal to 10 so we can stop.\nIt can be shown that 3 is the minimum number of operations needed so that all elements of the array are greater than or equal to 10.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,1,2,4,9], k = 1\n<strong>Output:</strong> 0\n<strong>Explanation:</strong> All elements of the array are greater than or equal to 1 so we do not need to apply any operations on nums.</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,1,2,4,9], k = 9\n<strong>Output:</strong> 4\n<strong>Explanation:</strong> only a single element of nums is greater than or equal to 9 so we need to apply the operations 4 times on nums.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 50</code></li>\n\t<li><code>1 &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>\n\t<li><code>1 &lt;= k &lt;= 10<sup>9</sup></code></li>\n\t<li>The input is generated such that there is at least one index <code>i</code> such that <code>nums[i] &gt;= k</code>.</li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "2643",
+      "slug": "row-with-maximum-ones",
+      "title": "Row With Maximum Ones",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Matrix"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    vector<int> rowAndMaximumOnes(vector<vector<int>>& mat) {\n        int max_count=-1;\n        int max_index=-1;\n        for(int i=0;i<mat.size();i++){\n            int current_count=0;\n            for(int j=0;j<mat[i].size();j++){\n                if(mat[i][j]==1){\n                    current_count++;\n                }\n            }\n            if(current_count>max_count){\n                max_count=current_count;\n                max_index=i;\n            }\n        }\n        return {max_index,max_count};\n    }\n};",
+      "submission_id": 1655871577,
+      "solved_at": "2025-06-06T17:02:31+00:00",
+      "content": "<p>Given a <code>m x n</code> binary matrix <code>mat</code>, find the <strong>0-indexed</strong> position of the row that contains the <strong>maximum</strong> count of <strong>ones,</strong> and the number of ones in that row.</p>\n\n<p>In case there are multiple rows that have the maximum count of ones, the row with the <strong>smallest row number</strong> should be selected.</p>\n\n<p>Return<em> an array containing the index of the row, and the number of ones in it.</em></p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> mat = [[0,1],[1,0]]\n<strong>Output:</strong> [0,1]\n<strong>Explanation:</strong> Both rows have the same number of 1&#39;s. So we return the index of the smaller row, 0, and the maximum count of ones (1<code>)</code>. So, the answer is [0,1]. \n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> mat = [[0,0,0],[0,1,1]]\n<strong>Output:</strong> [1,2]\n<strong>Explanation:</strong> The row indexed 1 has the maximum count of ones <code>(2)</code>. So we return its index, <code>1</code>, and the count. So, the answer is [1,2].\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> mat = [[0,0],[1,1],[0,0]]\n<strong>Output:</strong> [1,2]\n<strong>Explanation:</strong> The row indexed 1 has the maximum count of ones (2). So the answer is [1,2].\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>m == mat.length</code>&nbsp;</li>\n\t<li><code>n == mat[i].length</code>&nbsp;</li>\n\t<li><code>1 &lt;= m, n &lt;= 100</code>&nbsp;</li>\n\t<li><code>mat[i][j]</code> is either <code>0</code> or <code>1</code>.</li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "53",
+      "slug": "maximum-subarray",
+      "title": "Maximum Subarray",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Divide and Conquer",
+        "Dynamic Programming"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    int maxSubArray(vector<int>& nums) {\n        int sum=0;\n        int max_sum=INT_MIN;\n        for(int i=0;i<nums.size();i++){\n            sum+=nums[i];\n            if(sum>max_sum){\n                max_sum=sum;\n            }\n            if(sum<0){\n                sum=0;\n            }\n        }\n        return max_sum;\n    }\n};",
+      "submission_id": 1655909075,
+      "solved_at": "2025-06-06T17:43:55+00:00",
+      "content": "<p>Given an integer array <code>nums</code>, find the <span data-keyword=\"subarray-nonempty\">subarray</span> with the largest sum, and return <em>its sum</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [-2,1,-3,4,-1,2,1,-5,4]\n<strong>Output:</strong> 6\n<strong>Explanation:</strong> The subarray [4,-1,2,1] has the largest sum 6.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1]\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> The subarray [1] has the largest sum 1.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [5,4,-1,7,8]\n<strong>Output:</strong> 23\n<strong>Explanation:</strong> The subarray [5,4,-1,7,8] has the largest sum 23.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>-10<sup>4</sup> &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up:</strong> If you have figured out the <code>O(n)</code> solution, try coding another solution using the <strong>divide and conquer</strong> approach, which is more subtle.</p>\n"
+    },
+    {
+      "frontend_id": "2149",
+      "slug": "rearrange-array-elements-by-sign",
+      "title": "Rearrange Array Elements by Sign",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Two Pointers",
+        "Simulation"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    vector<int> rearrangeArray(vector<int>& nums) {\n        int n = nums.size();\n        int s = 0;\n        vector<int> res;\n        int i = 0 , j = 0;\n        while(s != n){\n            while(nums[i] < 0)i++;\n            res.push_back(nums[i++]);\n            while(nums[j] > 0)j++;\n            res.push_back(nums[j++]);\n            s += 2;\n        }\n        return res;\n    }\n};",
+      "submission_id": 1657846954,
+      "solved_at": "2025-06-08T16:50:35+00:00",
+      "content": "<p>You are given a <strong>0-indexed</strong> integer array <code>nums</code> of <strong>even</strong> length consisting of an <strong>equal</strong> number of positive and negative integers.</p>\n\n<p>You should return the array of nums such that the array follows the given conditions:</p>\n\n<ol>\n\t<li>Every <strong>consecutive pair</strong> of integers have <strong>opposite signs</strong>.</li>\n\t<li>For all integers with the same sign, the <strong>order</strong> in which they were present in <code>nums</code> is <strong>preserved</strong>.</li>\n\t<li>The rearranged array begins with a positive integer.</li>\n</ol>\n\n<p>Return <em>the modified array after rearranging the elements to satisfy the aforementioned conditions</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,1,-2,-5,2,-4]\n<strong>Output:</strong> [3,-2,1,-5,2,-4]\n<strong>Explanation:</strong>\nThe positive integers in nums are [3,1,2]. The negative integers are [-2,-5,-4].\nThe only possible way to rearrange them such that they satisfy all conditions is [3,-2,1,-5,2,-4].\nOther ways such as [1,-2,2,-5,3,-4], [3,1,2,-2,-5,-4], [-2,3,-5,1,-4,2] are incorrect because they do not satisfy one or more conditions.  \n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [-1,1]\n<strong>Output:</strong> [1,-1]\n<strong>Explanation:</strong>\n1 is the only positive integer and -1 the only negative integer in nums.\nSo nums is rearranged to [1,-1].\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>2 &lt;= nums.length &lt;= 2 * 10<sup>5</sup></code></li>\n\t<li><code>nums.length</code> is <strong>even</strong></li>\n\t<li><code>1 &lt;= |nums[i]| &lt;= 10<sup>5</sup></code></li>\n\t<li><code>nums</code> consists of <strong>equal</strong> number of positive and negative integers.</li>\n</ul>\n\n<p>&nbsp;</p>\nIt is not required to do the modifications in-place."
+    },
+    {
+      "frontend_id": "73",
+      "slug": "set-matrix-zeroes",
+      "title": "Set Matrix Zeroes",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Matrix"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    void setZeroes(vector<vector<int>>& matrix) {\n        int m=matrix.size();\n        int n=matrix[0].size();\n        vector<int> row(m,0),col(n,0);\n        for(int i=0;i<m;i++){\n            for(int j=0;j<n;j++){\n                if(matrix[i][j]==0){\n                    row[i]=1;\n                    col[j]=1;\n                }\n            }\n        }\n        for(int i=0;i<m;i++){\n            for(int j=0;j<n;j++){\n                if(row[i]==1 || col[j]==1){\n                    matrix[i][j]=0;\n                }\n            }\n        }\n    }\n};",
+      "submission_id": 1664957986,
+      "solved_at": "2025-06-15T13:11:21+00:00",
+      "content": "<p>Given an <code>m x n</code> integer matrix <code>matrix</code>, if an element is <code>0</code>, set its entire row and column to <code>0</code>&#39;s.</p>\n\n<p>You must do it <a href=\"https://en.wikipedia.org/wiki/In-place_algorithm\" target=\"_blank\">in place</a>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/08/17/mat1.jpg\" style=\"width: 450px; height: 169px;\" />\n<pre>\n<strong>Input:</strong> matrix = [[1,1,1],[1,0,1],[1,1,1]]\n<strong>Output:</strong> [[1,0,1],[0,0,0],[1,0,1]]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/08/17/mat2.jpg\" style=\"width: 450px; height: 137px;\" />\n<pre>\n<strong>Input:</strong> matrix = [[0,1,2,0],[3,4,5,2],[1,3,1,5]]\n<strong>Output:</strong> [[0,0,0,0],[0,4,5,0],[0,3,1,0]]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>m == matrix.length</code></li>\n\t<li><code>n == matrix[0].length</code></li>\n\t<li><code>1 &lt;= m, n &lt;= 200</code></li>\n\t<li><code>-2<sup>31</sup> &lt;= matrix[i][j] &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up:</strong></p>\n\n<ul>\n\t<li>A straightforward solution using <code>O(mn)</code> space is probably a bad idea.</li>\n\t<li>A simple improvement uses <code>O(m + n)</code> space, but still not the best solution.</li>\n\t<li>Could you devise a constant space solution?</li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "1037",
+      "slug": "valid-boomerang",
+      "title": "Valid Boomerang",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Math",
+        "Geometry"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    bool isBoomerang(vector<vector<int>>& points) {\n        return (points[0][0]*(points[1][1]-points[2][1])+points[1][0]*(points[2][1]-points[0][1])+points[2][0]*(points[0][1]-points[1][1]))!=0;\n    }\n};",
+      "submission_id": 1765187398,
+      "solved_at": "2025-09-09T17:06:33+00:00",
+      "content": "<p>Given an array <code>points</code> where <code>points[i] = [x<sub>i</sub>, y<sub>i</sub>]</code> represents a point on the <strong>X-Y</strong> plane, return <code>true</code> <em>if these points are a <strong>boomerang</strong></em>.</p>\n\n<p>A <strong>boomerang</strong> is a set of three points that are <strong>all distinct</strong> and <strong>not in a straight line</strong>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> points = [[1,1],[2,3],[3,2]]\n<strong>Output:</strong> true\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> points = [[1,1],[2,2],[3,3]]\n<strong>Output:</strong> false\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>points.length == 3</code></li>\n\t<li><code>points[i].length == 2</code></li>\n\t<li><code>0 &lt;= x<sub>i</sub>, y<sub>i</sub> &lt;= 100</code></li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "3184",
+      "slug": "count-pairs-that-form-a-complete-day-i",
+      "title": "Count Pairs That Form a Complete Day I",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Counting"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    int countCompleteDayPairs(vector<int>& hours) {\n       int pairCount=0;\n        for(int i=0;i<hours.size()-1;i++){\n            for(int j=i+1;j<hours.size();j++){\n                if((hours[i]+hours[j])%24==0) pairCount++;\n            }\n        }\n        return pairCount;\n    }\n};",
+      "submission_id": 1765196098,
+      "solved_at": "2025-09-09T17:13:26+00:00",
+      "content": "<p>Given an integer array <code>hours</code> representing times in <strong>hours</strong>, return an integer denoting the number of pairs <code>i</code>, <code>j</code> where <code>i &lt; j</code> and <code>hours[i] + hours[j]</code> forms a <strong>complete day</strong>.</p>\n\n<p>A <strong>complete day</strong> is defined as a time duration that is an <strong>exact</strong> <strong>multiple</strong> of 24 hours.</p>\n\n<p>For example, 1 day is 24 hours, 2 days is 48 hours, 3 days is 72 hours, and so on.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">hours = [12,12,30,24,24]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">2</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>The pairs of indices that form a complete day are <code>(0, 1)</code> and <code>(3, 4)</code>.</p>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">hours = [72,48,24,3]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">3</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>The pairs of indices that form a complete day are <code>(0, 1)</code>, <code>(0, 2)</code>, and <code>(1, 2)</code>.</p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= hours.length &lt;= 100</code></li>\n\t<li><code>1 &lt;= hours[i] &lt;= 10<sup>9</sup></code></li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "2441",
+      "slug": "largest-positive-integer-that-exists-with-its-negative",
+      "title": "Largest Positive Integer That Exists With Its Negative",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Two Pointers",
+        "Sorting"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    int findMaxK(vector<int>& nums) {\n          sort(nums.begin(),nums.end());\n          int l=0,r=nums.size()-1;\n          while(l<r){\n            if(nums[l]+nums[r]>0){\n                r--;\n            }\n            else if(nums[l]+nums[r]<0){\n                l++;\n            }\n            else{\n                return nums[r];\n            }\n          }\n          return -1;     \n    }\n};",
+      "submission_id": 1765224479,
+      "solved_at": "2025-09-09T17:35:16+00:00",
+      "content": "<p>Given an integer array <code>nums</code> that <strong>does not contain</strong> any zeros, find <strong>the largest positive</strong> integer <code>k</code> such that <code>-k</code> also exists in the array.</p>\n\n<p>Return <em>the positive integer </em><code>k</code>. If there is no such integer, return <code>-1</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [-1,2,-3,3]\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> 3 is the only valid k we can find in the array.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [-1,10,6,7,-7,1]\n<strong>Output:</strong> 7\n<strong>Explanation:</strong> Both 1 and 7 have their corresponding negative values in the array. 7 has a larger value.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [-10,8,6,7,-2,-3]\n<strong>Output:</strong> -1\n<strong>Explanation:</strong> There is no a single valid k, we return -1.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 1000</code></li>\n\t<li><code>-1000 &lt;= nums[i] &lt;= 1000</code></li>\n\t<li><code>nums[i] != 0</code></li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "1437",
+      "slug": "check-if-all-1s-are-at-least-length-k-places-away",
+      "title": "Check If All 1's Are at Least Length K Places Away",
+      "difficulty": "Easy",
+      "tags": [
+        "Array"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    bool kLengthApart(vector<int>& nums, int k) {\n        int dist=0;\n        bool firstOne=false;\n        for(int i=0;i<nums.size();i++){\n            if(nums[i]==1) {\n                if(dist<k && firstOne==true){\n                    return false;\n                }\n                else{\n                    firstOne=true;\n                    dist=0;\n                }\n            }\n            else{\n                dist++;\n            }\n        }\n        return true;\n    }\n};",
+      "submission_id": 1765246318,
+      "solved_at": "2025-09-09T17:51:47+00:00",
+      "content": "<p>Given an binary array <code>nums</code> and an integer <code>k</code>, return <code>true</code><em> if all </em><code>1</code><em>&#39;s are at least </em><code>k</code><em> places away from each other, otherwise return </em><code>false</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/04/15/sample_1_1791.png\" style=\"width: 428px; height: 181px;\" />\n<pre>\n<strong>Input:</strong> nums = [1,0,0,0,1,0,0,1], k = 2\n<strong>Output:</strong> true\n<strong>Explanation:</strong> Each of the 1s are at least 2 places away from each other.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/04/15/sample_2_1791.png\" style=\"width: 320px; height: 173px;\" />\n<pre>\n<strong>Input:</strong> nums = [1,0,0,1,0,1], k = 2\n<strong>Output:</strong> false\n<strong>Explanation:</strong> The second 1 and third 1 are only one apart from each other.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>0 &lt;= k &lt;= nums.length</code></li>\n\t<li><code>nums[i]</code> is <code>0</code> or <code>1</code></li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "20",
+      "slug": "valid-parentheses",
+      "title": "Valid Parentheses",
+      "difficulty": "Easy",
+      "tags": [
+        "String",
+        "Stack",
+        "Bracket Sequences"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "#define size 10000\nclass staack{\n    private:\n    int a[size];\n    int top;\n    public:\n    staack(){\n        top=-1;\n    }\n    bool isEmpty(){\n        return top==-1;\n    }\n    bool isFull(){\n        return top==size-1;\n    }\n    void push(char x){\n        if(isFull()){\n            return;\n        }\n        a[++top]=x;\n    }\n    char pop(){\n        if(isEmpty()){\n            return -1;\n        }\n        return a[top--];\n    }\n    char peek(){\n        if(isEmpty()){\n            return -1;\n        }\n        return a[top];\n    }\n    bool isMatching(char c1,char c2){\n        return (c1=='('&&c2==')')||(c1=='['&&c2==']')||(c1=='{'&&c2=='}');\n    }\n    bool isOpening(char c){\n        return (c=='(')||(c=='{')||(c=='[');\n    }\n    bool isClosing(char c){\n        return (c==')')||(c=='}')||(c==']');\n    }\n    bool validate(string s){\n        for(char ch:s){\n            if(isOpening(ch)){\n                push(ch);\n            }\n            else{\n                if(isEmpty()||!isMatching(pop(),ch)) return false;\n            }\n\n        }\n        return isEmpty();\n    }\n};\nclass Solution {\npublic:\n    bool isValid(string s) {\n        staack mystack;\n        return mystack.validate(s);\n    }\n};",
+      "submission_id": 1809798836,
+      "solved_at": "2025-10-23T20:25:30+00:00",
+      "content": "<p>Given a string <code>s</code> containing just the characters <code>&#39;(&#39;</code>, <code>&#39;)&#39;</code>, <code>&#39;{&#39;</code>, <code>&#39;}&#39;</code>, <code>&#39;[&#39;</code> and <code>&#39;]&#39;</code>, determine if the input string is valid.</p>\n\n<p>An input string is valid if:</p>\n\n<ol>\n\t<li>Open brackets must be closed by the same type of brackets.</li>\n\t<li>Open brackets must be closed in the correct order.</li>\n\t<li>Every close bracket has a corresponding open bracket of the same type.</li>\n</ol>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;()&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">true</span></p>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;()[]{}&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">true</span></p>\n</div>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;(]&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">false</span></p>\n</div>\n\n<p><strong class=\"example\">Example 4:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;([])&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">true</span></p>\n</div>\n\n<p><strong class=\"example\">Example 5:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;([)]&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">false</span></p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>s</code> consists of parentheses only <code>&#39;()[]{}&#39;</code>.</li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "2427",
+      "slug": "number-of-common-factors",
+      "title": "Number of Common Factors",
+      "difficulty": "Easy",
+      "tags": [
+        "Math",
+        "Enumeration",
+        "Number Theory",
+        "Euclidean Algorithm",
+        "Greatest Common Divisor"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    int gcd(int a, int b) {\n    return b == 0 ? a : gcd(b, a % b);\n    }\n    int commonFactors(int a, int b) {\n        int hcf=gcd(a,b);\n        int count=0;\n        for(int i=2;i<=hcf;i++){\n            if(a%i==0&&b%i==0){count++;}\n        }\n        return count+1;\n    }\n};",
+      "submission_id": 1810363259,
+      "solved_at": "2025-10-24T13:32:24+00:00",
+      "content": "<p>Given two positive integers <code>a</code> and <code>b</code>, return <em>the number of <strong>common</strong> factors of </em><code>a</code><em> and </em><code>b</code>.</p>\n\n<p>An integer <code>x</code> is a <strong>common factor</strong> of <code>a</code> and <code>b</code> if <code>x</code> divides both <code>a</code> and <code>b</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> a = 12, b = 6\n<strong>Output:</strong> 4\n<strong>Explanation:</strong> The common factors of 12 and 6 are 1, 2, 3, 6.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> a = 25, b = 30\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> The common factors of 25 and 30 are 1, 5.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= a, b &lt;= 1000</code></li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "108",
+      "slug": "convert-sorted-array-to-binary-search-tree",
+      "title": "Convert Sorted Array to Binary Search Tree",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Divide and Conquer",
+        "Tree",
+        "Binary Search Tree",
+        "Binary Tree"
+      ],
+      "lang": "c",
+      "extension": "c",
+      "code": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     struct TreeNode *left;\n *     struct TreeNode *right;\n * };\n */\nstruct TreeNode* createNode(int val){\n    struct TreeNode* newNode=(struct TreeNode*)malloc(sizeof(struct TreeNode));\n    newNode->val=val;\n    newNode->left=newNode->right=NULL;\n    return newNode;\n}\nstruct TreeNode* buildBST(int *nums,int start ,int end){\n    if(start>end)return NULL;\n    int mid=(start+end)/2;\n    struct TreeNode* root=createNode(nums[mid]);\n    root->left=buildBST(nums,start,mid-1);\n    root->right=buildBST(nums,mid+1,end);\n    return root;\n\n}\nstruct TreeNode* sortedArrayToBST(int* nums, int n) {\n    return buildBST(nums,0,n-1);\n}",
+      "submission_id": 1810591706,
+      "solved_at": "2025-10-24T18:00:27+00:00",
+      "content": "<p>Given an integer array <code>nums</code> where the elements are sorted in <strong>ascending order</strong>, convert <em>it to a </em><span data-keyword=\"height-balanced\"><strong><em>height-balanced</em></strong></span> <em>binary search tree</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/02/18/btree1.jpg\" style=\"width: 302px; height: 222px;\" />\n<pre>\n<strong>Input:</strong> nums = [-10,-3,0,5,9]\n<strong>Output:</strong> [0,-3,9,-10,null,5]\n<strong>Explanation:</strong> [0,-10,5,null,-3,null,9] is also accepted:\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/02/18/btree2.jpg\" style=\"width: 302px; height: 222px;\" />\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/02/18/btree.jpg\" style=\"width: 342px; height: 142px;\" />\n<pre>\n<strong>Input:</strong> nums = [1,3]\n<strong>Output:</strong> [3,1]\n<strong>Explanation:</strong> [1,null,3] and [3,1] are both height-balanced BSTs.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>-10<sup>4</sup> &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>\n\t<li><code>nums</code> is sorted in a <strong>strictly increasing</strong> order.</li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "2848",
+      "slug": "points-that-intersect-with-cars",
+      "title": "Points That Intersect With Cars",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Prefix Sum"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    int numberOfPoints(vector<vector<int>>& nums) {\n        int count=0;        \n        vector<int>v(101, 0);//array with 101 elements indexed 0 to 100\n        for(int i=0;i<nums.size();i++){\n            int startIndex=nums[i][0];\n            int endIndex=nums[i][1];\n            for(int k=startIndex;k<=endIndex;k++){\n                v[k]++;\n            }\n        }\n        for(int i=1;i<v.size();i++){\n            if(v[i]!=0){\n                count++;\n            }\n        }\n        return count;\n    }\n};",
+      "submission_id": 1919199128,
+      "solved_at": "2026-02-14T16:27:54+00:00",
+      "content": "<p>You are given a <strong>0-indexed</strong> 2D integer array <code>nums</code> representing the coordinates of the cars parking on a number line. For any index <code>i</code>, <code>nums[i] = [start<sub>i</sub>, end<sub>i</sub>]</code> where <code>start<sub>i</sub></code> is the starting point of the <code>i<sup>th</sup></code> car and <code>end<sub>i</sub></code> is the ending point of the <code>i<sup>th</sup></code> car.</p>\n\n<p>Return <em>the number of integer points on the line that are covered with <strong>any part</strong> of a car.</em></p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [[3,6],[1,5],[4,7]]\n<strong>Output:</strong> 7\n<strong>Explanation:</strong> All the points from 1 to 7 intersect at least one car, therefore the answer would be 7.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [[1,3],[5,8]]\n<strong>Output:</strong> 7\n<strong>Explanation:</strong> Points intersecting at least one car are 1, 2, 3, 5, 6, 7, 8. There are a total of 7 points, therefore the answer would be 7.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 100</code></li>\n\t<li><code>nums[i].length == 2</code></li>\n\t<li><code><font face=\"monospace\">1 &lt;= start<sub>i</sub>&nbsp;&lt;= end<sub>i</sub>&nbsp;&lt;= 100</font></code></li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "1025",
+      "slug": "divisor-game",
+      "title": "Divisor Game",
+      "difficulty": "Easy",
+      "tags": [
+        "Math",
+        "Dynamic Programming",
+        "Brainteaser",
+        "Game Theory",
+        "Impartial Game"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    bool divisorGame(int n) {\n        return n%2==0;\n    }\n};",
+      "submission_id": 1919239455,
+      "solved_at": "2026-02-14T17:09:25+00:00",
+      "content": "<p>Alice and Bob take turns playing a game, with Alice starting first.</p>\n\n<p>Initially, there is a number <code>n</code> on the chalkboard. On each player&#39;s turn, that player makes a move consisting of:</p>\n\n<ul>\n\t<li>Choosing any integer <code>x</code> with <code>0 &lt; x &lt; n</code> and <code>n % x == 0</code>.</li>\n\t<li>Replacing the number <code>n</code> on the chalkboard with <code>n - x</code>.</li>\n</ul>\n\n<p>Also, if a player cannot make a move, they lose the game.</p>\n\n<p>Return <code>true</code> <em>if and only if Alice wins the game, assuming both players play optimally</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 2\n<strong>Output:</strong> true\n<strong>Explanation:</strong> Alice chooses 1, and Bob has no more moves.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 3\n<strong>Output:</strong> false\n<strong>Explanation:</strong> Alice chooses 1, Bob chooses 1, and Alice has no more moves.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= n &lt;= 1000</code></li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "3591",
+      "slug": "check-if-any-element-has-prime-frequency",
+      "title": "Check if Any Element Has Prime Frequency",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Math",
+        "Counting",
+        "Number Theory"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    bool isPrime(int x){\n        if(x<=1) return false;\n        if(x==2) return true;\n        for(int i=2;i*i<=x;i++){\n            if(x%i==0) {\n                return false;\n            }\n        }\n        return true;\n    }\n    bool checkPrimeFrequency(vector<int>& nums) {\n        unordered_map<int,int>freq;\n        for(auto&x:nums){\n            freq[x]++;\n        }\n        for(const auto&x:freq){\n            if(isPrime(x.second)){\n                return true;\n            }\n        }\n        return false;\n    }\n};",
+      "submission_id": 1919255011,
+      "solved_at": "2026-02-14T17:25:08+00:00",
+      "content": "<p>You are given an integer array <code>nums</code>.</p>\n\n<p>Return <code>true</code> if the frequency of any element of the array is <strong>prime</strong>, otherwise, return <code>false</code>.</p>\n\n<p>The <strong>frequency</strong> of an element <code>x</code> is the number of times it occurs in the array.</p>\n\n<p>A prime number is a natural number greater than 1 with only two factors, 1 and itself.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">nums = [1,2,3,4,5,4]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">true</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>4 has a frequency of two, which is a prime number.</p>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">nums = [1,2,3,4,5]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">false</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>All elements have a frequency of one.</p>\n</div>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">nums = [2,2,2,4,4]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">true</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>Both 2 and 4 have a prime frequency.</p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 100</code></li>\n\t<li><code>0 &lt;= nums[i] &lt;= 100</code></li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "3750",
+      "slug": "minimum-number-of-flips-to-reverse-binary-string",
+      "title": "Minimum Number of Flips to Reverse Binary String",
+      "difficulty": "Easy",
+      "tags": [
+        "Math",
+        "Two Pointers",
+        "String",
+        "Bit Manipulation"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    int minimumFlips(int n) {\n        if (n == 0) return 0;\n        \n        vector<int> binary;\n        int temp = n;\n        while (temp) {\n            binary.push_back(temp % 2);\n            temp /= 2;\n        }\n        int count = 0;\n        int left = 0, right = binary.size() - 1;\n        \n        while (left < right) {\n            if (binary[left] != binary[right]) {\n                count++;\n            }\n            left++;\n            right--;\n        }\n        \n        return count*2;\n    }\n};",
+      "submission_id": 1919293909,
+      "solved_at": "2026-02-14T18:04:02+00:00",
+      "content": "<p>You are given a <strong>positive</strong> integer <code>n</code>.</p>\n\n<p>Let <code>s</code> be the <strong>binary representation</strong> of <code>n</code> without leading zeros.</p>\n\n<p>The <strong>reverse</strong> of a binary string <code>s</code> is obtained by writing the characters of <code>s</code> in the opposite order.</p>\n\n<p>You may flip any bit in <code>s</code> (change <code>0 &rarr; 1</code> or <code>1 &rarr; 0</code>). Each flip affects <strong>exactly</strong> one bit.</p>\n\n<p>Return the <strong>minimum</strong> number of flips required to make <code>s</code> equal to the reverse of its original form.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">n = 7</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">0</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>The binary representation of 7 is <code>&quot;111&quot;</code>. Its reverse is also <code>&quot;111&quot;</code>, which is the same. Hence, no flips are needed.</p>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">n = 10</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">4</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>The binary representation of 10 is <code>&quot;1010&quot;</code>. Its reverse is <code>&quot;0101&quot;</code>. All four bits must be flipped to make them equal. Thus, the minimum number of flips required is 4.</p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= n &lt;= 10<sup>9</sup></code></li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "3005",
+      "slug": "count-elements-with-maximum-frequency",
+      "title": "Count Elements With Maximum Frequency",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Counting"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    int maxFrequencyElements(vector<int>& nums) {\n        vector<int>v(101,0);\n        int max=-1;\n        int maxCount=0;\n        for(const auto &x:nums){\n            v[x]++;\n        }\n        for(int i=1;i<v.size();i++){\n            if(v[i]>max){\n                max=v[i];\n                maxCount=1;\n            }\n            else if(v[i]==max) {\n                maxCount++;\n            }\n            else{\n                continue;\n            }\n        }\n        return maxCount*max;\n    }\n};",
+      "submission_id": 1919307480,
+      "solved_at": "2026-02-14T18:17:31+00:00",
+      "content": "<p>You are given an array <code>nums</code> consisting of <strong>positive</strong> integers.</p>\n\n<p>Return <em>the <strong>total frequencies</strong> of elements in</em><em> </em><code>nums</code>&nbsp;<em>such that those elements all have the <strong>maximum</strong> frequency</em>.</p>\n\n<p>The <strong>frequency</strong> of an element is the number of occurrences of that element in the array.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,2,3,1,4]\n<strong>Output:</strong> 4\n<strong>Explanation:</strong> The elements 1 and 2 have a frequency of 2 which is the maximum frequency in the array.\nSo the number of elements in the array with maximum frequency is 4.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,3,4,5]\n<strong>Output:</strong> 5\n<strong>Explanation:</strong> All elements of the array have a frequency of 1 which is the maximum.\nSo the number of elements in the array with maximum frequency is 5.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 100</code></li>\n\t<li><code>1 &lt;= nums[i] &lt;= 100</code></li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "168",
+      "slug": "excel-sheet-column-title",
+      "title": "Excel Sheet Column Title",
+      "difficulty": "Easy",
+      "tags": [
+        "Math",
+        "String"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    string convertToTitle(int columnNumber) {\n        //create dictionary\n        map<int,string> dict;\n        for(int i=1;i<=26;i++){\n            dict[i]='A'+i-1;\n        }\n        int temp=columnNumber;\n        string result=\"\";\n        while(temp){\n            if(temp%26==0){\n                result+=dict[26];\n                temp-=26;\n            }\n            else{\n            result+=dict[(temp%26)];\n            }\n            temp/=26;\n            \n        }\n        reverse(result.begin(),result.end());\n        return result;\n    }\n};",
+      "submission_id": 1919331595,
+      "solved_at": "2026-02-14T18:44:28+00:00",
+      "content": "<p>Given an integer <code>columnNumber</code>, return <em>its corresponding column title as it appears in an Excel sheet</em>.</p>\n\n<p>For example:</p>\n\n<pre>\nA -&gt; 1\nB -&gt; 2\nC -&gt; 3\n...\nZ -&gt; 26\nAA -&gt; 27\nAB -&gt; 28 \n...\n</pre>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> columnNumber = 1\n<strong>Output:</strong> &quot;A&quot;\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> columnNumber = 28\n<strong>Output:</strong> &quot;AB&quot;\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> columnNumber = 701\n<strong>Output:</strong> &quot;ZY&quot;\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= columnNumber &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "1758",
+      "slug": "minimum-changes-to-make-alternating-binary-string",
+      "title": "Minimum Changes To Make Alternating Binary String",
+      "difficulty": "Easy",
+      "tags": [
+        "String"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    int minOperations(string s) {\n        int ops1=0, ops2=0;\n        for(int i=0;i<s.length();i++){\n            char expected1=(i%2==0) ? '0':'1';\n            char expected2=(i%2==0) ? '1':'0';\n            if(s[i]!=expected1)ops1++;\n            if(s[i]!=expected2)ops2++;\n        }\n        return min(ops1, ops2);\n    }\n};",
+      "submission_id": 1919405426,
+      "solved_at": "2026-02-14T20:51:48+00:00",
+      "content": "<p>You are given a string <code>s</code> consisting only of the characters <code>&#39;0&#39;</code> and <code>&#39;1&#39;</code>. In one operation, you can change any <code>&#39;0&#39;</code> to <code>&#39;1&#39;</code> or vice versa.</p>\n\n<p>The string is called alternating if no two adjacent characters are equal. For example, the string <code>&quot;010&quot;</code> is alternating, while the string <code>&quot;0100&quot;</code> is not.</p>\n\n<p>Return <em>the <strong>minimum</strong> number of operations needed to make</em> <code>s</code> <em>alternating</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;0100&quot;\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> If you change the last character to &#39;1&#39;, s will be &quot;0101&quot;, which is alternating.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;10&quot;\n<strong>Output:</strong> 0\n<strong>Explanation:</strong> s is already alternating.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;1111&quot;\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> You need two operations to reach &quot;0101&quot; or &quot;1010&quot;.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>s[i]</code> is either <code>&#39;0&#39;</code> or <code>&#39;1&#39;</code>.</li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "3210",
+      "slug": "find-the-encrypted-string",
+      "title": "Find the Encrypted String",
+      "difficulty": "Easy",
+      "tags": [
+        "String"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    string getEncryptedString(string s, int k) {\n        string result=\"\";\n        int n=s.size();\n        for(int i=0;i<n;i++){\n            result+=s[(i+k)%n];\n        }\n        return result;\n    }\n};",
+      "submission_id": 1925375566,
+      "solved_at": "2026-02-20T13:02:04+00:00",
+      "content": "<p>You are given a string <code>s</code> and an integer <code>k</code>. Encrypt the string using the following algorithm:</p>\n\n<ul>\n\t<li>For each character <code>c</code> in <code>s</code>, replace <code>c</code> with the <code>k<sup>th</sup></code> character after <code>c</code> in the string (in a cyclic manner).</li>\n</ul>\n\n<p>Return the <em>encrypted string</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;dart&quot;, k = 3</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">&quot;tdar&quot;</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<ul>\n\t<li>For <code>i = 0</code>, the 3<sup>rd</sup> character after <code>&#39;d&#39;</code> is <code>&#39;t&#39;</code>.</li>\n\t<li>For <code>i = 1</code>, the 3<sup>rd</sup> character after <code>&#39;a&#39;</code> is <code>&#39;d&#39;</code>.</li>\n\t<li>For <code>i = 2</code>, the 3<sup>rd</sup> character after <code>&#39;r&#39;</code> is <code>&#39;a&#39;</code>.</li>\n\t<li>For <code>i = 3</code>, the 3<sup>rd</sup> character after <code>&#39;t&#39;</code> is <code>&#39;r&#39;</code>.</li>\n</ul>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;aaa&quot;, k = 1</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">&quot;aaa&quot;</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>As all the characters are the same, the encrypted string will also be the same.</p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 100</code></li>\n\t<li><code>1 &lt;= k &lt;= 10<sup>4</sup></code></li>\n\t<li><code>s</code> consists only of lowercase English letters.</li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "747",
+      "slug": "largest-number-at-least-twice-of-others",
+      "title": "Largest Number At Least Twice of Others",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Sorting"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    int dominantIndex(vector<int>& nums) {\n        int l=-1;\n        int sl=-1;\n        int maxIndex=0;\n        for(int i=0;i<nums.size();i++){\n            if(nums[i]>l){\n                sl=l;\n                l=nums[i];\n                maxIndex=i;\n            }\n            else if(nums[i]>sl && nums[i]<l){\n                sl=nums[i];\n            }\n        }\n        return (l>=2*sl)?maxIndex:-1;\n    }\n};",
+      "submission_id": 1925383900,
+      "solved_at": "2026-02-20T13:14:08+00:00",
+      "content": "<p>You are given an integer array <code>nums</code> where the largest integer is <strong>unique</strong>.</p>\n\n<p>Determine whether the largest element in the array is <strong>at least twice</strong> as much as every other number in the array. If it is, return <em>the <strong>index</strong> of the largest element, or return </em><code>-1</code><em> otherwise</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,6,1,0]\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> 6 is the largest integer.\nFor every other number in the array x, 6 is at least twice as big as x.\nThe index of value 6 is 1, so we return 1.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,3,4]\n<strong>Output:</strong> -1\n<strong>Explanation:</strong> 4 is less than twice the value of 3, so we return -1.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>2 &lt;= nums.length &lt;= 50</code></li>\n\t<li><code>0 &lt;= nums[i] &lt;= 100</code></li>\n\t<li>The largest element in <code>nums</code> is unique.</li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "2716",
+      "slug": "minimize-string-length",
+      "title": "Minimize String Length",
+      "difficulty": "Easy",
+      "tags": [
+        "Hash Table",
+        "String"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    int minimizedStringLength(string s) {\n        bool seen[26] = {false};\n        int count = 0;        \n        for(char ch : s) {\n            int index = ch-'a';\n            if(!seen[index]){\n                seen[index]=true;\n                count++;\n            }\n        }\n        return count;\n    }\n};",
+      "submission_id": 1925391936,
+      "solved_at": "2026-02-20T13:25:10+00:00",
+      "content": "<p>Given a string <code>s</code>, you have two types of operation:</p>\n\n<ol>\n\t<li>Choose an index <code>i</code> in the string, and let <code>c</code> be the character in position <code>i</code>. <strong>Delete</strong> the <strong>closest occurrence</strong> of <code>c</code> to the <strong>left</strong> of <code>i</code> (if exists).</li>\n\t<li>Choose an index <code>i</code> in the string, and let <code>c</code> be the character in position <code>i</code>. <strong>Delete</strong> the <strong>closest occurrence</strong> of <code>c</code> to the <strong>right</strong> of <code>i</code> (if exists).</li>\n</ol>\n\n<p>Your task is to <strong>minimize</strong> the length of <code>s</code> by performing the above operations zero or more times.</p>\n\n<p>Return an integer denoting the length of the <strong>minimized</strong> string.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;aaabc&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">3</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<ol>\n\t<li>Operation 2: we choose <code>i = 1</code> so <code>c</code> is &#39;a&#39;, then we remove <code>s[2]</code> as it is closest &#39;a&#39; character to the right of <code>s[1]</code>.<br />\n\t<code>s</code> becomes &quot;aabc&quot; after this.</li>\n\t<li>Operation 1: we choose <code>i = 1</code> so <code>c</code> is &#39;a&#39;, then we remove <code>s[0]</code> as it is closest &#39;a&#39; character to the left of <code>s[1]</code>.<br />\n\t<code>s</code> becomes &quot;abc&quot; after this.</li>\n</ol>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;cbbd&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">3</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<ol>\n\t<li>Operation 1: we choose <code>i = 2</code> so <code>c</code> is &#39;b&#39;, then we remove <code>s[1]</code> as it is closest &#39;b&#39; character to the left of <code>s[1]</code>.<br />\n\t<code>s</code> becomes &quot;cbd&quot; after this.</li>\n</ol>\n</div>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;baadccab&quot;</span></p>\n\n<p><strong>Output:</strong> 4</p>\n\n<p><strong>Explanation:</strong></p>\n\n<ol>\n\t<li>Operation 1: we choose <code>i = 6</code> so <code>c</code> is &#39;a&#39;, then we remove <code>s[2]</code> as it is closest &#39;a&#39; character to the left of <code>s[6]</code>.<br />\n\t<code>s</code> becomes &quot;badccab&quot; after this.</li>\n\t<li>Operation 2: we choose <code>i = 0</code> so <code>c</code> is &#39;b&#39;, then we remove <code>s[6]</code> as it is closest &#39;b&#39; character to the right of <code>s[0]</code>.<br />\n\t<code>s</code> becomes &quot;badcca&quot; fter this.</li>\n\t<li>Operation 2: we choose <code>i = 3</code> so <code>c</code> is &#39;c&#39;, then we remove <code>s[4]</code> as it is closest &#39;c&#39; character to the right of <code>s[3]</code>.<br />\n\t<code>s</code> becomes &quot;badca&quot; after this.</li>\n\t<li>Operation 1: we choose <code>i = 4</code> so <code>c</code> is &#39;a&#39;, then we remove <code>s[1]</code> as it is closest &#39;a&#39; character to the left of <code>s[4]</code>.<br />\n\t<code>s</code> becomes &quot;bdca&quot; after this.</li>\n</ol>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 100</code></li>\n\t<li><code>s</code> contains only lowercase English letters</li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "1941",
+      "slug": "check-if-all-characters-have-equal-number-of-occurrences",
+      "title": "Check if All Characters Have Equal Number of Occurrences",
+      "difficulty": "Easy",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Counting"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    bool areOccurrencesEqual(string s) {\n        int freq[26] = {0}, count=0;\n        for(char &c: s)\n        {\n            freq[c-'a']++;\n        }\n        for(int i=0; i<26; i++)\n        {\n            if(count==0 && freq[i]!=0) count=freq[i];\n\n            if(count != freq[i] && freq[i]!=0) return false;\n        }\n        return true;\n    }\n};",
+      "submission_id": 1925408052,
+      "solved_at": "2026-02-20T13:46:23+00:00",
+      "content": "<p>Given a string <code>s</code>, return <code>true</code><em> if </em><code>s</code><em> is a <strong>good</strong> string, or </em><code>false</code><em> otherwise</em>.</p>\n\n<p>A string <code>s</code> is <strong>good</strong> if <strong>all</strong> the characters that appear in <code>s</code> have the <strong>same</strong> number of occurrences (i.e., the same frequency).</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;abacbc&quot;\n<strong>Output:</strong> true\n<strong>Explanation:</strong> The characters that appear in s are &#39;a&#39;, &#39;b&#39;, and &#39;c&#39;. All characters occur 2 times in s.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;aaabb&quot;\n<strong>Output:</strong> false\n<strong>Explanation:</strong> The characters that appear in s are &#39;a&#39; and &#39;b&#39;.\n&#39;a&#39; occurs 3 times while &#39;b&#39; occurs 2 times, which is not the same number of times.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 1000</code></li>\n\t<li><code>s</code> consists of lowercase English letters.</li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "257",
+      "slug": "binary-tree-paths",
+      "title": "Binary Tree Paths",
+      "difficulty": "Easy",
+      "tags": [
+        "String",
+        "Backtracking",
+        "Tree",
+        "Depth-First Search",
+        "Binary Tree"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    void generatePath(TreeNode*root,string path, vector<string>&result){\n        if(!root){\n            return;\n        }\n        path+=to_string(root->val);\n        if(!root->left && !root->right){\n            result.push_back(path);\n            return;\n        }\n        path+=\"->\";\n        generatePath(root->left,path,result);\n        generatePath(root->right,path,result);\n\n    }\n    vector<string> binaryTreePaths(TreeNode* root) {\n        vector<string>result;\n        generatePath(root,\"\",result);\n        return result;\n    }\n};",
+      "submission_id": 1925420870,
+      "solved_at": "2026-02-20T14:02:17+00:00",
+      "content": "<p>You are given the <code>root</code> of a binary tree.</p>\n\n<p>Return all <strong>root-to-leaf</strong> paths<em> </em>in <strong>any order</strong>.</p>\n\n<p>A <strong>leaf</strong> is a node with no children.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/03/12/paths-tree.jpg\" style=\"width: 207px; height: 293px;\" />\n<pre>\n<strong>Input:</strong> root = [1,2,3,null,5]\n<strong>Output:</strong> [&quot;1-&gt;2-&gt;5&quot;,&quot;1-&gt;3&quot;]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> root = [1]\n<strong>Output:</strong> [&quot;1&quot;]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in the tree is in the range <code>[1, 100]</code>.</li>\n\t<li><code>-100 &lt;= Node.val &lt;= 100</code></li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "1550",
+      "slug": "three-consecutive-odds",
+      "title": "Three Consecutive Odds",
+      "difficulty": "Easy",
+      "tags": [
+        "Array"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    bool isOdd(int x){\n        return x&1;\n    }\n    bool threeConsecutiveOdds(vector<int>& arr) {\n        int n=arr.size();\n        int oddCount=0;\n        for(int i=0;i<n;i++){\n            if(isOdd(arr[i])){\n                oddCount++;\n            }\n            else{\n                oddCount=0;\n            }\n            if(oddCount==3)return true;\n        }\n        return false;\n    }\n};",
+      "submission_id": 1925426469,
+      "solved_at": "2026-02-20T14:09:11+00:00",
+      "content": "Given an integer array <code>arr</code>, return <code>true</code>&nbsp;if there are three consecutive odd numbers in the array. Otherwise, return&nbsp;<code>false</code>.\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> arr = [2,6,4,1]\n<strong>Output:</strong> false\n<b>Explanation:</b> There are no three consecutive odds.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> arr = [1,2,34,3,4,5,7,23,12]\n<strong>Output:</strong> true\n<b>Explanation:</b> [5,7,23] are three consecutive odds.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= arr.length &lt;= 1000</code></li>\n\t<li><code>1 &lt;= arr[i] &lt;= 1000</code></li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "2810",
+      "slug": "faulty-keyboard",
+      "title": "Faulty Keyboard",
+      "difficulty": "Easy",
+      "tags": [
+        "String",
+        "Simulation"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    void reverse(string &s,int l,int r){\n        while(l<r){\n            swap(s[l++],s[r--]);\n        }\n    }\n    string finalString(string s) {\n        int n=s.size();\n        string current=\"\";\n        for(int i=0;i<n;i++){\n            if(s[i]!='i'){\n                current+=s[i];\n            }\n            else{\n                reverse(current,0,current.size()-1);\n            }\n        }\n        return current;\n    }\n};",
+      "submission_id": 1925436296,
+      "solved_at": "2026-02-20T14:21:35+00:00",
+      "content": "<p>Your laptop keyboard is faulty, and whenever you type a character <code>&#39;i&#39;</code> on it, it reverses the string that you have written. Typing other characters works as expected.</p>\n\n<p>You are given a <strong>0-indexed</strong> string <code>s</code>, and you type each character of <code>s</code> using your faulty keyboard.</p>\n\n<p>Return <em>the final string that will be present on your laptop screen.</em></p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;string&quot;\n<strong>Output:</strong> &quot;rtsng&quot;\n<strong>Explanation:</strong> \nAfter typing first character, the text on the screen is &quot;s&quot;.\nAfter the second character, the text is &quot;st&quot;. \nAfter the third character, the text is &quot;str&quot;.\nSince the fourth character is an &#39;i&#39;, the text gets reversed and becomes &quot;rts&quot;.\nAfter the fifth character, the text is &quot;rtsn&quot;. \nAfter the sixth character, the text is &quot;rtsng&quot;. \nTherefore, we return &quot;rtsng&quot;.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;poiinter&quot;\n<strong>Output:</strong> &quot;ponter&quot;\n<strong>Explanation:</strong> \nAfter the first character, the text on the screen is &quot;p&quot;.\nAfter the second character, the text is &quot;po&quot;. \nSince the third character you type is an &#39;i&#39;, the text gets reversed and becomes &quot;op&quot;. \nSince the fourth character you type is an &#39;i&#39;, the text gets reversed and becomes &quot;po&quot;.\nAfter the fifth character, the text is &quot;pon&quot;.\nAfter the sixth character, the text is &quot;pont&quot;. \nAfter the seventh character, the text is &quot;ponte&quot;. \nAfter the eighth character, the text is &quot;ponter&quot;. \nTherefore, we return &quot;ponter&quot;.</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 100</code></li>\n\t<li><code>s</code> consists of lowercase English letters.</li>\n\t<li><code>s[0] != &#39;i&#39;</code></li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "2733",
+      "slug": "neither-minimum-nor-maximum",
+      "title": "Neither Minimum nor Maximum",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Sorting"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    int findNonMinOrMax(vector<int>& nums) {\n        if (nums.size() < 3)return -1;\n        int a = min(nums[0],nums[1]);\n        int b = max(nums[0],nums[1]);\n        int c = nums[2];\n        if(c<b && c>a) return c; \n        if(c<a) return a;\n        if(c>b) return b;\n        return -1;\n    }\n};",
+      "submission_id": 1925444241,
+      "solved_at": "2026-02-20T14:30:56+00:00",
+      "content": "<p>Given an integer array <code>nums</code> containing <strong>distinct</strong> <strong>positive</strong> integers, find and return <strong>any</strong> number from the array that is neither the <strong>minimum</strong> nor the <strong>maximum</strong> value in the array, or <strong><code>-1</code></strong> if there is no such number.</p>\n\n<p>Return <em>the selected integer.</em></p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,2,1,4]\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> In this example, the minimum value is 1 and the maximum value is 4. Therefore, either 2 or 3 can be valid answers.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2]\n<strong>Output:</strong> -1\n<strong>Explanation:</strong> Since there is no number in nums that is neither the maximum nor the minimum, we cannot select a number that satisfies the given condition. Therefore, there is no answer.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [2,1,3]\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> Since 2 is neither the maximum nor the minimum value in nums, it is the only valid answer. \n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 100</code></li>\n\t<li><code>1 &lt;= nums[i] &lt;= 100</code></li>\n\t<li>All values in <code>nums</code> are distinct</li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "944",
+      "slug": "delete-columns-to-make-sorted",
+      "title": "Delete Columns to Make Sorted",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "String",
+        "Longest Increasing Subsequence"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    int minDeletionSize(vector<string>& strs) {\n        int n = strs.size();\n        int m = strs[0].size();\n        int deletions = 0;\n        for(int col = 0; col < m; col++){\n            for(int row = 1; row < n; row++){\n                if(strs[row][col] < strs[row-1][col]){\n                    deletions++;\n                    break;\n                }\n            }\n        }\n        return deletions;\n    }\n};",
+      "submission_id": 1925455971,
+      "solved_at": "2026-02-20T14:45:15+00:00",
+      "content": "<p>You are given an array of <code>n</code> strings <code>strs</code>, all of the same length.</p>\n\n<p>The strings can be arranged such that there is one on each line, making a grid.</p>\n\n<ul>\n\t<li>For example, <code>strs = [&quot;abc&quot;, &quot;bce&quot;, &quot;cae&quot;]</code> can be arranged as follows:</li>\n</ul>\n\n<pre>\nabc\nbce\ncae\n</pre>\n\n<p>You want to <strong>delete</strong> the columns that are <strong>not sorted lexicographically</strong>. In the above example (<strong>0-indexed</strong>), columns 0 (<code>&#39;a&#39;</code>, <code>&#39;b&#39;</code>, <code>&#39;c&#39;</code>) and 2 (<code>&#39;c&#39;</code>, <code>&#39;e&#39;</code>, <code>&#39;e&#39;</code>) are sorted, while column 1 (<code>&#39;b&#39;</code>, <code>&#39;c&#39;</code>, <code>&#39;a&#39;</code>) is not, so you would delete column 1.</p>\n\n<p>Return <em>the number of columns that you will delete</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> strs = [&quot;cba&quot;,&quot;daf&quot;,&quot;ghi&quot;]\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> The grid looks as follows:\n  cba\n  daf\n  ghi\nColumns 0 and 2 are sorted, but column 1 is not, so you only need to delete 1 column.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> strs = [&quot;a&quot;,&quot;b&quot;]\n<strong>Output:</strong> 0\n<strong>Explanation:</strong> The grid looks as follows:\n  a\n  b\nColumn 0 is the only column and is sorted, so you will not delete any columns.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> strs = [&quot;zyx&quot;,&quot;wvu&quot;,&quot;tsr&quot;]\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> The grid looks as follows:\n  zyx\n  wvu\n  tsr\nAll 3 columns are not sorted, so you will delete all 3.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>n == strs.length</code></li>\n\t<li><code>1 &lt;= n &lt;= 100</code></li>\n\t<li><code>1 &lt;= strs[i].length &lt;= 1000</code></li>\n\t<li><code>strs[i]</code> consists of lowercase English letters.</li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "2833",
+      "slug": "furthest-point-from-origin",
+      "title": "Furthest Point From Origin",
+      "difficulty": "Easy",
+      "tags": [
+        "String",
+        "Counting"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    int furthestDistanceFromOrigin(string moves) {\n        int lcount=0,rcount=0,_count=0;\n        for(char ch:moves){\n            if(ch=='L'){lcount++;}\n            else if(ch=='R'){rcount++;}\n            else {_count++;}\n        }\n        int mostTurns=max(lcount,rcount);\n        return mostTurns-(lcount+rcount-mostTurns)+_count;\n    }\n};",
+      "submission_id": 1925461407,
+      "solved_at": "2026-02-20T14:51:50+00:00",
+      "content": "<p>You are given a string <code>moves</code> of length <code>n</code> consisting only of characters <code>&#39;L&#39;</code>, <code>&#39;R&#39;</code>, and <code>&#39;_&#39;</code>. The string represents your movement on a number line starting from the origin <code>0</code>.</p>\n\n<p>In the <code>i<sup>th</sup></code> move, you can choose one of the following directions:</p>\n\n<ul>\n\t<li>move to the left if <code>moves[i] = &#39;L&#39;</code> or <code>moves[i] = &#39;_&#39;</code></li>\n\t<li>move to the right if <code>moves[i] = &#39;R&#39;</code> or <code>moves[i] = &#39;_&#39;</code></li>\n</ul>\n\n<p>Return <em>the <strong>distance from the origin</strong> of the <strong>furthest</strong> point you can get to after </em><code>n</code><em> moves</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> moves = &quot;L_RL__R&quot;\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> The furthest point we can reach from the origin 0 is point -3 through the following sequence of moves &quot;LLRLLLR&quot;.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> moves = &quot;_R__LL_&quot;\n<strong>Output:</strong> 5\n<strong>Explanation:</strong> The furthest point we can reach from the origin 0 is point -5 through the following sequence of moves &quot;LRLLLLL&quot;.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> moves = &quot;_______&quot;\n<strong>Output:</strong> 7\n<strong>Explanation:</strong> The furthest point we can reach from the origin 0 is point 7 through the following sequence of moves &quot;RRRRRRR&quot;.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= moves.length == n &lt;= 50</code></li>\n\t<li><code>moves</code> consists only of characters <code>&#39;L&#39;</code>, <code>&#39;R&#39;</code> and <code>&#39;_&#39;</code>.</li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "3697",
+      "slug": "compute-decimal-representation",
+      "title": "Compute Decimal Representation",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Math"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    void base10(int n,stack<int> &nums){\n        long mul=1;\n        while(n){\n            int x=n%10;\n            if(x!=0){\n                nums.push(x*mul);\n            }\n            n/=10;\n            mul*=10;\n        }\n    }\n    vector<int> decimalRepresentation(int n) {\n        stack<int>nums;\n        base10(n,nums);\n        vector<int>result;\n        while(nums.empty()!=1){\n            result.push_back(nums.top());\n            nums.pop();\n        }\n        return result;\n    }\n};",
+      "submission_id": 1925691610,
+      "solved_at": "2026-02-20T18:52:00+00:00",
+      "content": "<p>You are given a <strong>positive</strong> integer <code>n</code>.</p>\n\n<p>A positive integer is a <strong>base-10 component</strong> if it is the product of a single digit from 1 to 9 and a non-negative power of 10. For example, 500, 30, and 7 are <strong>base-10 components</strong>, while 537, 102, and 11 are not.</p>\n\n<p>Express <code>n</code> as a sum of <strong>only</strong> base-10 components, using the <strong>fewest</strong> base-10 components possible.</p>\n\n<p>Return an array containing these <strong>base-10 components</strong> in <strong>descending</strong> order.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">n = 537</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">[500,30,7]</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>We can express 537 as <code>500 + 30 + 7</code>. It is impossible to express 537 as a sum using fewer than 3 base-10 components.</p>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">n = 102</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">[100,2]</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>We can express 102 as <code>100 + 2</code>. 102 is not a base-10 component, which means 2 base-10 components are needed.</p>\n</div>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">n = 6</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">[6]</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>6 is a base-10 component.</p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= n &lt;= 10<sup>9</sup></code></li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "3684",
+      "slug": "maximize-sum-of-at-most-k-distinct-elements",
+      "title": "Maximize Sum of At Most K Distinct Elements",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Greedy",
+        "Sorting"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    vector<int> maxKDistinct(vector<int>& nums, int k) {\n        unordered_set<int> unique(nums.begin(), nums.end());\n        priority_queue<int> pq(unique.begin(), unique.end());\n\n        vector<int> result;\n        while(k-- && !pq.empty()){\n            result.push_back(pq.top());\n            pq.pop();\n        }\n        return result;\n    }\n};",
+      "submission_id": 1925706578,
+      "solved_at": "2026-02-20T19:13:11+00:00",
+      "content": "<p>You are given a <strong>positive</strong> integer array <code>nums</code> and an integer <code>k</code>.</p>\n\n<p>Choose at most <code>k</code> elements from <code>nums</code> so that their sum is maximized. However, the chosen numbers must be <strong>distinct</strong>.</p>\n\n<p>Return an array containing the chosen numbers in <strong>strictly descending</strong> order.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">nums = [84,93,100,77,90], k = 3</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">[100,93,90]</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>The maximum sum is 283, which is attained by choosing 93, 100 and 90. We rearrange them in strictly descending order as <code>[100, 93, 90]</code>.</p>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">nums = [84,93,100,77,93], k = 3</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">[100,93,84]</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>The maximum sum is 277, which is attained by choosing 84, 93 and 100. We rearrange them in strictly descending order as <code>[100, 93, <span class=\"example-io\">84</span>]</code>. We cannot choose 93, 100 and 93 because the chosen numbers must be distinct.</p>\n</div>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">nums = [1,1,1,2,2,2], k = 6</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">[2,1]</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>The maximum sum is 3, which is attained by choosing 1 and 2. We rearrange them in strictly descending order as <code>[2, 1]</code>.</p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 100</code></li>\n\t<li><code>1 &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>\n\t<li><code>1 &lt;= k &lt;= nums.length</code></li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "2798",
+      "slug": "number-of-employees-who-met-the-target",
+      "title": "Number of Employees Who Met the Target",
+      "difficulty": "Easy",
+      "tags": [
+        "Array"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    int numberOfEmployeesWhoMetTarget(vector<int>& hours, int target) {\n        int count=0;\n        for(const auto &x:hours){\n            if(x>=target)count++;\n        }\n        return count;\n    }\n};",
+      "submission_id": 1926256015,
+      "solved_at": "2026-02-21T11:00:52+00:00",
+      "content": "<p>There are <code>n</code> employees in a company, numbered from <code>0</code> to <code>n - 1</code>. Each employee <code>i</code> has worked for <code>hours[i]</code> hours in the company.</p>\n\n<p>The company requires each employee to work for <strong>at least</strong> <code>target</code> hours.</p>\n\n<p>You are given a <strong>0-indexed</strong> array of non-negative integers <code>hours</code> of length <code>n</code> and a non-negative integer <code>target</code>.</p>\n\n<p>Return <em>the integer denoting the number of employees who worked at least</em> <code>target</code> <em>hours</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> hours = [0,1,2,3,4], target = 2\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> The company wants each employee to work for at least 2 hours.\n- Employee 0 worked for 0 hours and didn&#39;t meet the target.\n- Employee 1 worked for 1 hours and didn&#39;t meet the target.\n- Employee 2 worked for 2 hours and met the target.\n- Employee 3 worked for 3 hours and met the target.\n- Employee 4 worked for 4 hours and met the target.\nThere are 3 employees who met the target.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> hours = [5,1,4,2,2], target = 6\n<strong>Output:</strong> 0\n<strong>Explanation:</strong> The company wants each employee to work for at least 6 hours.\nThere are 0 employees who met the target.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= n == hours.length &lt;= 50</code></li>\n\t<li><code>0 &lt;=&nbsp;hours[i], target &lt;= 10<sup>5</sup></code></li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "1800",
+      "slug": "maximum-ascending-subarray-sum",
+      "title": "Maximum Ascending Subarray Sum",
+      "difficulty": "Easy",
+      "tags": [
+        "Array"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    int maxAscendingSum(vector<int>& nums) {\n        int n=nums.size();\n        int maxSum=nums[0];\n        int currSum=nums[0];\n        for(int i=1;i<n;i++){\n            if(nums[i]>nums[i-1]){\n                currSum+=nums[i];\n                maxSum=max(currSum,maxSum);\n            }\n            else{\n                currSum=nums[i];\n            }\n        }\n        return maxSum;\n    }\n};",
+      "submission_id": 1927343699,
+      "solved_at": "2026-02-22T10:56:19+00:00",
+      "content": "<p>Given an array of positive integers <code>nums</code>, return the <strong>maximum</strong> possible sum of an <span data-keyword=\"strictly-increasing-array\">strictly increasing subarray</span> in<em> </em><code>nums</code>.</p>\n\n<p>A subarray is defined as a contiguous sequence of numbers in an array.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [10,20,30,5,10,50]\n<strong>Output:</strong> 65\n<strong>Explanation: </strong>[5,10,50] is the ascending subarray with the maximum sum of 65.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [10,20,30,40,50]\n<strong>Output:</strong> 150\n<strong>Explanation: </strong>[10,20,30,40,50] is the ascending subarray with the maximum sum of 150.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [12,17,15,13,10,11,12]\n<strong>Output:</strong> 33\n<strong>Explanation: </strong>[10,11,12] is the ascending subarray with the maximum sum of 33.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 100</code></li>\n\t<li><code>1 &lt;= nums[i] &lt;= 100</code></li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "1260",
+      "slug": "shift-2d-grid",
+      "title": "Shift 2D Grid",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Matrix",
+        "Simulation"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    vector<vector<int>> shiftGrid(vector<vector<int>>& grid, int k) {\n        vector<int>linear;\n        for(const auto &row:grid){\n            for(const int &x:row){\n                linear.push_back(x);\n            }\n        }\n        int m=grid.size();\n        int n=grid[0].size();\n        k%=(m*n);\n        reverse(linear.begin(),linear.end());\n        reverse(linear.begin(),linear.begin()+k);\n        reverse(linear.begin()+k,linear.end());\n        int i=0;\n        for( auto&row:grid){\n            for(auto &x:row){\n                x=linear[i++];\n            }\n        }\n        return grid;\n    }\n};",
+      "submission_id": 1927362683,
+      "solved_at": "2026-02-22T11:20:03+00:00",
+      "content": "<p>Given a 2D <code>grid</code> of size <code>m x n</code>&nbsp;and an integer <code>k</code>. You need to shift the <code>grid</code>&nbsp;<code>k</code> times.</p>\n\n<p>In one shift operation:</p>\n\n<ul>\n\t<li>Element at <code>grid[i][j]</code> moves to <code>grid[i][j + 1]</code>.</li>\n\t<li>Element at <code>grid[i][n - 1]</code> moves to <code>grid[i + 1][0]</code>.</li>\n\t<li>Element at <code>grid[m&nbsp;- 1][n - 1]</code> moves to <code>grid[0][0]</code>.</li>\n</ul>\n\n<p>Return the <em>2D grid</em> after applying shift operation <code>k</code> times.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2019/11/05/e1.png\" style=\"width: 400px; height: 178px;\" />\n<pre>\n<strong>Input:</strong> <code>grid</code> = [[1,2,3],[4,5,6],[7,8,9]], k = 1\n<strong>Output:</strong> [[9,1,2],[3,4,5],[6,7,8]]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2019/11/05/e2.png\" style=\"width: 400px; height: 166px;\" />\n<pre>\n<strong>Input:</strong> <code>grid</code> = [[3,8,1,9],[19,7,2,5],[4,6,11,10],[12,0,21,13]], k = 4\n<strong>Output:</strong> [[12,0,21,13],[3,8,1,9],[19,7,2,5],[4,6,11,10]]\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> <code>grid</code> = [[1,2,3],[4,5,6],[7,8,9]], k = 9\n<strong>Output:</strong> [[1,2,3],[4,5,6],[7,8,9]]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>m ==&nbsp;grid.length</code></li>\n\t<li><code>n ==&nbsp;grid[i].length</code></li>\n\t<li><code>1 &lt;= m &lt;= 50</code></li>\n\t<li><code>1 &lt;= n &lt;= 50</code></li>\n\t<li><code>-1000 &lt;= grid[i][j] &lt;= 1000</code></li>\n\t<li><code>0 &lt;= k &lt;= 100</code></li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "2574",
+      "slug": "left-and-right-sum-differences",
+      "title": "Left and Right Sum Differences",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Prefix Sum"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    vector<int> leftRightDifference(vector<int>& nums) {\n        int totalSum = 0;\n        for(int x : nums) totalSum += x;\n\n        int leftSum = 0;\n        for(int i = 0; i < nums.size(); i++){\n            int rightSum = totalSum - leftSum - nums[i];\n            int curr = nums[i];   // store original value\n            nums[i] = abs(leftSum - rightSum);\n            leftSum += curr;\n        }\n        return nums;\n    }\n};",
+      "submission_id": 1927380816,
+      "solved_at": "2026-02-22T11:43:45+00:00",
+      "content": "<p>You are given a <strong>0-indexed</strong> integer array <code>nums</code> of size <code>n</code>.</p>\n\n<p>Define two arrays <code>leftSum</code> and <code>rightSum</code> where:</p>\n\n<ul>\n\t<li><code>leftSum[i]</code> is the sum of elements to the left of the index <code>i</code> in the array <code>nums</code>. If there is no such element, <code>leftSum[i] = 0</code>.</li>\n\t<li><code>rightSum[i]</code> is the sum of elements to the right of the index <code>i</code> in the array <code>nums</code>. If there is no such element, <code>rightSum[i] = 0</code>.</li>\n</ul>\n\n<p>Return an integer array <code>answer</code> of size <code>n</code> where <code>answer[i] = |leftSum[i] - rightSum[i]|</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [10,4,8,3]\n<strong>Output:</strong> [15,1,11,22]\n<strong>Explanation:</strong> The array leftSum is [0,10,14,22] and the array rightSum is [15,11,3,0].\nThe array answer is [|0 - 15|,|10 - 11|,|14 - 3|,|22 - 0|] = [15,1,11,22].\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1]\n<strong>Output:</strong> [0]\n<strong>Explanation:</strong> The array leftSum is [0] and the array rightSum is [0].\nThe array answer is [|0 - 0|] = [0].\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 1000</code></li>\n\t<li><code>1 &lt;= nums[i] &lt;= 10<sup>5</sup></code></li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "3423",
+      "slug": "maximum-difference-between-adjacent-elements-in-a-circular-array",
+      "title": "Maximum Difference Between Adjacent Elements in a Circular Array",
+      "difficulty": "Easy",
+      "tags": [
+        "Array"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    int maxAdjacentDistance(vector<int>& nums) {\n        const int n=nums.size();\n        int ans=abs(nums[0]-nums[n-1]);\n        for(int i=1; i<n; i++)\n            ans=max(ans, abs(nums[i]-nums[i-1]));\n        return ans;\n    }\n};",
+      "submission_id": 1927391059,
+      "solved_at": "2026-02-22T11:57:31+00:00",
+      "content": "<p>Given a <strong>circular</strong> array <code>nums</code>, find the <b>maximum</b> absolute difference between adjacent elements.</p>\n\n<p><strong>Note</strong>: In a circular array, the first and last elements are adjacent.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">nums = [1,2,4]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">3</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>Because <code>nums</code> is circular, <code>nums[0]</code> and <code>nums[2]</code> are adjacent. They have the maximum absolute difference of <code>|4 - 1| = 3</code>.</p>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">nums = [-5,-10,-5]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">5</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>The adjacent elements <code>nums[0]</code> and <code>nums[1]</code> have the maximum absolute difference of <code>|-5 - (-10)| = 5</code>.</p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>2 &lt;= nums.length &lt;= 100</code></li>\n\t<li><code>-100 &lt;= nums[i] &lt;= 100</code></li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "925",
+      "slug": "long-pressed-name",
+      "title": "Long Pressed Name",
+      "difficulty": "Easy",
+      "tags": [
+        "Two Pointers",
+        "String"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    bool isLongPressedName(string name, string typed) {\n        int m = name.size(), n = typed.size();\n        int p1 = 0, p2 = 0;\n\n        while (p2 < n) {\n            if (p1 < m && name[p1] == typed[p2]) {\n                p1++;\n                p2++;\n            }\n            else if (p2 > 0 && typed[p2] == typed[p2-1]) {\n                p2++;  \n            }\n            else {\n                return false;\n            }\n        }\n\n        return p1 == m;  \n    }\n};",
+      "submission_id": 1927519964,
+      "solved_at": "2026-02-22T14:39:42+00:00",
+      "content": "<p>Your friend is typing his <code>name</code> into a keyboard. Sometimes, when typing a character <code>c</code>, the key might get <em>long pressed</em>, and the character will be typed 1 or more times.</p>\n\n<p>You examine the <code>typed</code> characters of the keyboard. Return <code>True</code> if it is possible that it was your friends name, with some characters (possibly none) being long pressed.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> name = &quot;alex&quot;, typed = &quot;aaleex&quot;\n<strong>Output:</strong> true\n<strong>Explanation: </strong>&#39;a&#39; and &#39;e&#39; in &#39;alex&#39; were long pressed.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> name = &quot;saeed&quot;, typed = &quot;ssaaedd&quot;\n<strong>Output:</strong> false\n<strong>Explanation: </strong>&#39;e&#39; must have been pressed twice, but it was not in the typed output.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= name.length, typed.length &lt;= 1000</code></li>\n\t<li><code>name</code> and <code>typed</code> consist of only lowercase English letters.</li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "69",
+      "slug": "sqrtx",
+      "title": "Sqrt(x)",
+      "difficulty": "Easy",
+      "tags": [
+        "Math",
+        "Binary Search",
+        "Newton's Method"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    int mySqrt(int x) {\n        if(x==0 || x==1)return x;\n\n        int low=1,high=x/2;\n        int result=1;\n        while(low<=high){\n            long long mid=low+(high-low)/2;\n            if(mid*mid<=x){\n                result=mid;\n                low=mid+1;\n            }\n            else{\n                high=mid-1;\n            }\n        }\n        return result;\n    }\n};",
+      "submission_id": 1927537395,
+      "solved_at": "2026-02-22T15:00:56+00:00",
+      "content": "<p>Given a non-negative integer <code>x</code>, return <em>the square root of </em><code>x</code><em> rounded down to the nearest integer</em>. The returned integer should be <strong>non-negative</strong> as well.</p>\n\n<p>You <strong>must not use</strong> any built-in exponent function or operator.</p>\n\n<ul>\n\t<li>For example, do not use <code>pow(x, 0.5)</code> in c++ or <code>x ** 0.5</code> in python.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> x = 4\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> The square root of 4 is 2, so we return 2.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> x = 8\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> The square root of 8 is 2.82842..., and since we round it down to the nearest integer, 2 is returned.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>0 &lt;= x &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "500",
+      "slug": "keyboard-row",
+      "title": "Keyboard Row",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    int row(char ch){\n        ch=(char)tolower(ch);\n        int res;\n        switch(ch){\n            case 'q':case 'w':case 'e':case 'r':case 't':case 'y':case 'u':case 'i':case 'o':case 'p':\n            res=1;\n            break;\n            case 'a':case 's':case 'd':case 'f':case 'g':case 'h':case 'j':case 'k':case 'l':\n            res=2;\n            break;\n            case 'z':case 'x':case 'c':case 'v':case 'b':case 'n':case 'm':\n            res=3;\n            break;\n            default:\n            res=-1;\n        }\n        return res;\n    }\n    bool isSameRow(string word){\n        int n=word.size();\n        int base=row(word[0]);\n        for(int i=1;i<n;i++){\n            if(row(word[i])!=base){\n                return false;\n            }\n        }\n        return true;\n    }\n    vector<string> findWords(vector<string>& words) {\n         vector<string> result;\n         for(const auto &word : words){\n            if(isSameRow(word)){\n                result.push_back(word);\n            }\n         }\n         return result;\n    }\n};",
+      "submission_id": 1928631672,
+      "solved_at": "2026-02-23T15:07:51+00:00",
+      "content": "<p>Given an array of strings <code>words</code>, return <em>the words that can be typed using letters of the alphabet on only one row of American keyboard like the image below</em>.</p>\n\n<p><strong>Note</strong> that the strings are <strong>case-insensitive</strong>, both lowercased and uppercased of the same letter are treated as if they are at the same row.</p>\n\n<p>In the <strong>American keyboard</strong>:</p>\n\n<ul>\n\t<li>the first row consists of the characters <code>&quot;qwertyuiop&quot;</code>,</li>\n\t<li>the second row consists of the characters <code>&quot;asdfghjkl&quot;</code>, and</li>\n\t<li>the third row consists of the characters <code>&quot;zxcvbnm&quot;</code>.</li>\n</ul>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2018/10/12/keyboard.png\" style=\"width: 800px; max-width: 600px; height: 267px;\" />\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">words = [&quot;Hello&quot;,&quot;Alaska&quot;,&quot;Dad&quot;,&quot;Peace&quot;]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">[&quot;Alaska&quot;,&quot;Dad&quot;]</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>Both <code>&quot;a&quot;</code> and <code>&quot;A&quot;</code> are in the 2nd row of the American keyboard due to case insensitivity.</p>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">words = [&quot;omk&quot;]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">[]</span></p>\n</div>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">words = [&quot;adsdf&quot;,&quot;sfd&quot;]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">[&quot;adsdf&quot;,&quot;sfd&quot;]</span></p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= words.length &lt;= 20</code></li>\n\t<li><code>1 &lt;= words[i].length &lt;= 100</code></li>\n\t<li><code>words[i]</code> consists of English letters (both lowercase and uppercase).&nbsp;</li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "2917",
+      "slug": "find-the-k-or-of-an-array",
+      "title": "Find the K-or of an Array",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Bit Manipulation"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    int findKOr(vector<int>& nums, int k) {\n        int ans=0;\n        for(int b=0;b<32;b++){\n            int count=0;\n            for(int x:nums){\n                if(((x>>b)&1)==1){\n                    count++;\n                }\n            }\n            if(count>=k){\n                ans|=(1<<b);\n            }\n        }\n        return ans;\n\n    }\n};",
+      "submission_id": 1931654892,
+      "solved_at": "2026-02-26T09:20:51+00:00",
+      "content": "<p>You are given an integer array <code>nums</code>, and an integer <code>k</code>. Let&#39;s introduce&nbsp;<strong>K-or</strong> operation by extending the standard bitwise OR. In K-or, a bit position in the result is set to <code>1</code>&nbsp;if at least <code>k</code> numbers in <code>nums</code> have a <code>1</code> in that position.</p>\n\n<p>Return <em>the K-or of</em> <code>nums</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1: </strong></p>\n\n<div class=\"example-block\" style=\"border-color: var(--border-tertiary); border-left-width: 2px; color: var(--text-secondary); font-size: .875rem; margin-bottom: 1rem; margin-top: 1rem; overflow: visible; padding-left: 1rem;\">\n<p><strong>Input:</strong><span class=\"example-io\" style=\"font-family: Menlo,sans-serif; font-size: 0.85rem;\"> nums = [7,12,9,8,9,15], k = 4 </span></p>\n\n<p><strong>Output:</strong><span class=\"example-io\" style=\"font-family: Menlo,sans-serif; font-size: 0.85rem;\"> 9 </span></p>\n\n<p><strong>Explanation: </strong></p>\n\n<p>Represent numbers in binary:</p>\n\n<table style=\"text-indent:10px; margin-bottom=20px;\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<th><b>Number</b></th>\n\t\t\t<th>Bit 3</th>\n\t\t\t<th>Bit 2</th>\n\t\t\t<th>Bit 1</th>\n\t\t\t<th>Bit 0</th>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td><b>7</b></td>\n\t\t\t<td>0</td>\n\t\t\t<td>1</td>\n\t\t\t<td>1</td>\n\t\t\t<td>1</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td><b>12</b></td>\n\t\t\t<td>1</td>\n\t\t\t<td>1</td>\n\t\t\t<td>0</td>\n\t\t\t<td>0</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td><b>9</b></td>\n\t\t\t<td>1</td>\n\t\t\t<td>0</td>\n\t\t\t<td>0</td>\n\t\t\t<td>1</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td><b>8</b></td>\n\t\t\t<td>1</td>\n\t\t\t<td>0</td>\n\t\t\t<td>0</td>\n\t\t\t<td>0</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td><b>9</b></td>\n\t\t\t<td>1</td>\n\t\t\t<td>0</td>\n\t\t\t<td>0</td>\n\t\t\t<td>1</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td><b>15</b></td>\n\t\t\t<td>1</td>\n\t\t\t<td>1</td>\n\t\t\t<td>1</td>\n\t\t\t<td>1</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td><b>Result = 9</b></td>\n\t\t\t<td>1</td>\n\t\t\t<td>0</td>\n\t\t\t<td>0</td>\n\t\t\t<td>1</td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n<p>Bit 0 is set in 7, 9, 9, and 15. Bit 3 is set in 12, 9, 8, 9, and 15.<br />\nOnly bits 0 and 3 qualify. The result is <code>(1001)<sub>2</sub> = 9</code>.</p>\n</div>\n\n<p><strong class=\"example\">Example 2: </strong></p>\n\n<div class=\"example-block\" style=\"border-color: var(--border-tertiary); border-left-width: 2px; color: var(--text-secondary); font-size: .875rem; margin-bottom: 1rem; margin-top: 1rem; overflow: visible; padding-left: 1rem;\">\n<p><strong>Input:</strong><span class=\"example-io\" style=\"font-family: Menlo,sans-serif; font-size: 0.85rem;\"> nums = [2,12,1,11,4,5], k = 6 </span></p>\n\n<p><strong>Output:</strong><span class=\"example-io\" style=\"font-family: Menlo,sans-serif; font-size: 0.85rem;\"> 0 </span></p>\n\n<p><strong>Explanation:&nbsp;</strong>No bit appears as 1 in all six array numbers, as required for K-or with <code>k = 6</code>. Thus, the result is 0.</p>\n</div>\n\n<p><strong class=\"example\">Example 3: </strong></p>\n\n<div class=\"example-block\" style=\"border-color: var(--border-tertiary); border-left-width: 2px; color: var(--text-secondary); font-size: .875rem; margin-bottom: 1rem; margin-top: 1rem; overflow: visible; padding-left: 1rem;\">\n<p><strong>Input:</strong><span class=\"example-io\" style=\"font-family: Menlo,sans-serif; font-size: 0.85rem;\"> nums = [10,8,5,9,11,6,8], k = 1 </span></p>\n\n<p><strong>Output:</strong><span class=\"example-io\" style=\"font-family: Menlo,sans-serif; font-size: 0.85rem;\"> 15 </span></p>\n\n<p><strong>Explanation: </strong> Since <code>k == 1</code>, the 1-or of the array is equal to the bitwise OR of all its elements. Hence, the answer is <code>10 OR 8 OR 5 OR 9 OR 11 OR 6 OR 8 = 15</code>.</p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 50</code></li>\n\t<li><code>0 &lt;= nums[i] &lt; 2<sup>31</sup></code></li>\n\t<li><code>1 &lt;= k &lt;= nums.length</code></li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "961",
+      "slug": "n-repeated-element-in-size-2n-array",
+      "title": "N-Repeated Element in Size 2N Array",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Pigeonhole Principle"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    int repeatedNTimes(vector<int>& nums) {\n        int n = nums.size();\n        for(int i = 0; i < n; i++) {\n            if(i + 1 < n && nums[i] == nums[i + 1]){\n                return nums[i];\n            }\n            if(i + 2 < n && nums[i] == nums[i + 2]){\n                return nums[i];\n            }\n            if(i + 3 < n && nums[i] == nums[i + 3]){\n                return nums[i];\n            }\n        }\n        return -1;\n    }\n};",
+      "submission_id": 1956059061,
+      "solved_at": "2026-03-22T18:48:35+00:00",
+      "content": "<p>You are given an integer array <code>nums</code> with the following properties:</p>\n\n<ul>\n\t<li><code>nums.length == 2 * n</code>.</li>\n\t<li><code>nums</code> contains <code>n + 1</code> <strong>unique</strong> values, <code>n</code> of which occur <strong>exactly once</strong> in the array.</li>\n\t<li>Exactly one element of <code>nums</code> is repeated <code>n</code> times.</li>\n</ul>\n\n<p>Return <em>the element that is repeated </em><code>n</code><em> times</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> nums = [1,2,3,3]\n<strong>Output:</strong> 3\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> nums = [2,1,2,5,3,2]\n<strong>Output:</strong> 2\n</pre><p><strong class=\"example\">Example 3:</strong></p>\n<pre><strong>Input:</strong> nums = [5,1,5,2,5,3,5,4]\n<strong>Output:</strong> 5\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>2 &lt;= n &lt;= 5000</code></li>\n\t<li><code>nums.length == 2 * n</code></li>\n\t<li><code>0 &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>\n\t<li><code>nums</code> contains <code>n + 1</code> <strong>unique</strong> elements and one of them is repeated exactly <code>n</code> times.</li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "3270",
+      "slug": "find-the-key-of-the-numbers",
+      "title": "Find the Key of the Numbers",
+      "difficulty": "Easy",
+      "tags": [
+        "Math"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    int generateKey(int num1, int num2, int num3) {\n        int place = 1;\n        int res = 0;\n\n        for(int i=0;i<4;i++)\n        {\n            int d1 = num1%10;\n            int d2 = num2%10;\n            int d3 = num3%10;\n\n            int min = std::min(d1, std::min(d2,d3));\n            res += (min*place);\n            \n            num1 /= 10;\n            num2 /= 10;\n            num3 /= 10;\n            \n            place *= 10;\n        }\n        return res;\n    }\n};",
+      "submission_id": 2007012888,
+      "solved_at": "2026-05-19T06:27:38+00:00",
+      "content": "<p>You are given three <strong>positive</strong> integers <code>num1</code>, <code>num2</code>, and <code>num3</code>.</p>\n\n<p>The <code>key</code> of <code>num1</code>, <code>num2</code>, and <code>num3</code> is defined as a four-digit number such that:</p>\n\n<ul>\n\t<li>Initially, if any number has <strong>less than</strong> four digits, it is padded with <strong>leading zeros</strong>.</li>\n\t<li>The <code>i<sup>th</sup></code> digit (<code>1 &lt;= i &lt;= 4</code>) of the <code>key</code> is generated by taking the <strong>smallest</strong> digit among the <code>i<sup>th</sup></code> digits of <code>num1</code>, <code>num2</code>, and <code>num3</code>.</li>\n</ul>\n\n<p>Return the <code>key</code> of the three numbers <strong>without</strong> leading zeros (<em>if any</em>).</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">num1 = 1, num2 = 10, num3 = 1000</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">0</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>On padding, <code>num1</code> becomes <code>&quot;0001&quot;</code>, <code>num2</code> becomes <code>&quot;0010&quot;</code>, and <code>num3</code> remains <code>&quot;1000&quot;</code>.</p>\n\n<ul>\n\t<li>The <code>1<sup>st</sup></code> digit of the <code>key</code> is <code>min(0, 0, 1)</code>.</li>\n\t<li>The <code>2<sup>nd</sup></code> digit of the <code>key</code> is <code>min(0, 0, 0)</code>.</li>\n\t<li>The <code>3<sup>rd</sup></code> digit of the <code>key</code> is <code>min(0, 1, 0)</code>.</li>\n\t<li>The <code>4<sup>th</sup></code> digit of the <code>key</code> is <code>min(1, 0, 0)</code>.</li>\n</ul>\n\n<p>Hence, the <code>key</code> is <code>&quot;0000&quot;</code>, i.e. 0.</p>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">num1 = 987, num2 = 879, num3 = 798</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">777</span></p>\n</div>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">num1 = 1, num2 = 2, num3 = 3</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">1</span></p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= num1, num2, num3 &lt;= 9999</code></li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "2553",
+      "slug": "separate-the-digits-in-an-array",
+      "title": "Separate the Digits in an Array",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Simulation"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    vector<int> separateDigits(vector<int>& nums) {\n        vector<int> result;\n        for(auto &x : nums){\n            stack<int> rev;\n            while(x){\n                rev.push(x%10);\n                x/=10;\n            }\n            while(!rev.empty()) {\n                result.push_back(rev.top());\n                rev.pop();\n            }\n        }\n        return result;\n    }\n};",
+      "submission_id": 2007925588,
+      "solved_at": "2026-05-20T07:17:13+00:00",
+      "content": "<p>Given an array of positive integers <code>nums</code>, return <em>an array </em><code>answer</code><em> that consists of the digits of each integer in </em><code>nums</code><em> after separating them in <strong>the same order</strong> they appear in </em><code>nums</code>.</p>\n\n<p>To separate the digits of an integer is to get all the digits it has in the same order.</p>\n\n<ul>\n\t<li>For example, for the integer <code>10921</code>, the separation of its digits is <code>[1,0,9,2,1]</code>.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [13,25,83,77]\n<strong>Output:</strong> [1,3,2,5,8,3,7,7]\n<strong>Explanation:</strong> \n- The separation of 13 is [1,3].\n- The separation of 25 is [2,5].\n- The separation of 83 is [8,3].\n- The separation of 77 is [7,7].\nanswer = [1,3,2,5,8,3,7,7]. Note that answer contains the separations in the same order.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [7,1,3,9]\n<strong>Output:</strong> [7,1,3,9]\n<strong>Explanation:</strong> The separation of each integer in nums is itself.\nanswer = [7,1,3,9].\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 1000</code></li>\n\t<li><code>1 &lt;= nums[i] &lt;= 10<sup>5</sup></code></li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "746",
+      "slug": "min-cost-climbing-stairs",
+      "title": "Min Cost Climbing Stairs",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Dynamic Programming"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    int minCostClimbingStairs(vector<int>& cost) {\n        int n = cost.size();\n        vector<int> dp(n);\n        dp[0] = cost[0];\n        dp[1] = cost[1];\n        for(int i = 2; i < n; i++){\n            dp[i] = cost[i] + std::min(dp[i-1], dp[i-2]);     \n        }\n        return std::min(dp[n-1],dp[n-2]);\n    }\n};",
+      "submission_id": 2026053188,
+      "solved_at": "2026-06-08T06:52:00+00:00",
+      "content": "<p>You are given an integer array <code>cost</code> where <code>cost[i]</code> is the cost of <code>i<sup>th</sup></code> step on a staircase.</p>\n\n<p>Once you pay the cost, you can either climb <strong>one</strong> or <strong>two</strong> steps.</p>\n\n<p>You can either start from the step with index 0, or the step with index 1.</p>\n\n<p>Return the <strong>minimum</strong> cost to reach the top of the staircase, which is the position just past the last step (index <code>cost.length</code>).</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> cost = [10,<u>15</u>,20]\n<strong>Output:</strong> 15\n<strong>Explanation:</strong> You will start at index 1.\n- Pay 15 and climb two steps to reach the top.\nThe total cost is 15.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> cost = [<u>1</u>,100,<u>1</u>,1,<u>1</u>,100,<u>1</u>,<u>1</u>,100,<u>1</u>]\n<strong>Output:</strong> 6\n<strong>Explanation:</strong> You will start at index 0.\n- Pay 1 and climb two steps to reach index 2.\n- Pay 1 and climb two steps to reach index 4.\n- Pay 1 and climb two steps to reach index 6.\n- Pay 1 and climb one step to reach index 7.\n- Pay 1 and climb two steps to reach index 9.\n- Pay 1 and climb one step to reach the top.\nThe total cost is 6.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>2 &lt;= cost.length &lt;= 1000</code></li>\n\t<li><code>0 &lt;= cost[i] &lt;= 999</code></li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "1",
+      "slug": "two-sum",
+      "title": "Two Sum",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Hash Table"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    vector<int> twoSum(vector<int>& nums, int target) {\n        vector <pair<int,int>> nums_with_index;\n        for(int i=0;i<nums.size();i++){\n            nums_with_index.emplace_back(nums[i],i);\n        }\n        sort(nums_with_index.begin(),nums_with_index.end());\n        int l=0,r=nums_with_index.size()-1;\n        while(l<=r){\n            int sum=nums_with_index[l].first+nums_with_index[r].first;\n            if(sum>target){\n                r--;\n            }\n            else if(sum<target){\n                l++;\n            }\n            else if(sum==target){\n                return {nums_with_index[l].second,nums_with_index[r].second};\n            }\n        }\n        return {-1,-1};\n    }\n};",
+      "submission_id": 2034952774,
+      "solved_at": "2026-06-16T09:20:17+00:00",
+      "content": "<p>You are given an array of integers <code>nums</code>&nbsp;and an integer <code>target</code>, return <em>indices of the two numbers such that they add up to <code>target</code></em>.</p>\n\n<p>You may assume that each input would have <strong><em>exactly</em> one solution</strong>, and you may not use the <em>same</em> element twice.</p>\n\n<p>You can return the answer in any order.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [2,7,11,15], target = 9\n<strong>Output:</strong> [0,1]\n<strong>Explanation:</strong> Because nums[0] + nums[1] == 9, we return [0, 1].\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,2,4], target = 6\n<strong>Output:</strong> [1,2]\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,3], target = 6\n<strong>Output:</strong> [0,1]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>2 &lt;= nums.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>-10<sup>9</sup> &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>\n\t<li><code>-10<sup>9</sup> &lt;= target &lt;= 10<sup>9</sup></code></li>\n\t<li><strong>Only one valid answer exists.</strong></li>\n</ul>\n\n<p>&nbsp;</p>\n<strong>Follow-up:&nbsp;</strong>Can you come up with an algorithm that is less than <code>O(n<sup>2</sup>)</code><font face=\"monospace\">&nbsp;</font>time complexity?"
+    },
+    {
+      "frontend_id": "1646",
+      "slug": "get-maximum-in-generated-array",
+      "title": "Get Maximum in Generated Array",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Simulation"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    int getMaximumGenerated(int n) {\n        if (n == 0) return 0;\n        \n        vector<int> nums(n + 1);\n        nums[0] = 0;\n        nums[1] = 1;\n        int maxVal = 1;\n        \n        for (int i = 1; 2 * i <= n; i++) {\n            nums[2 * i] = nums[i];\n            maxVal = max(maxVal, nums[2 * i]);\n            \n            if (2 * i + 1 <= n) {\n                nums[2 * i + 1] = nums[i] + nums[i + 1];\n                maxVal = max(maxVal, nums[2 * i + 1]);\n            }\n        }\n        \n        return maxVal;\n    }\n};",
+      "submission_id": 2091265436,
+      "solved_at": "2026-08-02T11:14:36+00:00",
+      "content": "<p>You are given an integer <code>n</code>. A <strong>0-indexed</strong> integer array <code>nums</code> of length <code>n + 1</code> is generated in the following way:</p>\n\n<ul>\n\t<li><code>nums[0] = 0</code></li>\n\t<li><code>nums[1] = 1</code></li>\n\t<li><code>nums[2 * i] = nums[i]</code> when <code>2 &lt;= 2 * i &lt;= n</code></li>\n\t<li><code>nums[2 * i + 1] = nums[i] + nums[i + 1]</code> when <code>2 &lt;= 2 * i + 1 &lt;= n</code></li>\n</ul>\n\n<p>Return<strong> </strong><em>the <strong>maximum</strong> integer in the array </em><code>nums</code>​​​.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 7\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> According to the given rules:\n  nums[0] = 0\n  nums[1] = 1\n  nums[(1 * 2) = 2] = nums[1] = 1\n  nums[(1 * 2) + 1 = 3] = nums[1] + nums[2] = 1 + 1 = 2\n  nums[(2 * 2) = 4] = nums[2] = 1\n  nums[(2 * 2) + 1 = 5] = nums[2] + nums[3] = 1 + 2 = 3\n  nums[(3 * 2) = 6] = nums[3] = 2\n  nums[(3 * 2) + 1 = 7] = nums[3] + nums[4] = 2 + 1 = 3\nHence, nums = [0,1,1,2,1,3,2,3], and the maximum is max(0,1,1,2,1,3,2,3) = 3.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 2\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> According to the given rules, nums = [0,1,1]. The maximum is max(0,1,1) = 1.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 3\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> According to the given rules, nums = [0,1,1,2]. The maximum is max(0,1,1,2) = 2.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>0 &lt;= n &lt;= 100</code></li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "643",
+      "slug": "maximum-average-subarray-i",
+      "title": "Maximum Average Subarray I",
+      "difficulty": "Easy",
+      "tags": [
+        "Array",
+        "Sliding Window"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    double findMaxAverage(vector<int>& nums, int k) {\n        int n = nums.size();\n        int l = 0, r = k - 1;\n        long long sum = 0;\n        for(int i = 0; i < k; i++){\n            sum += nums[i];\n        }\n        long long maxSum = sum;\n        while(r + 1 <= n - 1){\n            sum -= nums[l++];\n            sum += nums[++r];\n            maxSum = std::max(sum, maxSum);\n        }\n        return (double)maxSum / k;\n    }\n};",
+      "submission_id": 2131803270,
+      "solved_at": "2026-09-05T14:23:19+00:00",
+      "content": "<p>You are given an integer array <code>nums</code> consisting of <code>n</code> elements, and an integer <code>k</code>.</p>\n\n<p>Find a contiguous subarray whose <strong>length is equal to</strong> <code>k</code> that has the maximum average value and return <em>this value</em>. Any answer with a calculation error less than <code>10<sup>-5</sup></code> will be accepted.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,12,-5,-6,50,3], k = 4\n<strong>Output:</strong> 12.75000\n<strong>Explanation:</strong> Maximum average is (12 - 5 - 6 + 50) / 4 = 51 / 4 = 12.75\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [5], k = 1\n<strong>Output:</strong> 5.00000\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>n == nums.length</code></li>\n\t<li><code>1 &lt;= k &lt;= n &lt;= 10<sup>5</sup></code></li>\n\t<li><code>-10<sup>4</sup> &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "3",
+      "slug": "longest-substring-without-repeating-characters",
+      "title": "Longest Substring Without Repeating Characters",
+      "difficulty": "Medium",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Sliding Window"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    int lengthOfLongestSubstring(string s) {\n        int l = 0;\n        int maxLength = 0;\n        unordered_set<char> currentWindow;\n\n        for(int r = 0; r < s.size(); r++){\n            while(currentWindow.contains(s[r])){\n                currentWindow.erase(s[l++]);\n            }\n            currentWindow.insert(s[r]);\n            maxLength = std::max(r - l + 1, maxLength);\n        }\n        return maxLength;\n    }\n};",
+      "submission_id": 2133062921,
+      "solved_at": "2026-09-06T16:36:02+00:00",
+      "content": "<p>Given a string <code>s</code>, find the length of the <strong>longest</strong> <span data-keyword=\"substring-nonempty\"><strong>substring</strong></span> without duplicate characters.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;abcabcbb&quot;\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> The answer is &quot;abc&quot;, with the length of 3. Note that <code>&quot;bca&quot;</code> and <code>&quot;cab&quot;</code> are also correct answers.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;bbbbb&quot;\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> The answer is &quot;b&quot;, with the length of 1.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;pwwkew&quot;\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> The answer is &quot;wke&quot;, with the length of 3.\nNotice that the answer must be a substring, &quot;pwke&quot; is a subsequence and not a substring.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>0 &lt;= s.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>s</code> consists of English letters, digits, symbols and spaces.</li>\n</ul>\n"
+    },
+    {
+      "frontend_id": "209",
+      "slug": "minimum-size-subarray-sum",
+      "title": "Minimum Size Subarray Sum",
+      "difficulty": "Medium",
+      "tags": [
+        "Array",
+        "Binary Search",
+        "Sliding Window",
+        "Prefix Sum"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    int minSubArrayLen(int target, vector<int>& nums) {\n        int n = nums.size();\n        int minLength = n + 1;\n        long long windowSum = 0;\n        int l = 0;\n        for(int r = 0; r < n; r++){\n            windowSum += nums[r];\n            while(windowSum >= target){\n                minLength = std::min(r - l + 1, minLength);\n                windowSum -= nums[l++];\n            }\n        }\n        if(minLength == n + 1) return 0;\n        return minLength;\n    }\n};",
+      "submission_id": 2133100225,
+      "solved_at": "2026-09-06T17:09:15+00:00",
+      "content": "<p>Given an array of positive integers <code>nums</code> and a positive integer <code>target</code>, return <em>the <strong>minimal length</strong> of a </em><span data-keyword=\"subarray-nonempty\"><em>subarray</em></span><em> whose sum is greater than or equal to</em> <code>target</code>. If there is no such subarray, return <code>0</code> instead.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> target = 7, nums = [2,3,1,2,4,3]\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> The subarray [4,3] has the minimal length under the problem constraint.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> target = 4, nums = [1,4,4]\n<strong>Output:</strong> 1\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> target = 11, nums = [1,1,1,1,1,1,1,1]\n<strong>Output:</strong> 0\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= target &lt;= 10<sup>9</sup></code></li>\n\t<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>1 &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>\n</ul>\n\n<p>&nbsp;</p>\n<strong>Follow up:</strong> If you have figured out the <code>O(n)</code> solution, try coding another solution of which the time complexity is <code>O(n log(n))</code>."
+    },
+    {
+      "frontend_id": "424",
+      "slug": "longest-repeating-character-replacement",
+      "title": "Longest Repeating Character Replacement",
+      "difficulty": "Medium",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Sliding Window"
+      ],
+      "lang": "cpp",
+      "extension": "cpp",
+      "code": "class Solution {\npublic:\n    int characterReplacement(string s, int k) {\n        int l = 0, maxFreq = 0, maxLength = 0;\n        unordered_map<char, int> freq;\n\n        for(int r = 0; r < s.size(); r++){\n            freq[s[r]]++;\n            maxFreq = std::max(maxFreq, freq[s[r]]);\n            while(r - l  + 1 - maxFreq > k){\n                freq[s[l]]--;\n                l++;\n            }\n            maxLength = std::max(maxLength, r - l + 1);\n        }\n\n        return maxLength;\n    }\n};",
+      "submission_id": 2136837990,
+      "solved_at": "2026-09-09T20:35:22+00:00",
+      "content": "<p>You are given a string <code>s</code> and an integer <code>k</code>. You can choose any character of the string and change it to any other uppercase English character. You can perform this operation at most <code>k</code> times.</p>\n\n<p>Return <em>the length of the longest substring containing the same letter you can get after performing the above operations</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;ABAB&quot;, k = 2\n<strong>Output:</strong> 4\n<strong>Explanation:</strong> Replace the two &#39;A&#39;s with two &#39;B&#39;s or vice versa.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;AABABBA&quot;, k = 1\n<strong>Output:</strong> 4\n<strong>Explanation:</strong> Replace the one &#39;A&#39; in the middle with &#39;B&#39; and form &quot;AABBBBA&quot;.\nThe substring &quot;BBBB&quot; has the longest repeating letters, which is 4.\nThere may exists other ways to achieve this answer too.</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>s</code> consists of only uppercase English letters.</li>\n\t<li><code>0 &lt;= k &lt;= s.length</code></li>\n</ul>\n"
+    }
+  ],
+  "failed": []
+}
