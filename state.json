@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-09-21T07:38:52.892495+00:00",
+  "last_updated": "2026-09-22T07:20:32.348269+00:00",
   "total_solved_on_leetcode": 74,
-  "total_synced_to_repo": 3,
+  "total_synced_to_repo": 4,
   "synced": [
     {
       "frontend_id": "1952",
@@ -48,9 +48,7 @@
       "submission_id": 1638146915,
       "solved_at": "2025-05-19T10:26:15+00:00",
       "synced_at": "2026-09-21T07:38:52.892487+00:00"
-    }
-  ],
-  "pending": [
+    },
     {
       "frontend_id": "1979",
       "slug": "find-greatest-common-divisor-of-array",
@@ -65,11 +63,12 @@
       ],
       "lang": "cpp",
       "extension": "cpp",
-      "code": "class Solution {\npublic:\n    int gcd(int a,int b){\n        if(b==0){\n            return a;\n        }\n        else {\n            return gcd(b,a%b);\n        }\n    }\n    int findGCD(vector<int>& nums) {\n        sort(nums.begin(),nums.end());\n        return gcd(nums[0],nums.back());\n    }\n};",
       "submission_id": 1638209688,
       "solved_at": "2025-05-19T11:50:55+00:00",
-      "content": "<p>Given an integer array <code>nums</code>, return<strong> </strong><em>the <strong>greatest common divisor</strong> of the smallest number and largest number in </em><code>nums</code>.</p>\n\n<p>The <strong>greatest common divisor</strong> of two numbers is the largest positive integer that evenly divides both numbers.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [2,5,6,9,10]\n<strong>Output:</strong> 2\n<strong>Explanation:</strong>\nThe smallest number in nums is 2.\nThe largest number in nums is 10.\nThe greatest common divisor of 2 and 10 is 2.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [7,5,6,8,3]\n<strong>Output:</strong> 1\n<strong>Explanation:</strong>\nThe smallest number in nums is 3.\nThe largest number in nums is 8.\nThe greatest common divisor of 3 and 8 is 1.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,3]\n<strong>Output:</strong> 3\n<strong>Explanation:</strong>\nThe smallest number in nums is 3.\nThe largest number in nums is 3.\nThe greatest common divisor of 3 and 3 is 3.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>2 &lt;= nums.length &lt;= 1000</code></li>\n\t<li><code>1 &lt;= nums[i] &lt;= 1000</code></li>\n</ul>\n"
-    },
+      "synced_at": "2026-09-22T07:20:32.348260+00:00"
+    }
+  ],
+  "pending": [
     {
       "frontend_id": "125",
       "slug": "valid-palindrome",
