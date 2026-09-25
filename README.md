@@ -13,6 +13,7 @@ Working through problems consistently.
 |---|-------|------------|----------|------|
 | 7 | [Reverse Integer](Medium/0007-reverse-integer/README.md) | Medium | Cpp | Math |
 | 9 | [Palindrome Number](Easy/0009-palindrome-number/README.md) | Easy | Cpp | Math |
+| 70 | [Climbing Stairs](Easy/0070-climbing-stairs/README.md) | Easy | Cpp | Math, Dynamic Programming, Memoization |
 | 125 | [Valid Palindrome](Easy/0125-valid-palindrome/README.md) | Easy | Cpp | Two Pointers, String |
 | 509 | [Fibonacci Number](Easy/0509-fibonacci-number/README.md) | Easy | Cpp | Math, Dynamic Programming, Recursion, Memoization |
 | 1952 | [Three Divisors](Easy/1952-three-divisors/README.md) | Easy | Cpp | Math, Enumeration, Number Theory, Prime Factorization, Sieve Theory |
