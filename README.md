@@ -15,6 +15,7 @@ Working through problems consistently.
 | 9 | [Palindrome Number](Easy/0009-palindrome-number/README.md) | Easy | Cpp | Math |
 | 70 | [Climbing Stairs](Easy/0070-climbing-stairs/README.md) | Easy | Cpp | Math, Dynamic Programming, Memoization |
 | 125 | [Valid Palindrome](Easy/0125-valid-palindrome/README.md) | Easy | Cpp | Two Pointers, String |
+| 231 | [Power of Two](Easy/0231-power-of-two/README.md) | Easy | Cpp | Math, Bit Manipulation, Recursion |
 | 509 | [Fibonacci Number](Easy/0509-fibonacci-number/README.md) | Easy | Cpp | Math, Dynamic Programming, Recursion, Memoization |
 | 1952 | [Three Divisors](Easy/1952-three-divisors/README.md) | Easy | Cpp | Math, Enumeration, Number Theory, Prime Factorization, Sieve Theory |
 | 1979 | [Find Greatest Common Divisor of Array](Easy/1979-find-greatest-common-divisor-of-array/README.md) | Easy | Cpp | Array, Math, Number Theory, Euclidean Algorithm, Greatest Common Divisor |
