@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-09-27T07:37:04.905443+00:00",
+  "last_updated": "2026-09-28T08:14:55.726215+00:00",
   "total_solved_on_leetcode": 74,
-  "total_synced_to_repo": 9,
+  "total_synced_to_repo": 10,
   "synced": [
     {
       "frontend_id": "1952",
@@ -146,9 +146,7 @@
       "submission_id": 1643257376,
       "solved_at": "2025-05-24T16:35:13+00:00",
       "synced_at": "2026-09-27T07:37:04.905438+00:00"
-    }
-  ],
-  "pending": [
+    },
     {
       "frontend_id": "1752",
       "slug": "check-if-array-is-sorted-and-rotated",
@@ -159,11 +157,12 @@
       ],
       "lang": "cpp",
       "extension": "cpp",
-      "code": "class Solution {\npublic:\n    bool check(vector<int>& nums) {\n        int count = 0;\n        int n = nums.size();\n\n        for(int i = 0; i < n; ++i) {\n            if(nums[i] > nums[(i + 1) % n]) {\n                count++;\n            }\n        }\n\n        return count <= 1;\n    }\n};",
       "submission_id": 1645825182,
       "solved_at": "2025-05-27T08:43:04+00:00",
-      "content": "<p>Given an array <code>nums</code>, return <code>true</code><em> if the array was originally sorted in non-decreasing order, then rotated <strong>some</strong> number of positions (including zero)</em>. Otherwise, return <code>false</code>.</p>\n\n<p>There may be <strong>duplicates</strong> in the original array.</p>\n\n<p><strong>Note:</strong> An array <code>A</code> rotated by <code>x</code> positions results in an array <code>B</code> of the same length such that <code>B[i] == A[(i+x) % A.length]</code> for every valid index <code>i</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,4,5,1,2]\n<strong>Output:</strong> true\n<strong>Explanation:</strong> [1,2,3,4,5] is the original sorted array.\nYou can rotate the array by x = 2 positions to begin on the element of value 3: [3,4,5,1,2].\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [2,1,3,4]\n<strong>Output:</strong> false\n<strong>Explanation:</strong> There is no sorted array once rotated that can make nums.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,3]\n<strong>Output:</strong> true\n<strong>Explanation:</strong> [1,2,3] is the original sorted array.\nYou can rotate the array by x = 0 positions (i.e. no rotation) to make nums.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 100</code></li>\n\t<li><code>1 &lt;= nums[i] &lt;= 100</code></li>\n</ul>\n"
-    },
+      "synced_at": "2026-09-28T08:14:55.726206+00:00"
+    }
+  ],
+  "pending": [
     {
       "frontend_id": "26",
       "slug": "remove-duplicates-from-sorted-array",
