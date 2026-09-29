@@ -13,6 +13,7 @@ Working through problems consistently.
 |---|-------|------------|----------|------|
 | 7 | [Reverse Integer](Medium/0007-reverse-integer/README.md) | Medium | Cpp | Math |
 | 9 | [Palindrome Number](Easy/0009-palindrome-number/README.md) | Easy | Cpp | Math |
+| 26 | [Remove Duplicates from Sorted Array](Easy/0026-remove-duplicates-from-sorted-array/README.md) | Easy | Cpp | Array, Two Pointers |
 | 70 | [Climbing Stairs](Easy/0070-climbing-stairs/README.md) | Easy | Cpp | Math, Dynamic Programming, Memoization |
 | 125 | [Valid Palindrome](Easy/0125-valid-palindrome/README.md) | Easy | Cpp | Two Pointers, String |
 | 231 | [Power of Two](Easy/0231-power-of-two/README.md) | Easy | Cpp | Math, Bit Manipulation, Recursion |
