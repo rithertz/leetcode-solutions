@@ -19,6 +19,7 @@ Working through problems consistently.
 | 189 | [Rotate Array](Medium/0189-rotate-array/README.md) | Medium | Cpp | Array, Math, Two Pointers |
 | 231 | [Power of Two](Easy/0231-power-of-two/README.md) | Easy | Cpp | Math, Bit Manipulation, Recursion |
 | 258 | [Add Digits](Easy/0258-add-digits/README.md) | Easy | Cpp | Math, Simulation, Number Theory |
+| 283 | [Move Zeroes](Easy/0283-move-zeroes/README.md) | Easy | Cpp | Array, Two Pointers |
 | 509 | [Fibonacci Number](Easy/0509-fibonacci-number/README.md) | Easy | Cpp | Math, Dynamic Programming, Recursion, Memoization |
 | 1752 | [Check if Array Is Sorted and Rotated](Easy/1752-check-if-array-is-sorted-and-rotated/README.md) | Easy | Cpp | Array |
 | 1952 | [Three Divisors](Easy/1952-three-divisors/README.md) | Easy | Cpp | Math, Enumeration, Number Theory, Prime Factorization, Sieve Theory |
