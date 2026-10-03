@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-10-02T07:57:23.586184+00:00",
+  "last_updated": "2026-10-03T07:36:52.516650+00:00",
   "total_solved_on_leetcode": 74,
-  "total_synced_to_repo": 14,
+  "total_synced_to_repo": 15,
   "synced": [
     {
       "frontend_id": "1952",
@@ -225,9 +225,7 @@
       "submission_id": 1645952204,
       "solved_at": "2025-05-27T11:27:05+00:00",
       "synced_at": "2026-10-02T07:57:23.586175+00:00"
-    }
-  ],
-  "pending": [
+    },
     {
       "frontend_id": "485",
       "slug": "max-consecutive-ones",
@@ -238,11 +236,12 @@
       ],
       "lang": "cpp",
       "extension": "cpp",
-      "code": "class Solution {\npublic:\n    int findMaxConsecutiveOnes(vector<int>& nums) {\n        int ans = 0, count = 0;\n        for(int i = 0, n = nums.size(); i < n; ++i){\n            if(nums[i]){\n                ++count;\n                ans = max(ans , count);\n            }\n            else count = 0;\n        }\n        return ans;\n    }\n};\n",
       "submission_id": 1645980736,
       "solved_at": "2025-05-27T12:06:41+00:00",
-      "content": "<p>Given a binary array <code>nums</code>, return <em>the maximum number of consecutive </em><code>1</code><em>&#39;s in the array</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,1,0,1,1,1]\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> The first two digits or the last three digits are consecutive 1s. The maximum number of consecutive 1s is 3.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,0,1,1,0,1]\n<strong>Output:</strong> 2\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>nums[i]</code> is either <code>0</code> or <code>1</code>.</li>\n</ul>\n"
-    },
+      "synced_at": "2026-10-03T07:36:52.516642+00:00"
+    }
+  ],
+  "pending": [
     {
       "frontend_id": "136",
       "slug": "single-number",
