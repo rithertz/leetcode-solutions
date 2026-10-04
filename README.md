@@ -16,6 +16,7 @@ Working through problems consistently.
 | 26 | [Remove Duplicates from Sorted Array](Easy/0026-remove-duplicates-from-sorted-array/README.md) | Easy | Cpp | Array, Two Pointers |
 | 70 | [Climbing Stairs](Easy/0070-climbing-stairs/README.md) | Easy | Cpp | Math, Dynamic Programming, Memoization |
 | 125 | [Valid Palindrome](Easy/0125-valid-palindrome/README.md) | Easy | Cpp | Two Pointers, String |
+| 136 | [Single Number](Easy/0136-single-number/README.md) | Easy | Cpp | Array, Bit Manipulation |
 | 189 | [Rotate Array](Medium/0189-rotate-array/README.md) | Medium | Cpp | Array, Math, Two Pointers |
 | 231 | [Power of Two](Easy/0231-power-of-two/README.md) | Easy | Cpp | Math, Bit Manipulation, Recursion |
 | 258 | [Add Digits](Easy/0258-add-digits/README.md) | Easy | Cpp | Math, Simulation, Number Theory |
