@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-10-04T16:29:53.282258+00:00",
+  "last_updated": "2026-10-05T08:23:18.497368+00:00",
   "total_solved_on_leetcode": 74,
-  "total_synced_to_repo": 16,
+  "total_synced_to_repo": 17,
   "synced": [
     {
       "frontend_id": "1952",
@@ -254,9 +254,7 @@
       "submission_id": 1645992566,
       "solved_at": "2025-05-27T12:22:34+00:00",
       "synced_at": "2026-10-04T16:29:53.282243+00:00"
-    }
-  ],
-  "pending": [
+    },
     {
       "frontend_id": "35",
       "slug": "search-insert-position",
@@ -268,11 +266,12 @@
       ],
       "lang": "cpp",
       "extension": "cpp",
-      "code": "class Solution {\npublic:\n    int searchInsert(vector<int>& nums, int target) {\n        int l=0;\n        int r=nums.size()-1;\n        while(l<=r){\n            int mid=l+(r-l)/2;\n            if(nums[mid]>target){\n                r=mid-1;\n            }\n            else if(nums[mid]==target){\n                return mid;\n            }\n            else if(nums[mid]<target){\n                l=mid+1;\n            }\n        }\n        return l;\n    }\n};",
       "submission_id": 1647152515,
       "solved_at": "2025-05-28T16:01:19+00:00",
-      "content": "<p>Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.</p>\n\n<p>You must&nbsp;write an algorithm with&nbsp;<code>O(log n)</code> runtime complexity.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,3,5,6], target = 5\n<strong>Output:</strong> 2\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,3,5,6], target = 2\n<strong>Output:</strong> 1\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,3,5,6], target = 7\n<strong>Output:</strong> 4\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>-10<sup>4</sup> &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>\n\t<li><code>nums</code> contains <strong>distinct</strong> values sorted in <strong>ascending</strong> order.</li>\n\t<li><code>-10<sup>4</sup> &lt;= target &lt;= 10<sup>4</sup></code></li>\n</ul>\n"
-    },
+      "synced_at": "2026-10-05T08:23:18.497359+00:00"
+    }
+  ],
+  "pending": [
     {
       "frontend_id": "292",
       "slug": "nim-game",
