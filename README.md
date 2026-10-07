@@ -24,6 +24,7 @@ Working through problems consistently.
 | 268 | [Missing Number](Easy/0268-missing-number/README.md) | Easy | Cpp | Array, Hash Table, Math, Binary Search, Bit Manipulation, Sorting |
 | 283 | [Move Zeroes](Easy/0283-move-zeroes/README.md) | Easy | Cpp | Array, Two Pointers |
 | 292 | [Nim Game](Easy/0292-nim-game/README.md) | Easy | Cpp | Math, Brainteaser, Minimax, Game Theory, Nim Game, Impartial Game |
+| 326 | [Power of Three](Easy/0326-power-of-three/README.md) | Easy | Cpp | Math, Recursion |
 | 485 | [Max Consecutive Ones](Easy/0485-max-consecutive-ones/README.md) | Easy | Cpp | Array |
 | 509 | [Fibonacci Number](Easy/0509-fibonacci-number/README.md) | Easy | Cpp | Math, Dynamic Programming, Recursion, Memoization |
 | 1752 | [Check if Array Is Sorted and Rotated](Easy/1752-check-if-array-is-sorted-and-rotated/README.md) | Easy | Cpp | Array |
