@@ -16,6 +16,7 @@ Working through problems consistently.
 | 26 | [Remove Duplicates from Sorted Array](Easy/0026-remove-duplicates-from-sorted-array/README.md) | Easy | Cpp | Array, Two Pointers |
 | 35 | [Search Insert Position](Easy/0035-search-insert-position/README.md) | Easy | Cpp | Array, Binary Search |
 | 70 | [Climbing Stairs](Easy/0070-climbing-stairs/README.md) | Easy | Cpp | Math, Dynamic Programming, Memoization |
+| 75 | [Sort Colors](Medium/0075-sort-colors/README.md) | Medium | Cpp | Array, Two Pointers, Sorting, Quicksort, Bubble Sort |
 | 125 | [Valid Palindrome](Easy/0125-valid-palindrome/README.md) | Easy | Cpp | Two Pointers, String |
 | 136 | [Single Number](Easy/0136-single-number/README.md) | Easy | Cpp | Array, Bit Manipulation |
 | 189 | [Rotate Array](Medium/0189-rotate-array/README.md) | Medium | Cpp | Array, Math, Two Pointers |
