@@ -31,6 +31,7 @@ Working through problems consistently.
 | 1752 | [Check if Array Is Sorted and Rotated](Easy/1752-check-if-array-is-sorted-and-rotated/README.md) | Easy | Cpp | Array |
 | 1952 | [Three Divisors](Easy/1952-three-divisors/README.md) | Easy | Cpp | Math, Enumeration, Number Theory, Prime Factorization, Sieve Theory |
 | 1979 | [Find Greatest Common Divisor of Array](Easy/1979-find-greatest-common-divisor-of-array/README.md) | Easy | Cpp | Array, Math, Number Theory, Euclidean Algorithm, Greatest Common Divisor |
+| 3386 | [Button with Longest Push Time](Easy/3386-button-with-longest-push-time/README.md) | Easy | Cpp | Array |
 <!-- SOLUTIONS_TABLE_END -->
 
 ---
