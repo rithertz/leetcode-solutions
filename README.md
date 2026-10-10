@@ -14,6 +14,7 @@ Working through problems consistently.
 | 7 | [Reverse Integer](Medium/0007-reverse-integer/README.md) | Medium | Cpp | Math |
 | 9 | [Palindrome Number](Easy/0009-palindrome-number/README.md) | Easy | Cpp | Math |
 | 26 | [Remove Duplicates from Sorted Array](Easy/0026-remove-duplicates-from-sorted-array/README.md) | Easy | Cpp | Array, Two Pointers |
+| 27 | [Remove Element](Easy/0027-remove-element/README.md) | Easy | Cpp | Array, Two Pointers |
 | 35 | [Search Insert Position](Easy/0035-search-insert-position/README.md) | Easy | Cpp | Array, Binary Search |
 | 70 | [Climbing Stairs](Easy/0070-climbing-stairs/README.md) | Easy | Cpp | Math, Dynamic Programming, Memoization |
 | 75 | [Sort Colors](Medium/0075-sort-colors/README.md) | Medium | Cpp | Array, Two Pointers, Sorting, Quicksort, Bubble Sort |
