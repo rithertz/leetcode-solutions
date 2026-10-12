@@ -29,6 +29,7 @@ Working through problems consistently.
 | 326 | [Power of Three](Easy/0326-power-of-three/README.md) | Easy | Cpp | Math, Recursion |
 | 485 | [Max Consecutive Ones](Easy/0485-max-consecutive-ones/README.md) | Easy | Cpp | Array |
 | 509 | [Fibonacci Number](Easy/0509-fibonacci-number/README.md) | Easy | Cpp | Math, Dynamic Programming, Recursion, Memoization |
+| 1475 | [Final Prices With a Special Discount in a Shop](Easy/1475-final-prices-with-a-special-discount-in-a-shop/README.md) | Easy | Cpp | Array, Stack, Monotonic Stack |
 | 1752 | [Check if Array Is Sorted and Rotated](Easy/1752-check-if-array-is-sorted-and-rotated/README.md) | Easy | Cpp | Array |
 | 1822 | [Sign of the Product of an Array](Easy/1822-sign-of-the-product-of-an-array/README.md) | Easy | Cpp | Array, Math |
 | 1952 | [Three Divisors](Easy/1952-three-divisors/README.md) | Easy | Cpp | Math, Enumeration, Number Theory, Prime Factorization, Sieve Theory |
