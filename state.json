@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-10-12T08:38:30.567058+00:00",
+  "last_updated": "2026-10-13T08:58:02.851428+00:00",
   "total_solved_on_leetcode": 74,
-  "total_synced_to_repo": 24,
+  "total_synced_to_repo": 25,
   "synced": [
     {
       "frontend_id": "1952",
@@ -381,9 +381,7 @@
       "submission_id": 1655096922,
       "solved_at": "2025-06-05T20:18:03+00:00",
       "synced_at": "2026-10-12T08:38:30.567049+00:00"
-    }
-  ],
-  "pending": [
+    },
     {
       "frontend_id": "3065",
       "slug": "minimum-operations-to-exceed-threshold-value-i",
@@ -394,11 +392,12 @@
       ],
       "lang": "cpp",
       "extension": "cpp",
-      "code": "class Solution {\npublic:\n    int minOperations(vector<int>& nums, int k) {\n        //sort(nums.begin(),nums.end());\n        int count=0;\n        for(int x:nums){\n            if(x<k){\n                count++;\n            }\n        }\n        return count;\n    }\n    \n};",
       "submission_id": 1655843879,
       "solved_at": "2025-06-06T16:30:50+00:00",
-      "content": "<p>You are given a <strong>0-indexed</strong> integer array <code>nums</code>, and an integer <code>k</code>.</p>\n\n<p>In one operation, you can remove one occurrence of the smallest element of <code>nums</code>.</p>\n\n<p>Return <em>the <strong>minimum</strong> number of operations needed so that all elements of the array are greater than or equal to</em> <code>k</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [2,11,10,1,3], k = 10\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> After one operation, nums becomes equal to [2, 11, 10, 3].\nAfter two operations, nums becomes equal to [11, 10, 3].\nAfter three operations, nums becomes equal to [11, 10].\nAt this stage, all the elements of nums are greater than or equal to 10 so we can stop.\nIt can be shown that 3 is the minimum number of operations needed so that all elements of the array are greater than or equal to 10.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,1,2,4,9], k = 1\n<strong>Output:</strong> 0\n<strong>Explanation:</strong> All elements of the array are greater than or equal to 1 so we do not need to apply any operations on nums.</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,1,2,4,9], k = 9\n<strong>Output:</strong> 4\n<strong>Explanation:</strong> only a single element of nums is greater than or equal to 9 so we need to apply the operations 4 times on nums.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 50</code></li>\n\t<li><code>1 &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>\n\t<li><code>1 &lt;= k &lt;= 10<sup>9</sup></code></li>\n\t<li>The input is generated such that there is at least one index <code>i</code> such that <code>nums[i] &gt;= k</code>.</li>\n</ul>\n"
-    },
+      "synced_at": "2026-10-13T08:58:02.851418+00:00"
+    }
+  ],
+  "pending": [
     {
       "frontend_id": "2643",
       "slug": "row-with-maximum-ones",
