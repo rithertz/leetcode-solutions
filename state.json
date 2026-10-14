@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-10-13T08:58:02.851428+00:00",
+  "last_updated": "2026-10-14T07:07:16.617883+00:00",
   "total_solved_on_leetcode": 74,
-  "total_synced_to_repo": 25,
+  "total_synced_to_repo": 26,
   "synced": [
     {
       "frontend_id": "1952",
@@ -395,9 +395,7 @@
       "submission_id": 1655843879,
       "solved_at": "2025-06-06T16:30:50+00:00",
       "synced_at": "2026-10-13T08:58:02.851418+00:00"
-    }
-  ],
-  "pending": [
+    },
     {
       "frontend_id": "2643",
       "slug": "row-with-maximum-ones",
@@ -409,11 +407,12 @@
       ],
       "lang": "cpp",
       "extension": "cpp",
-      "code": "class Solution {\npublic:\n    vector<int> rowAndMaximumOnes(vector<vector<int>>& mat) {\n        int max_count=-1;\n        int max_index=-1;\n        for(int i=0;i<mat.size();i++){\n            int current_count=0;\n            for(int j=0;j<mat[i].size();j++){\n                if(mat[i][j]==1){\n                    current_count++;\n                }\n            }\n            if(current_count>max_count){\n                max_count=current_count;\n                max_index=i;\n            }\n        }\n        return {max_index,max_count};\n    }\n};",
       "submission_id": 1655871577,
       "solved_at": "2025-06-06T17:02:31+00:00",
-      "content": "<p>Given a <code>m x n</code> binary matrix <code>mat</code>, find the <strong>0-indexed</strong> position of the row that contains the <strong>maximum</strong> count of <strong>ones,</strong> and the number of ones in that row.</p>\n\n<p>In case there are multiple rows that have the maximum count of ones, the row with the <strong>smallest row number</strong> should be selected.</p>\n\n<p>Return<em> an array containing the index of the row, and the number of ones in it.</em></p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> mat = [[0,1],[1,0]]\n<strong>Output:</strong> [0,1]\n<strong>Explanation:</strong> Both rows have the same number of 1&#39;s. So we return the index of the smaller row, 0, and the maximum count of ones (1<code>)</code>. So, the answer is [0,1]. \n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> mat = [[0,0,0],[0,1,1]]\n<strong>Output:</strong> [1,2]\n<strong>Explanation:</strong> The row indexed 1 has the maximum count of ones <code>(2)</code>. So we return its index, <code>1</code>, and the count. So, the answer is [1,2].\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> mat = [[0,0],[1,1],[0,0]]\n<strong>Output:</strong> [1,2]\n<strong>Explanation:</strong> The row indexed 1 has the maximum count of ones (2). So the answer is [1,2].\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>m == mat.length</code>&nbsp;</li>\n\t<li><code>n == mat[i].length</code>&nbsp;</li>\n\t<li><code>1 &lt;= m, n &lt;= 100</code>&nbsp;</li>\n\t<li><code>mat[i][j]</code> is either <code>0</code> or <code>1</code>.</li>\n</ul>\n"
-    },
+      "synced_at": "2026-10-14T07:07:16.617875+00:00"
+    }
+  ],
+  "pending": [
     {
       "frontend_id": "53",
       "slug": "maximum-subarray",
