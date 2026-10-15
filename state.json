@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-10-14T07:07:16.617883+00:00",
+  "last_updated": "2026-10-15T06:58:56.601867+00:00",
   "total_solved_on_leetcode": 74,
-  "total_synced_to_repo": 26,
+  "total_synced_to_repo": 27,
   "synced": [
     {
       "frontend_id": "1952",
@@ -410,9 +410,7 @@
       "submission_id": 1655871577,
       "solved_at": "2025-06-06T17:02:31+00:00",
       "synced_at": "2026-10-14T07:07:16.617875+00:00"
-    }
-  ],
-  "pending": [
+    },
     {
       "frontend_id": "53",
       "slug": "maximum-subarray",
@@ -425,11 +423,12 @@
       ],
       "lang": "cpp",
       "extension": "cpp",
-      "code": "class Solution {\npublic:\n    int maxSubArray(vector<int>& nums) {\n        int sum=0;\n        int max_sum=INT_MIN;\n        for(int i=0;i<nums.size();i++){\n            sum+=nums[i];\n            if(sum>max_sum){\n                max_sum=sum;\n            }\n            if(sum<0){\n                sum=0;\n            }\n        }\n        return max_sum;\n    }\n};",
       "submission_id": 1655909075,
       "solved_at": "2025-06-06T17:43:55+00:00",
-      "content": "<p>Given an integer array <code>nums</code>, find the <span data-keyword=\"subarray-nonempty\">subarray</span> with the largest sum, and return <em>its sum</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [-2,1,-3,4,-1,2,1,-5,4]\n<strong>Output:</strong> 6\n<strong>Explanation:</strong> The subarray [4,-1,2,1] has the largest sum 6.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1]\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> The subarray [1] has the largest sum 1.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [5,4,-1,7,8]\n<strong>Output:</strong> 23\n<strong>Explanation:</strong> The subarray [5,4,-1,7,8] has the largest sum 23.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>-10<sup>4</sup> &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up:</strong> If you have figured out the <code>O(n)</code> solution, try coding another solution using the <strong>divide and conquer</strong> approach, which is more subtle.</p>\n"
-    },
+      "synced_at": "2026-10-15T06:58:56.601859+00:00"
+    }
+  ],
+  "pending": [
     {
       "frontend_id": "2149",
       "slug": "rearrange-array-elements-by-sign",
