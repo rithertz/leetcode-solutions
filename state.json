@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-10-15T06:58:56.601867+00:00",
+  "last_updated": "2026-10-16T06:45:09.248978+00:00",
   "total_solved_on_leetcode": 74,
-  "total_synced_to_repo": 27,
+  "total_synced_to_repo": 28,
   "synced": [
     {
       "frontend_id": "1952",
@@ -426,9 +426,7 @@
       "submission_id": 1655909075,
       "solved_at": "2025-06-06T17:43:55+00:00",
       "synced_at": "2026-10-15T06:58:56.601859+00:00"
-    }
-  ],
-  "pending": [
+    },
     {
       "frontend_id": "2149",
       "slug": "rearrange-array-elements-by-sign",
@@ -441,11 +439,12 @@
       ],
       "lang": "cpp",
       "extension": "cpp",
-      "code": "class Solution {\npublic:\n    vector<int> rearrangeArray(vector<int>& nums) {\n        int n = nums.size();\n        int s = 0;\n        vector<int> res;\n        int i = 0 , j = 0;\n        while(s != n){\n            while(nums[i] < 0)i++;\n            res.push_back(nums[i++]);\n            while(nums[j] > 0)j++;\n            res.push_back(nums[j++]);\n            s += 2;\n        }\n        return res;\n    }\n};",
       "submission_id": 1657846954,
       "solved_at": "2025-06-08T16:50:35+00:00",
-      "content": "<p>You are given a <strong>0-indexed</strong> integer array <code>nums</code> of <strong>even</strong> length consisting of an <strong>equal</strong> number of positive and negative integers.</p>\n\n<p>You should return the array of nums such that the array follows the given conditions:</p>\n\n<ol>\n\t<li>Every <strong>consecutive pair</strong> of integers have <strong>opposite signs</strong>.</li>\n\t<li>For all integers with the same sign, the <strong>order</strong> in which they were present in <code>nums</code> is <strong>preserved</strong>.</li>\n\t<li>The rearranged array begins with a positive integer.</li>\n</ol>\n\n<p>Return <em>the modified array after rearranging the elements to satisfy the aforementioned conditions</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,1,-2,-5,2,-4]\n<strong>Output:</strong> [3,-2,1,-5,2,-4]\n<strong>Explanation:</strong>\nThe positive integers in nums are [3,1,2]. The negative integers are [-2,-5,-4].\nThe only possible way to rearrange them such that they satisfy all conditions is [3,-2,1,-5,2,-4].\nOther ways such as [1,-2,2,-5,3,-4], [3,1,2,-2,-5,-4], [-2,3,-5,1,-4,2] are incorrect because they do not satisfy one or more conditions.  \n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [-1,1]\n<strong>Output:</strong> [1,-1]\n<strong>Explanation:</strong>\n1 is the only positive integer and -1 the only negative integer in nums.\nSo nums is rearranged to [1,-1].\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>2 &lt;= nums.length &lt;= 2 * 10<sup>5</sup></code></li>\n\t<li><code>nums.length</code> is <strong>even</strong></li>\n\t<li><code>1 &lt;= |nums[i]| &lt;= 10<sup>5</sup></code></li>\n\t<li><code>nums</code> consists of <strong>equal</strong> number of positive and negative integers.</li>\n</ul>\n\n<p>&nbsp;</p>\nIt is not required to do the modifications in-place."
-    },
+      "synced_at": "2026-10-16T06:45:09.248970+00:00"
+    }
+  ],
+  "pending": [
     {
       "frontend_id": "73",
       "slug": "set-matrix-zeroes",
