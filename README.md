@@ -18,6 +18,7 @@ Working through problems consistently.
 | 35 | [Search Insert Position](Easy/0035-search-insert-position/README.md) | Easy | Cpp | Array, Binary Search |
 | 53 | [Maximum Subarray](Medium/0053-maximum-subarray/README.md) | Medium | Cpp | Array, Divide and Conquer, Dynamic Programming |
 | 70 | [Climbing Stairs](Easy/0070-climbing-stairs/README.md) | Easy | Cpp | Math, Dynamic Programming, Memoization |
+| 73 | [Set Matrix Zeroes](Medium/0073-set-matrix-zeroes/README.md) | Medium | Cpp | Array, Hash Table, Matrix |
 | 75 | [Sort Colors](Medium/0075-sort-colors/README.md) | Medium | Cpp | Array, Two Pointers, Sorting, Quicksort, Bubble Sort |
 | 125 | [Valid Palindrome](Easy/0125-valid-palindrome/README.md) | Easy | Cpp | Two Pointers, String |
 | 136 | [Single Number](Easy/0136-single-number/README.md) | Easy | Cpp | Array, Bit Manipulation |
