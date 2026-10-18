@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-10-17T06:35:02.447330+00:00",
+  "last_updated": "2026-10-18T06:58:38.376300+00:00",
   "total_solved_on_leetcode": 74,
-  "total_synced_to_repo": 29,
+  "total_synced_to_repo": 30,
   "synced": [
     {
       "frontend_id": "1952",
@@ -458,9 +458,7 @@
       "submission_id": 1664957986,
       "solved_at": "2025-06-15T13:11:21+00:00",
       "synced_at": "2026-10-17T06:35:02.447322+00:00"
-    }
-  ],
-  "pending": [
+    },
     {
       "frontend_id": "1037",
       "slug": "valid-boomerang",
@@ -473,11 +471,12 @@
       ],
       "lang": "cpp",
       "extension": "cpp",
-      "code": "class Solution {\npublic:\n    bool isBoomerang(vector<vector<int>>& points) {\n        return (points[0][0]*(points[1][1]-points[2][1])+points[1][0]*(points[2][1]-points[0][1])+points[2][0]*(points[0][1]-points[1][1]))!=0;\n    }\n};",
       "submission_id": 1765187398,
       "solved_at": "2025-09-09T17:06:33+00:00",
-      "content": "<p>Given an array <code>points</code> where <code>points[i] = [x<sub>i</sub>, y<sub>i</sub>]</code> represents a point on the <strong>X-Y</strong> plane, return <code>true</code> <em>if these points are a <strong>boomerang</strong></em>.</p>\n\n<p>A <strong>boomerang</strong> is a set of three points that are <strong>all distinct</strong> and <strong>not in a straight line</strong>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> points = [[1,1],[2,3],[3,2]]\n<strong>Output:</strong> true\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> points = [[1,1],[2,2],[3,3]]\n<strong>Output:</strong> false\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>points.length == 3</code></li>\n\t<li><code>points[i].length == 2</code></li>\n\t<li><code>0 &lt;= x<sub>i</sub>, y<sub>i</sub> &lt;= 100</code></li>\n</ul>\n"
-    },
+      "synced_at": "2026-10-18T06:58:38.376292+00:00"
+    }
+  ],
+  "pending": [
     {
       "frontend_id": "3184",
       "slug": "count-pairs-that-form-a-complete-day-i",
