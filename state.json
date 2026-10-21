@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-10-20T07:11:59.924259+00:00",
+  "last_updated": "2026-10-21T07:05:11.786886+00:00",
   "total_solved_on_leetcode": 74,
-  "total_synced_to_repo": 32,
+  "total_synced_to_repo": 33,
   "synced": [
     {
       "frontend_id": "1952",
@@ -507,9 +507,7 @@
       "submission_id": 1765224479,
       "solved_at": "2025-09-09T17:35:16+00:00",
       "synced_at": "2026-10-20T07:11:59.924251+00:00"
-    }
-  ],
-  "pending": [
+    },
     {
       "frontend_id": "1437",
       "slug": "check-if-all-1s-are-at-least-length-k-places-away",
@@ -520,11 +518,12 @@
       ],
       "lang": "cpp",
       "extension": "cpp",
-      "code": "class Solution {\npublic:\n    bool kLengthApart(vector<int>& nums, int k) {\n        int dist=0;\n        bool firstOne=false;\n        for(int i=0;i<nums.size();i++){\n            if(nums[i]==1) {\n                if(dist<k && firstOne==true){\n                    return false;\n                }\n                else{\n                    firstOne=true;\n                    dist=0;\n                }\n            }\n            else{\n                dist++;\n            }\n        }\n        return true;\n    }\n};",
       "submission_id": 1765246318,
       "solved_at": "2025-09-09T17:51:47+00:00",
-      "content": "<p>Given an binary array <code>nums</code> and an integer <code>k</code>, return <code>true</code><em> if all </em><code>1</code><em>&#39;s are at least </em><code>k</code><em> places away from each other, otherwise return </em><code>false</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/04/15/sample_1_1791.png\" style=\"width: 428px; height: 181px;\" />\n<pre>\n<strong>Input:</strong> nums = [1,0,0,0,1,0,0,1], k = 2\n<strong>Output:</strong> true\n<strong>Explanation:</strong> Each of the 1s are at least 2 places away from each other.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/04/15/sample_2_1791.png\" style=\"width: 320px; height: 173px;\" />\n<pre>\n<strong>Input:</strong> nums = [1,0,0,1,0,1], k = 2\n<strong>Output:</strong> false\n<strong>Explanation:</strong> The second 1 and third 1 are only one apart from each other.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>0 &lt;= k &lt;= nums.length</code></li>\n\t<li><code>nums[i]</code> is <code>0</code> or <code>1</code></li>\n</ul>\n"
-    },
+      "synced_at": "2026-10-21T07:05:11.786879+00:00"
+    }
+  ],
+  "pending": [
     {
       "frontend_id": "20",
       "slug": "valid-parentheses",
