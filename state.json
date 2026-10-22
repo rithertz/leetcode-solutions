@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-10-21T07:05:11.786886+00:00",
+  "last_updated": "2026-10-22T07:07:06.524442+00:00",
   "total_solved_on_leetcode": 74,
-  "total_synced_to_repo": 33,
+  "total_synced_to_repo": 34,
   "synced": [
     {
       "frontend_id": "1952",
@@ -521,9 +521,7 @@
       "submission_id": 1765246318,
       "solved_at": "2025-09-09T17:51:47+00:00",
       "synced_at": "2026-10-21T07:05:11.786879+00:00"
-    }
-  ],
-  "pending": [
+    },
     {
       "frontend_id": "20",
       "slug": "valid-parentheses",
@@ -536,11 +534,12 @@
       ],
       "lang": "cpp",
       "extension": "cpp",
-      "code": "#define size 10000\nclass staack{\n    private:\n    int a[size];\n    int top;\n    public:\n    staack(){\n        top=-1;\n    }\n    bool isEmpty(){\n        return top==-1;\n    }\n    bool isFull(){\n        return top==size-1;\n    }\n    void push(char x){\n        if(isFull()){\n            return;\n        }\n        a[++top]=x;\n    }\n    char pop(){\n        if(isEmpty()){\n            return -1;\n        }\n        return a[top--];\n    }\n    char peek(){\n        if(isEmpty()){\n            return -1;\n        }\n        return a[top];\n    }\n    bool isMatching(char c1,char c2){\n        return (c1=='('&&c2==')')||(c1=='['&&c2==']')||(c1=='{'&&c2=='}');\n    }\n    bool isOpening(char c){\n        return (c=='(')||(c=='{')||(c=='[');\n    }\n    bool isClosing(char c){\n        return (c==')')||(c=='}')||(c==']');\n    }\n    bool validate(string s){\n        for(char ch:s){\n            if(isOpening(ch)){\n                push(ch);\n            }\n            else{\n                if(isEmpty()||!isMatching(pop(),ch)) return false;\n            }\n\n        }\n        return isEmpty();\n    }\n};\nclass Solution {\npublic:\n    bool isValid(string s) {\n        staack mystack;\n        return mystack.validate(s);\n    }\n};",
       "submission_id": 1809798836,
       "solved_at": "2025-10-23T20:25:30+00:00",
-      "content": "<p>Given a string <code>s</code> containing just the characters <code>&#39;(&#39;</code>, <code>&#39;)&#39;</code>, <code>&#39;{&#39;</code>, <code>&#39;}&#39;</code>, <code>&#39;[&#39;</code> and <code>&#39;]&#39;</code>, determine if the input string is valid.</p>\n\n<p>An input string is valid if:</p>\n\n<ol>\n\t<li>Open brackets must be closed by the same type of brackets.</li>\n\t<li>Open brackets must be closed in the correct order.</li>\n\t<li>Every close bracket has a corresponding open bracket of the same type.</li>\n</ol>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;()&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">true</span></p>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;()[]{}&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">true</span></p>\n</div>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;(]&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">false</span></p>\n</div>\n\n<p><strong class=\"example\">Example 4:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;([])&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">true</span></p>\n</div>\n\n<p><strong class=\"example\">Example 5:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;([)]&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">false</span></p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>s</code> consists of parentheses only <code>&#39;()[]{}&#39;</code>.</li>\n</ul>\n"
-    },
+      "synced_at": "2026-10-22T07:07:06.524435+00:00"
+    }
+  ],
+  "pending": [
     {
       "frontend_id": "2427",
       "slug": "number-of-common-factors",
