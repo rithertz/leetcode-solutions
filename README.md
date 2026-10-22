@@ -13,6 +13,7 @@ Working through problems consistently.
 |---|-------|------------|----------|------|
 | 7 | [Reverse Integer](Medium/0007-reverse-integer/README.md) | Medium | Cpp | Math |
 | 9 | [Palindrome Number](Easy/0009-palindrome-number/README.md) | Easy | Cpp | Math |
+| 20 | [Valid Parentheses](Easy/0020-valid-parentheses/README.md) | Easy | Cpp | String, Stack, Bracket Sequences |
 | 26 | [Remove Duplicates from Sorted Array](Easy/0026-remove-duplicates-from-sorted-array/README.md) | Easy | Cpp | Array, Two Pointers |
 | 27 | [Remove Element](Easy/0027-remove-element/README.md) | Easy | Cpp | Array, Two Pointers |
 | 35 | [Search Insert Position](Easy/0035-search-insert-position/README.md) | Easy | Cpp | Array, Binary Search |
