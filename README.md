@@ -40,6 +40,7 @@ Working through problems consistently.
 | 1952 | [Three Divisors](Easy/1952-three-divisors/README.md) | Easy | Cpp | Math, Enumeration, Number Theory, Prime Factorization, Sieve Theory |
 | 1979 | [Find Greatest Common Divisor of Array](Easy/1979-find-greatest-common-divisor-of-array/README.md) | Easy | Cpp | Array, Math, Number Theory, Euclidean Algorithm, Greatest Common Divisor |
 | 2149 | [Rearrange Array Elements by Sign](Medium/2149-rearrange-array-elements-by-sign/README.md) | Medium | Cpp | Array, Two Pointers, Simulation |
+| 2427 | [Number of Common Factors](Easy/2427-number-of-common-factors/README.md) | Easy | Cpp | Math, Enumeration, Number Theory, Euclidean Algorithm, Greatest Common Divisor |
 | 2441 | [Largest Positive Integer That Exists With Its Negative](Easy/2441-largest-positive-integer-that-exists-with-its-negative/README.md) | Easy | Cpp | Array, Hash Table, Two Pointers, Sorting |
 | 2643 | [Row With Maximum Ones](Easy/2643-row-with-maximum-ones/README.md) | Easy | Cpp | Array, Matrix |
 | 3065 | [Minimum Operations to Exceed Threshold Value I](Easy/3065-minimum-operations-to-exceed-threshold-value-i/README.md) | Easy | Cpp | Array |
