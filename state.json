@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-10-25T07:17:30.464120+00:00",
+  "last_updated": "2026-10-26T07:25:58.969117+00:00",
   "total_solved_on_leetcode": 74,
-  "total_synced_to_repo": 37,
+  "total_synced_to_repo": 38,
   "synced": [
     {
       "frontend_id": "1952",
@@ -589,9 +589,7 @@
       "submission_id": 1919199128,
       "solved_at": "2026-02-14T16:27:54+00:00",
       "synced_at": "2026-10-25T07:17:30.464112+00:00"
-    }
-  ],
-  "pending": [
+    },
     {
       "frontend_id": "1025",
       "slug": "divisor-game",
@@ -606,11 +604,12 @@
       ],
       "lang": "cpp",
       "extension": "cpp",
-      "code": "class Solution {\npublic:\n    bool divisorGame(int n) {\n        return n%2==0;\n    }\n};",
       "submission_id": 1919239455,
       "solved_at": "2026-02-14T17:09:25+00:00",
-      "content": "<p>Alice and Bob take turns playing a game, with Alice starting first.</p>\n\n<p>Initially, there is a number <code>n</code> on the chalkboard. On each player&#39;s turn, that player makes a move consisting of:</p>\n\n<ul>\n\t<li>Choosing any integer <code>x</code> with <code>0 &lt; x &lt; n</code> and <code>n % x == 0</code>.</li>\n\t<li>Replacing the number <code>n</code> on the chalkboard with <code>n - x</code>.</li>\n</ul>\n\n<p>Also, if a player cannot make a move, they lose the game.</p>\n\n<p>Return <code>true</code> <em>if and only if Alice wins the game, assuming both players play optimally</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 2\n<strong>Output:</strong> true\n<strong>Explanation:</strong> Alice chooses 1, and Bob has no more moves.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 3\n<strong>Output:</strong> false\n<strong>Explanation:</strong> Alice chooses 1, Bob chooses 1, and Alice has no more moves.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= n &lt;= 1000</code></li>\n</ul>\n"
-    },
+      "synced_at": "2026-10-26T07:25:58.969106+00:00"
+    }
+  ],
+  "pending": [
     {
       "frontend_id": "3591",
       "slug": "check-if-any-element-has-prime-frequency",
