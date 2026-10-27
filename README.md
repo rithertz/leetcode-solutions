@@ -49,6 +49,7 @@ Working through problems consistently.
 | 3065 | [Minimum Operations to Exceed Threshold Value I](Easy/3065-minimum-operations-to-exceed-threshold-value-i/README.md) | Easy | Cpp | Array |
 | 3184 | [Count Pairs That Form a Complete Day I](Easy/3184-count-pairs-that-form-a-complete-day-i/README.md) | Easy | Cpp | Array, Hash Table, Counting |
 | 3386 | [Button with Longest Push Time](Easy/3386-button-with-longest-push-time/README.md) | Easy | Cpp | Array |
+| 3591 | [Check if Any Element Has Prime Frequency](Easy/3591-check-if-any-element-has-prime-frequency/README.md) | Easy | Cpp | Array, Hash Table, Math, Counting, Number Theory |
 <!-- SOLUTIONS_TABLE_END -->
 
 ---
