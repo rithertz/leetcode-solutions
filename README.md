@@ -50,6 +50,7 @@ Working through problems consistently.
 | 3184 | [Count Pairs That Form a Complete Day I](Easy/3184-count-pairs-that-form-a-complete-day-i/README.md) | Easy | Cpp | Array, Hash Table, Counting |
 | 3386 | [Button with Longest Push Time](Easy/3386-button-with-longest-push-time/README.md) | Easy | Cpp | Array |
 | 3591 | [Check if Any Element Has Prime Frequency](Easy/3591-check-if-any-element-has-prime-frequency/README.md) | Easy | Cpp | Array, Hash Table, Math, Counting, Number Theory |
+| 3750 | [Minimum Number of Flips to Reverse Binary String](Easy/3750-minimum-number-of-flips-to-reverse-binary-string/README.md) | Easy | Cpp | Math, Two Pointers, String, Bit Manipulation |
 <!-- SOLUTIONS_TABLE_END -->
 
 ---
