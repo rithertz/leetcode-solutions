@@ -46,6 +46,7 @@ Working through problems consistently.
 | 2441 | [Largest Positive Integer That Exists With Its Negative](Easy/2441-largest-positive-integer-that-exists-with-its-negative/README.md) | Easy | Cpp | Array, Hash Table, Two Pointers, Sorting |
 | 2643 | [Row With Maximum Ones](Easy/2643-row-with-maximum-ones/README.md) | Easy | Cpp | Array, Matrix |
 | 2848 | [Points That Intersect With Cars](Easy/2848-points-that-intersect-with-cars/README.md) | Easy | Cpp | Array, Hash Table, Prefix Sum |
+| 3005 | [Count Elements With Maximum Frequency](Easy/3005-count-elements-with-maximum-frequency/README.md) | Easy | Cpp | Array, Hash Table, Counting |
 | 3065 | [Minimum Operations to Exceed Threshold Value I](Easy/3065-minimum-operations-to-exceed-threshold-value-i/README.md) | Easy | Cpp | Array |
 | 3184 | [Count Pairs That Form a Complete Day I](Easy/3184-count-pairs-that-form-a-complete-day-i/README.md) | Easy | Cpp | Array, Hash Table, Counting |
 | 3386 | [Button with Longest Push Time](Easy/3386-button-with-longest-push-time/README.md) | Easy | Cpp | Array |
