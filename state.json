@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-10-28T07:55:50.470606+00:00",
+  "last_updated": "2026-10-29T08:03:18.829484+00:00",
   "total_solved_on_leetcode": 74,
-  "total_synced_to_repo": 40,
+  "total_synced_to_repo": 41,
   "synced": [
     {
       "frontend_id": "1952",
@@ -642,9 +642,7 @@
       "submission_id": 1919293909,
       "solved_at": "2026-02-14T18:04:02+00:00",
       "synced_at": "2026-10-28T07:55:50.470593+00:00"
-    }
-  ],
-  "pending": [
+    },
     {
       "frontend_id": "3005",
       "slug": "count-elements-with-maximum-frequency",
@@ -657,11 +655,12 @@
       ],
       "lang": "cpp",
       "extension": "cpp",
-      "code": "class Solution {\npublic:\n    int maxFrequencyElements(vector<int>& nums) {\n        vector<int>v(101,0);\n        int max=-1;\n        int maxCount=0;\n        for(const auto &x:nums){\n            v[x]++;\n        }\n        for(int i=1;i<v.size();i++){\n            if(v[i]>max){\n                max=v[i];\n                maxCount=1;\n            }\n            else if(v[i]==max) {\n                maxCount++;\n            }\n            else{\n                continue;\n            }\n        }\n        return maxCount*max;\n    }\n};",
       "submission_id": 1919307480,
       "solved_at": "2026-02-14T18:17:31+00:00",
-      "content": "<p>You are given an array <code>nums</code> consisting of <strong>positive</strong> integers.</p>\n\n<p>Return <em>the <strong>total frequencies</strong> of elements in</em><em> </em><code>nums</code>&nbsp;<em>such that those elements all have the <strong>maximum</strong> frequency</em>.</p>\n\n<p>The <strong>frequency</strong> of an element is the number of occurrences of that element in the array.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,2,3,1,4]\n<strong>Output:</strong> 4\n<strong>Explanation:</strong> The elements 1 and 2 have a frequency of 2 which is the maximum frequency in the array.\nSo the number of elements in the array with maximum frequency is 4.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,3,4,5]\n<strong>Output:</strong> 5\n<strong>Explanation:</strong> All elements of the array have a frequency of 1 which is the maximum.\nSo the number of elements in the array with maximum frequency is 5.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 100</code></li>\n\t<li><code>1 &lt;= nums[i] &lt;= 100</code></li>\n</ul>\n"
-    },
+      "synced_at": "2026-10-29T08:03:18.829474+00:00"
+    }
+  ],
+  "pending": [
     {
       "frontend_id": "168",
       "slug": "excel-sheet-column-title",
