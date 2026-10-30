@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-10-29T08:03:18.829484+00:00",
+  "last_updated": "2026-10-30T08:05:10.056928+00:00",
   "total_solved_on_leetcode": 74,
-  "total_synced_to_repo": 41,
+  "total_synced_to_repo": 42,
   "synced": [
     {
       "frontend_id": "1952",
@@ -658,9 +658,7 @@
       "submission_id": 1919307480,
       "solved_at": "2026-02-14T18:17:31+00:00",
       "synced_at": "2026-10-29T08:03:18.829474+00:00"
-    }
-  ],
-  "pending": [
+    },
     {
       "frontend_id": "168",
       "slug": "excel-sheet-column-title",
@@ -672,11 +670,12 @@
       ],
       "lang": "cpp",
       "extension": "cpp",
-      "code": "class Solution {\npublic:\n    string convertToTitle(int columnNumber) {\n        //create dictionary\n        map<int,string> dict;\n        for(int i=1;i<=26;i++){\n            dict[i]='A'+i-1;\n        }\n        int temp=columnNumber;\n        string result=\"\";\n        while(temp){\n            if(temp%26==0){\n                result+=dict[26];\n                temp-=26;\n            }\n            else{\n            result+=dict[(temp%26)];\n            }\n            temp/=26;\n            \n        }\n        reverse(result.begin(),result.end());\n        return result;\n    }\n};",
       "submission_id": 1919331595,
       "solved_at": "2026-02-14T18:44:28+00:00",
-      "content": "<p>Given an integer <code>columnNumber</code>, return <em>its corresponding column title as it appears in an Excel sheet</em>.</p>\n\n<p>For example:</p>\n\n<pre>\nA -&gt; 1\nB -&gt; 2\nC -&gt; 3\n...\nZ -&gt; 26\nAA -&gt; 27\nAB -&gt; 28 \n...\n</pre>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> columnNumber = 1\n<strong>Output:</strong> &quot;A&quot;\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> columnNumber = 28\n<strong>Output:</strong> &quot;AB&quot;\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> columnNumber = 701\n<strong>Output:</strong> &quot;ZY&quot;\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= columnNumber &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n"
-    },
+      "synced_at": "2026-10-30T08:05:10.056920+00:00"
+    }
+  ],
+  "pending": [
     {
       "frontend_id": "1758",
       "slug": "minimum-changes-to-make-alternating-binary-string",
