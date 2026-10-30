@@ -24,6 +24,7 @@ Working through problems consistently.
 | 108 | [Convert Sorted Array to Binary Search Tree](Easy/0108-convert-sorted-array-to-binary-search-tree/README.md) | Easy | C | Array, Divide and Conquer, Tree, Binary Search Tree, Binary Tree |
 | 125 | [Valid Palindrome](Easy/0125-valid-palindrome/README.md) | Easy | Cpp | Two Pointers, String |
 | 136 | [Single Number](Easy/0136-single-number/README.md) | Easy | Cpp | Array, Bit Manipulation |
+| 168 | [Excel Sheet Column Title](Easy/0168-excel-sheet-column-title/README.md) | Easy | Cpp | Math, String |
 | 189 | [Rotate Array](Medium/0189-rotate-array/README.md) | Medium | Cpp | Array, Math, Two Pointers |
 | 231 | [Power of Two](Easy/0231-power-of-two/README.md) | Easy | Cpp | Math, Bit Manipulation, Recursion |
 | 258 | [Add Digits](Easy/0258-add-digits/README.md) | Easy | Cpp | Math, Simulation, Number Theory |
