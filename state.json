@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-11-01T08:44:17.357540+00:00",
+  "last_updated": "2026-11-02T08:54:27.344847+00:00",
   "total_solved_on_leetcode": 74,
-  "total_synced_to_repo": 44,
+  "total_synced_to_repo": 45,
   "synced": [
     {
       "frontend_id": "1952",
@@ -701,9 +701,7 @@
       "submission_id": 1925375566,
       "solved_at": "2026-02-20T13:02:04+00:00",
       "synced_at": "2026-11-01T08:44:17.357533+00:00"
-    }
-  ],
-  "pending": [
+    },
     {
       "frontend_id": "747",
       "slug": "largest-number-at-least-twice-of-others",
@@ -715,11 +713,12 @@
       ],
       "lang": "cpp",
       "extension": "cpp",
-      "code": "class Solution {\npublic:\n    int dominantIndex(vector<int>& nums) {\n        int l=-1;\n        int sl=-1;\n        int maxIndex=0;\n        for(int i=0;i<nums.size();i++){\n            if(nums[i]>l){\n                sl=l;\n                l=nums[i];\n                maxIndex=i;\n            }\n            else if(nums[i]>sl && nums[i]<l){\n                sl=nums[i];\n            }\n        }\n        return (l>=2*sl)?maxIndex:-1;\n    }\n};",
       "submission_id": 1925383900,
       "solved_at": "2026-02-20T13:14:08+00:00",
-      "content": "<p>You are given an integer array <code>nums</code> where the largest integer is <strong>unique</strong>.</p>\n\n<p>Determine whether the largest element in the array is <strong>at least twice</strong> as much as every other number in the array. If it is, return <em>the <strong>index</strong> of the largest element, or return </em><code>-1</code><em> otherwise</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,6,1,0]\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> 6 is the largest integer.\nFor every other number in the array x, 6 is at least twice as big as x.\nThe index of value 6 is 1, so we return 1.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,3,4]\n<strong>Output:</strong> -1\n<strong>Explanation:</strong> 4 is less than twice the value of 3, so we return -1.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>2 &lt;= nums.length &lt;= 50</code></li>\n\t<li><code>0 &lt;= nums[i] &lt;= 100</code></li>\n\t<li>The largest element in <code>nums</code> is unique.</li>\n</ul>\n"
-    },
+      "synced_at": "2026-11-02T08:54:27.344839+00:00"
+    }
+  ],
+  "pending": [
     {
       "frontend_id": "2716",
       "slug": "minimize-string-length",
