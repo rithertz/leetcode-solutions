@@ -48,6 +48,7 @@ Working through problems consistently.
 | 2427 | [Number of Common Factors](Easy/2427-number-of-common-factors/README.md) | Easy | Cpp | Math, Enumeration, Number Theory, Euclidean Algorithm, Greatest Common Divisor |
 | 2441 | [Largest Positive Integer That Exists With Its Negative](Easy/2441-largest-positive-integer-that-exists-with-its-negative/README.md) | Easy | Cpp | Array, Hash Table, Two Pointers, Sorting |
 | 2643 | [Row With Maximum Ones](Easy/2643-row-with-maximum-ones/README.md) | Easy | Cpp | Array, Matrix |
+| 2716 | [Minimize String Length](Easy/2716-minimize-string-length/README.md) | Easy | Cpp | Hash Table, String |
 | 2848 | [Points That Intersect With Cars](Easy/2848-points-that-intersect-with-cars/README.md) | Easy | Cpp | Array, Hash Table, Prefix Sum |
 | 3005 | [Count Elements With Maximum Frequency](Easy/3005-count-elements-with-maximum-frequency/README.md) | Easy | Cpp | Array, Hash Table, Counting |
 | 3065 | [Minimum Operations to Exceed Threshold Value I](Easy/3065-minimum-operations-to-exceed-threshold-value-i/README.md) | Easy | Cpp | Array |
