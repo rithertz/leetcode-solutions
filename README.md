@@ -42,6 +42,7 @@ Working through problems consistently.
 | 1752 | [Check if Array Is Sorted and Rotated](Easy/1752-check-if-array-is-sorted-and-rotated/README.md) | Easy | Cpp | Array |
 | 1758 | [Minimum Changes To Make Alternating Binary String](Easy/1758-minimum-changes-to-make-alternating-binary-string/README.md) | Easy | Cpp | String |
 | 1822 | [Sign of the Product of an Array](Easy/1822-sign-of-the-product-of-an-array/README.md) | Easy | Cpp | Array, Math |
+| 1941 | [Check if All Characters Have Equal Number of Occurrences](Easy/1941-check-if-all-characters-have-equal-number-of-occurrences/README.md) | Easy | Cpp | Hash Table, String, Counting |
 | 1952 | [Three Divisors](Easy/1952-three-divisors/README.md) | Easy | Cpp | Math, Enumeration, Number Theory, Prime Factorization, Sieve Theory |
 | 1979 | [Find Greatest Common Divisor of Array](Easy/1979-find-greatest-common-divisor-of-array/README.md) | Easy | Cpp | Array, Math, Number Theory, Euclidean Algorithm, Greatest Common Divisor |
 | 2149 | [Rearrange Array Elements by Sign](Medium/2149-rearrange-array-elements-by-sign/README.md) | Medium | Cpp | Array, Two Pointers, Simulation |
