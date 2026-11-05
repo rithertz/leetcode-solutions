@@ -27,6 +27,7 @@ Working through problems consistently.
 | 168 | [Excel Sheet Column Title](Easy/0168-excel-sheet-column-title/README.md) | Easy | Cpp | Math, String |
 | 189 | [Rotate Array](Medium/0189-rotate-array/README.md) | Medium | Cpp | Array, Math, Two Pointers |
 | 231 | [Power of Two](Easy/0231-power-of-two/README.md) | Easy | Cpp | Math, Bit Manipulation, Recursion |
+| 257 | [Binary Tree Paths](Easy/0257-binary-tree-paths/README.md) | Easy | Cpp | String, Backtracking, Tree, Depth-First Search, Binary Tree |
 | 258 | [Add Digits](Easy/0258-add-digits/README.md) | Easy | Cpp | Math, Simulation, Number Theory |
 | 268 | [Missing Number](Easy/0268-missing-number/README.md) | Easy | Cpp | Array, Hash Table, Math, Binary Search, Bit Manipulation, Sorting |
 | 283 | [Move Zeroes](Easy/0283-move-zeroes/README.md) | Easy | Cpp | Array, Two Pointers |
