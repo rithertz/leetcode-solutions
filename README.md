@@ -40,6 +40,7 @@ Working through problems consistently.
 | 1037 | [Valid Boomerang](Easy/1037-valid-boomerang/README.md) | Easy | Cpp | Array, Math, Geometry |
 | 1437 | [Check If All 1's Are at Least Length K Places Away](Easy/1437-check-if-all-1s-are-at-least-length-k-places-away/README.md) | Easy | Cpp | Array |
 | 1475 | [Final Prices With a Special Discount in a Shop](Easy/1475-final-prices-with-a-special-discount-in-a-shop/README.md) | Easy | Cpp | Array, Stack, Monotonic Stack |
+| 1550 | [Three Consecutive Odds](Easy/1550-three-consecutive-odds/README.md) | Easy | Cpp | Array |
 | 1752 | [Check if Array Is Sorted and Rotated](Easy/1752-check-if-array-is-sorted-and-rotated/README.md) | Easy | Cpp | Array |
 | 1758 | [Minimum Changes To Make Alternating Binary String](Easy/1758-minimum-changes-to-make-alternating-binary-string/README.md) | Easy | Cpp | String |
 | 1822 | [Sign of the Product of an Array](Easy/1822-sign-of-the-product-of-an-array/README.md) | Easy | Cpp | Array, Math |
