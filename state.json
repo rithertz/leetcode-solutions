@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-11-06T08:56:27.710127+00:00",
+  "last_updated": "2026-11-07T08:21:17.465079+00:00",
   "total_solved_on_leetcode": 74,
-  "total_synced_to_repo": 49,
+  "total_synced_to_repo": 50,
   "synced": [
     {
       "frontend_id": "1952",
@@ -779,9 +779,7 @@
       "submission_id": 1925426469,
       "solved_at": "2026-02-20T14:09:11+00:00",
       "synced_at": "2026-11-06T08:56:27.710119+00:00"
-    }
-  ],
-  "pending": [
+    },
     {
       "frontend_id": "2810",
       "slug": "faulty-keyboard",
@@ -793,11 +791,12 @@
       ],
       "lang": "cpp",
       "extension": "cpp",
-      "code": "class Solution {\npublic:\n    void reverse(string &s,int l,int r){\n        while(l<r){\n            swap(s[l++],s[r--]);\n        }\n    }\n    string finalString(string s) {\n        int n=s.size();\n        string current=\"\";\n        for(int i=0;i<n;i++){\n            if(s[i]!='i'){\n                current+=s[i];\n            }\n            else{\n                reverse(current,0,current.size()-1);\n            }\n        }\n        return current;\n    }\n};",
       "submission_id": 1925436296,
       "solved_at": "2026-02-20T14:21:35+00:00",
-      "content": "<p>Your laptop keyboard is faulty, and whenever you type a character <code>&#39;i&#39;</code> on it, it reverses the string that you have written. Typing other characters works as expected.</p>\n\n<p>You are given a <strong>0-indexed</strong> string <code>s</code>, and you type each character of <code>s</code> using your faulty keyboard.</p>\n\n<p>Return <em>the final string that will be present on your laptop screen.</em></p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;string&quot;\n<strong>Output:</strong> &quot;rtsng&quot;\n<strong>Explanation:</strong> \nAfter typing first character, the text on the screen is &quot;s&quot;.\nAfter the second character, the text is &quot;st&quot;. \nAfter the third character, the text is &quot;str&quot;.\nSince the fourth character is an &#39;i&#39;, the text gets reversed and becomes &quot;rts&quot;.\nAfter the fifth character, the text is &quot;rtsn&quot;. \nAfter the sixth character, the text is &quot;rtsng&quot;. \nTherefore, we return &quot;rtsng&quot;.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;poiinter&quot;\n<strong>Output:</strong> &quot;ponter&quot;\n<strong>Explanation:</strong> \nAfter the first character, the text on the screen is &quot;p&quot;.\nAfter the second character, the text is &quot;po&quot;. \nSince the third character you type is an &#39;i&#39;, the text gets reversed and becomes &quot;op&quot;. \nSince the fourth character you type is an &#39;i&#39;, the text gets reversed and becomes &quot;po&quot;.\nAfter the fifth character, the text is &quot;pon&quot;.\nAfter the sixth character, the text is &quot;pont&quot;. \nAfter the seventh character, the text is &quot;ponte&quot;. \nAfter the eighth character, the text is &quot;ponter&quot;. \nTherefore, we return &quot;ponter&quot;.</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 100</code></li>\n\t<li><code>s</code> consists of lowercase English letters.</li>\n\t<li><code>s[0] != &#39;i&#39;</code></li>\n</ul>\n"
-    },
+      "synced_at": "2026-11-07T08:21:17.465064+00:00"
+    }
+  ],
+  "pending": [
     {
       "frontend_id": "2733",
       "slug": "neither-minimum-nor-maximum",
