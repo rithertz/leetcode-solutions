@@ -52,6 +52,7 @@ Working through problems consistently.
 | 2441 | [Largest Positive Integer That Exists With Its Negative](Easy/2441-largest-positive-integer-that-exists-with-its-negative/README.md) | Easy | Cpp | Array, Hash Table, Two Pointers, Sorting |
 | 2643 | [Row With Maximum Ones](Easy/2643-row-with-maximum-ones/README.md) | Easy | Cpp | Array, Matrix |
 | 2716 | [Minimize String Length](Easy/2716-minimize-string-length/README.md) | Easy | Cpp | Hash Table, String |
+| 2733 | [Neither Minimum nor Maximum](Easy/2733-neither-minimum-nor-maximum/README.md) | Easy | Cpp | Array, Sorting |
 | 2810 | [Faulty Keyboard](Easy/2810-faulty-keyboard/README.md) | Easy | Cpp | String, Simulation |
 | 2848 | [Points That Intersect With Cars](Easy/2848-points-that-intersect-with-cars/README.md) | Easy | Cpp | Array, Hash Table, Prefix Sum |
 | 3005 | [Count Elements With Maximum Frequency](Easy/3005-count-elements-with-maximum-frequency/README.md) | Easy | Cpp | Array, Hash Table, Counting |
