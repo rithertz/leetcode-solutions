@@ -36,6 +36,7 @@ Working through problems consistently.
 | 485 | [Max Consecutive Ones](Easy/0485-max-consecutive-ones/README.md) | Easy | Cpp | Array |
 | 509 | [Fibonacci Number](Easy/0509-fibonacci-number/README.md) | Easy | Cpp | Math, Dynamic Programming, Recursion, Memoization |
 | 747 | [Largest Number At Least Twice of Others](Easy/0747-largest-number-at-least-twice-of-others/README.md) | Easy | Cpp | Array, Sorting |
+| 944 | [Delete Columns to Make Sorted](Easy/0944-delete-columns-to-make-sorted/README.md) | Easy | Cpp | Array, String, Longest Increasing Subsequence |
 | 1025 | [Divisor Game](Easy/1025-divisor-game/README.md) | Easy | Cpp | Math, Dynamic Programming, Brainteaser, Game Theory, Impartial Game |
 | 1037 | [Valid Boomerang](Easy/1037-valid-boomerang/README.md) | Easy | Cpp | Array, Math, Geometry |
 | 1437 | [Check If All 1's Are at Least Length K Places Away](Easy/1437-check-if-all-1s-are-at-least-length-k-places-away/README.md) | Easy | Cpp | Array |
