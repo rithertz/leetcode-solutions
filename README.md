@@ -44,6 +44,7 @@ Working through problems consistently.
 | 1550 | [Three Consecutive Odds](Easy/1550-three-consecutive-odds/README.md) | Easy | Cpp | Array |
 | 1752 | [Check if Array Is Sorted and Rotated](Easy/1752-check-if-array-is-sorted-and-rotated/README.md) | Easy | Cpp | Array |
 | 1758 | [Minimum Changes To Make Alternating Binary String](Easy/1758-minimum-changes-to-make-alternating-binary-string/README.md) | Easy | Cpp | String |
+| 1800 | [Maximum Ascending Subarray Sum](Easy/1800-maximum-ascending-subarray-sum/README.md) | Easy | Cpp | Array |
 | 1822 | [Sign of the Product of an Array](Easy/1822-sign-of-the-product-of-an-array/README.md) | Easy | Cpp | Array, Math |
 | 1941 | [Check if All Characters Have Equal Number of Occurrences](Easy/1941-check-if-all-characters-have-equal-number-of-occurrences/README.md) | Easy | Cpp | Hash Table, String, Counting |
 | 1952 | [Three Divisors](Easy/1952-three-divisors/README.md) | Easy | Cpp | Math, Enumeration, Number Theory, Prime Factorization, Sieve Theory |
