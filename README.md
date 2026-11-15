@@ -39,6 +39,7 @@ Working through problems consistently.
 | 944 | [Delete Columns to Make Sorted](Easy/0944-delete-columns-to-make-sorted/README.md) | Easy | Cpp | Array, String, Longest Increasing Subsequence |
 | 1025 | [Divisor Game](Easy/1025-divisor-game/README.md) | Easy | Cpp | Math, Dynamic Programming, Brainteaser, Game Theory, Impartial Game |
 | 1037 | [Valid Boomerang](Easy/1037-valid-boomerang/README.md) | Easy | Cpp | Array, Math, Geometry |
+| 1260 | [Shift 2D Grid](Easy/1260-shift-2d-grid/README.md) | Easy | Cpp | Array, Matrix, Simulation |
 | 1437 | [Check If All 1's Are at Least Length K Places Away](Easy/1437-check-if-all-1s-are-at-least-length-k-places-away/README.md) | Easy | Cpp | Array |
 | 1475 | [Final Prices With a Special Discount in a Shop](Easy/1475-final-prices-with-a-special-discount-in-a-shop/README.md) | Easy | Cpp | Array, Stack, Monotonic Stack |
 | 1550 | [Three Consecutive Odds](Easy/1550-three-consecutive-odds/README.md) | Easy | Cpp | Array |
