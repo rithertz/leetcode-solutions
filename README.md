@@ -53,6 +53,7 @@ Working through problems consistently.
 | 2149 | [Rearrange Array Elements by Sign](Medium/2149-rearrange-array-elements-by-sign/README.md) | Medium | Cpp | Array, Two Pointers, Simulation |
 | 2427 | [Number of Common Factors](Easy/2427-number-of-common-factors/README.md) | Easy | Cpp | Math, Enumeration, Number Theory, Euclidean Algorithm, Greatest Common Divisor |
 | 2441 | [Largest Positive Integer That Exists With Its Negative](Easy/2441-largest-positive-integer-that-exists-with-its-negative/README.md) | Easy | Cpp | Array, Hash Table, Two Pointers, Sorting |
+| 2574 | [Left and Right Sum Differences](Easy/2574-left-and-right-sum-differences/README.md) | Easy | Cpp | Array, Prefix Sum |
 | 2643 | [Row With Maximum Ones](Easy/2643-row-with-maximum-ones/README.md) | Easy | Cpp | Array, Matrix |
 | 2716 | [Minimize String Length](Easy/2716-minimize-string-length/README.md) | Easy | Cpp | Hash Table, String |
 | 2733 | [Neither Minimum nor Maximum](Easy/2733-neither-minimum-nor-maximum/README.md) | Easy | Cpp | Array, Sorting |
