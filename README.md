@@ -66,6 +66,7 @@ Working through problems consistently.
 | 3184 | [Count Pairs That Form a Complete Day I](Easy/3184-count-pairs-that-form-a-complete-day-i/README.md) | Easy | Cpp | Array, Hash Table, Counting |
 | 3210 | [Find the Encrypted String](Easy/3210-find-the-encrypted-string/README.md) | Easy | Cpp | String |
 | 3386 | [Button with Longest Push Time](Easy/3386-button-with-longest-push-time/README.md) | Easy | Cpp | Array |
+| 3423 | [Maximum Difference Between Adjacent Elements in a Circular Array](Easy/3423-maximum-difference-between-adjacent-elements-in-a-circular-array/README.md) | Easy | Cpp | Array |
 | 3591 | [Check if Any Element Has Prime Frequency](Easy/3591-check-if-any-element-has-prime-frequency/README.md) | Easy | Cpp | Array, Hash Table, Math, Counting, Number Theory |
 | 3684 | [Maximize Sum of At Most K Distinct Elements](Easy/3684-maximize-sum-of-at-most-k-distinct-elements/README.md) | Easy | Cpp | Array, Hash Table, Greedy, Sorting |
 | 3697 | [Compute Decimal Representation](Easy/3697-compute-decimal-representation/README.md) | Easy | Cpp | Array, Math |
